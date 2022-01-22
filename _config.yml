@@ -1,0 +1,59 @@
+author:
+  name: Dinh-Tuyen Le
+  email: tuyenld@circuitlover.com
+  github: tuyenld
+  linkedin: ledinhtuyen
+  twitter: tuyen_ld
+collections:
+  newsletters:
+    output: true
+defaults:
+  -
+    scope:
+      path: "_newsletters/**"
+    values:
+      sitemap: false
+exclude:
+  - yarn.lock
+  - package-lock.json
+  - README.md
+  - postcss.config.js
+  - purgecss.config.js
+  - netlify.toml
+  - bin
+  - .gitignore
+  - resources
+  - node_modules
+include:
+  - .htaccess
+  - _newsletters
+markdown: kramdown
+plugins:
+#  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-postcss
+  - jekyll-purgecss
+url: https://circuitlover.com
+
+# jekyll-seo-tag configuration
+title: circuitlover.com
+tagline: "IoT systems."
+description: "A blog from Dinh-Tuyen Le."
+logo: images/avatar-circle.png
+twitter:
+  username: tuyen_ld
+  card: summary_large_image
+social:
+  name: Dinh-Tuyen Le
+  links:
+    - https://twitter.com/tuyen_ld
+    - https://www.linkedin.com/in/ledinhtuyen
+    - https://github.com/tuyenld
+
+
+# tuyenld added
+repository : "tuyenld/circuitlover"
+# deployment
+host: 0.0.0.0
+# port: 4000
