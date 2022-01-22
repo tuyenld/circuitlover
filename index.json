@@ -1,0 +1,34 @@
+{
+  "intro": {
+    "intro": "Hi! 👋 I'm Dinh-Tuyen Le, I'm interested in embedded system.",
+    "hero-1": "I would love to work together!",
+    "hero-2": "Send me an email to get in touch.",
+    "cta": "Email Tuyen"
+  },
+  "categories": [
+    {
+      "name": "Power electronics",
+      "slug": "po",
+      "lightColor": "bee3f8",
+      "darkColor": "2c5282"
+    },
+    {
+      "name": "Raspberry Pi",
+      "slug": "pi",
+      "lightColor": "c6f6d5",
+      "darkColor": "276749"
+    }
+    
+  ],
+  "posts": [
+    {
+      "title": "Bring Pi Zero (not W) to the Internet",
+      "category": "",
+      "date": "2020-12-11T00:00:00Z",
+      "url": "/pi/2020/12/11/bring-Pi-Zero-to-internet.html",
+      "description": "",
+      "image": "/"
+    }
+    
+  ]
+}

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-01-22T12:30:06+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Bring Pi Zero (not W) to the Internet</title><link href="https://circuitlover.com/pi/2020/12/11/bring-Pi-Zero-to-internet.html" rel="alternate" type="text/html" title="Bring Pi Zero (not W) to the Internet" /><published>2020-12-11T00:00:00+00:00</published><updated>2020-12-11T00:00:00+00:00</updated><id>https://circuitlover.com/pi/2020/12/11/bring-Pi-Zero-to-internet</id><content type="html" xml:base="https://circuitlover.com/pi/2020/12/11/bring-Pi-Zero-to-internet.html">&lt;p&gt;Raspi Zero (not W) have neither Wi-Fi no Ethernet, how could we want to update our board on the fly? 
+Well, we can create a virtual Ethernet interface. I’ll show you how to do it.&lt;/p&gt;
+
+&lt;p&gt;The network topology I’m going to deploy as following.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/posts/Pi-Zero-internet.jpg&quot; alt=&quot;Pi Zero Internet&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;First, you need to run this script. It will create a virtual UDC ethernet interface.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# https://www.isticktoit.net/?p=1383&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;CONFIG&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/sys/kernel/config/usb_gadget/piwebcam
+&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$CONFIG&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$CONFIG&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;1
+
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0x1d6b &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; idVendor &lt;span class=&quot;c&quot;&gt;# Linux Foundation&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0x0104 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; idProduct &lt;span class=&quot;c&quot;&gt;# Multifunction Composite Gadget&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0x0100 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; bcdDevice &lt;span class=&quot;c&quot;&gt;# v1.0.0&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0x0200 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; bcdUSB &lt;span class=&quot;c&quot;&gt;# USB2&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; strings/0x409
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;fedcba9876543210&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; strings/0x409/serialnumber
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Tobias Girstmair&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; strings/0x409/manufacturer
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;iSticktoit.net USB Device&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; strings/0x409/product
+&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; configs/c.1/strings/0x409
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Config 1: ECM network&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; configs/c.1/strings/0x409/configuration
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;250 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; configs/c.1/MaxPower
+&lt;span class=&quot;c&quot;&gt;# Add functions here&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# see gadget configurations below&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# End functions&lt;/span&gt;
+udevadm settle &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; 5 &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; :
+&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; /sys/class/udc &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; UDC
+
+&lt;span class=&quot;c&quot;&gt;# Ethernet Adapter&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#-------------------------------------------&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Add functions here&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; functions/ecm.usb0
+&lt;span class=&quot;c&quot;&gt;# first byte of address must be even&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;HOST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;48:6f:73:74:50:43&quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# &quot;HostPC&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;SELF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;42:61:64:55:53:42&quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# &quot;BadUSB&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$HOST&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; functions/ecm.usb0/host_addr
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$SELF&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; functions/ecm.usb0/dev_addr
+&lt;span class=&quot;nb&quot;&gt;ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; functions/ecm.usb0 configs/c.1/
+&lt;span class=&quot;c&quot;&gt;# End functions&lt;/span&gt;
+udevadm settle &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; 5 &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; :
+&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; /sys/class/udc &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; UDC
+&lt;span class=&quot;c&quot;&gt;#put this at the very end of the file:&lt;/span&gt;
+ifconfig usb0 10.0.0.1 netmask 255.255.255.252 up
+route add &lt;span class=&quot;nt&quot;&gt;-net&lt;/span&gt; default gw 10.0.0.2
+
+&lt;span class=&quot;c&quot;&gt;# USB Mass storage&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#-------------------------------------------&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Add functions here&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;FILE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/dev/mmcblk0p2
+&lt;span class=&quot;c&quot;&gt;# FILE=/home/pi/usbdisk.img&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# mkdir -p ${FILE/img/d}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# mount -o loop,ro,offset=1048576 -t ext4 $FILE ${FILE/img/d} # FOR OLD WAY OF MAKING THE IMAGE&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# mount -o loop,ro, -t vfat $FILE ${FILE/img/d} # FOR IMAGE CREATED WITH DD&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; functions/mass_storage.usb0
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; functions/mass_storage.usb0/stall
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;1 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;functions/mass_storage.usb0/lun.0/removable
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; functions/mass_storage.usb0/lun.0/cdrom
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; functions/mass_storage.usb0/lun.0/ro
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; functions/mass_storage.usb0/lun.0/nofua
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$FILE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; functions/mass_storage.usb0/lun.0/file
+&lt;span class=&quot;nb&quot;&gt;ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; functions/mass_storage.usb0 configs/c.1/
+&lt;span class=&quot;c&quot;&gt;# End functions&lt;/span&gt;
+udevadm settle &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; 5 &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; :
+&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; /sys/class/udc &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; UDC
+
+&lt;span class=&quot;c&quot;&gt;# REMOVE USB Mass Storage&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# rm configs/c.1/mass_storage.usb0&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# rm -rf functions/mass_storage.usb0&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, try to ping to the host PC &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ping 10.0.0.2&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You created another network, so you need to “register” it to your router.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;## Add route to your Gateway Network&lt;/span&gt;
+ldtuyen@pc:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh root@172.16.10.1
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Enter username and password]
+
+root@OpenWrt:~# route &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt;
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         192.168.1.1     0.0.0.0         UG    0      0        0 eth0.2
+172.16.10.0     0.0.0.0         255.255.255.0   U     0      0        0 br-lan
+192.168.1.0     0.0.0.0         255.255.255.0   U     0      0        0 eth0.2
+root@OpenWrt:~# ip route add 10.0.0.0/24 via 172.16.10.159
+root@OpenWrt:~# 
+root@OpenWrt:~# route &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt;
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         192.168.1.1     0.0.0.0         UG    0      0        0 eth0.2
+10.0.0.0        172.16.10.159   255.255.255.0   UG    0      0        0 br-lan
+172.16.10.0     0.0.0.0         255.255.255.0   U     0      0        0 br-lan
+192.168.1.0     0.0.0.0         255.255.255.0   U     0      0        0 eth0.2
+root@OpenWrt:~# 
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Try to ping to Google &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ping 8.8.8.8&lt;/code&gt;. If it fail, you may be need to check your network topology.&lt;/p&gt;
+
+&lt;p&gt;In order to use the Internet, your Raspberry Pi need to be changed the DNS server.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; /etc/resolv.conf
+&lt;span class=&quot;c&quot;&gt;# Generated by resolvconf&lt;/span&gt;
+nameserver 8.8.8.8 
+nameserver fe80::3e47:11ff:fe87:fc43%wlan0
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ping google.com
+PING google.com &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;172.217.24.46&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 56&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;84&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; bytes of data.
+64 bytes from hkg07s23-in-f46.1e100.net &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;172.217.24.46&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;: &lt;span class=&quot;nv&quot;&gt;icmp_seq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;nv&quot;&gt;ttl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;115 &lt;span class=&quot;nb&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;23.8 ms
+64 bytes from hkg07s23-in-f46.1e100.net &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;172.217.24.46&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;: &lt;span class=&quot;nv&quot;&gt;icmp_seq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2 &lt;span class=&quot;nv&quot;&gt;ttl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;115 &lt;span class=&quot;nb&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;23.6 ms
+^C
+&lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt; google.com ping statistics &lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;
+2 packets transmitted, 2 received, 0% packet loss, &lt;span class=&quot;nb&quot;&gt;time &lt;/span&gt;1001ms
+rtt min/avg/max/mdev &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 23.672/23.750/23.829/0.172 ms
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Done! Now you could use the Internet on your Pi Zero.&lt;/p&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pi" /><summary type="html">Raspi Zero (not W) have neither Wi-Fi no Ethernet, how could we want to update our board on the fly? Well, we can create a virtual Ethernet interface. I’ll show you how to do it.</summary></entry></feed>
