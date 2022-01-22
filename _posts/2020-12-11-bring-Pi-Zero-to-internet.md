@@ -11,7 +11,7 @@ Well, we can create a virtual Ethernet interface. I'll show you how to do it.
 
 The network topology I'm going to deploy as following.
 
-![Pi Zero Internet](../images/posts/Pi-Zero-internet.jpg)
+![Pi Zero Internet](/images/posts/Pi-Zero-internet.jpg)
 
 First, you need to run this script. It will create a virtual UDC ethernet interface.
 
@@ -85,7 +85,7 @@ ls /sys/class/udc > UDC
 
 ```
 
-Now, try to ping to the host PC `ping 10.0.0.2`.
+Now, try to ping from your Pi to the host PC `ping 10.0.0.2`.
 
 You created another network, so you need to "register" it to your router.
 
@@ -113,9 +113,9 @@ root@OpenWrt:~#
 
 ```
 
-Try to ping to Google `ping 8.8.8.8`. If it fail, you may be need to check your network topology.
+Try to ping from your Pi to Google `ping 8.8.8.8`. If it fails, you may be need to check your network topology.
 
-In order to use the Internet, your Raspberry Pi need to be changed the DNS server.
+In order to use the Internet, the DNS server of your Raspberry Pi need to be changed.
 
 ```bash
 $ cat /etc/resolv.conf
