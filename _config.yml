@@ -54,6 +54,7 @@ social:
 
 
 # tuyenld added
+cloudinaryurl : "https://res.cloudinary.com/crushcoding/image/upload/q_auto,f_auto/"
 
 # Set which comment system to use
 comments:

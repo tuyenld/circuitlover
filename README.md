@@ -41,14 +41,14 @@ bin/new POST_TITLE
 [] `_includes/newsletter.html`
 [] mugshotbot
 [] _includes/xcode.html
-[] View page source > find `masilotti.com`
-[] New line in `class="highlight"`
+[-] View page source > find `masilotti.com`
+[-] New line in `class="highlight"`
 [-] Build slow
     [] [Cause of slow](https://github.com/joemasilotti/masilotti.com/commit/d543b7eb2ba5a5ee8bc2a7b35f8616d2c801a274)
     [] Alternative
         [] https://github.com/purifycss/purifycss
         https://github.com/giakki/uncss
         https://github.com/FullHuman/purgecss
-[] Comment system
+[x] Comment system
 ## Post
 [] Clarke transform (ref#4, 15.6)

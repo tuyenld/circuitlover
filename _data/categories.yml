@@ -35,11 +35,11 @@
   lightColor: "c6f6d5"
   darkColor: "276749"
 
-# - name: Objective-C Testing
-#   slug: testing-objective-c
-#   color: purple
-#   lightColor: "e9d8fd"
-#   darkColor: "553c9a"
+- name: Uncategorized
+  slug: uncategorized
+  color: purple
+  lightColor: "e9d8fd"
+  darkColor: "553c9a"
 
 # - name: Board Games
 #   slug: board-games
