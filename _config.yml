@@ -55,6 +55,12 @@ social:
 
 # tuyenld added
 cloudinaryurl : "https://res.cloudinary.com/crushcoding/image/upload/q_auto,f_auto/"
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "post"
 
 # Set which comment system to use
 comments:
