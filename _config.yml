@@ -53,6 +53,34 @@ social:
 
 
 # tuyenld added
+
+# Set which comment system to use
+comments:
+  # 'disqus' or 'utterances' are available
+  provider:            giscus
+
+# You must install utterances github app before use.(https://github.com/apps/utterances)
+# Make sure all variables are set properly. Check below link for detail.
+# https://utteranc.es/
+utterances:
+  repo:                "LazyRen/LazyRen.github.io"
+  issue-term:          "pathname"
+  label:               "Comments"
+  theme:               "dark-blue"
+
+# You must install giscus github app before use.(https://github.com/apps/giscus)
+# Make sure all variables are set properly. Check below link for detail.
+# https://giscus.vercel.app/
+giscus:
+  repo:                "tuyenld/circuitlover"
+  repo-id:             "R_kgDOGon9FA"
+  category:            "Announcements"
+  category-id:         "DIC_kwDOGon9FM4CA0Wc"
+  mapping:             "pathname"
+  reaction-enabled:    "1"
+  theme:               "light"
+  crossorigin:         "anonymous"
+
 repository : "tuyenld/circuitlover"
 # deployment
 host: 0.0.0.0

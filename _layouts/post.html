@@ -40,5 +40,8 @@ layout: default
     {% include xcode.html %}
   </div>
   {{ content }}
+  {% if site.comments.provider and page.comments %}
+    {% include my-comments.html %}
+  {% endif %}
   <!-- {% include newsletter.html %} -->
 </article>

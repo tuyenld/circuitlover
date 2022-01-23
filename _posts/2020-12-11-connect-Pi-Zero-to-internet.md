@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bring Pi Zero (not W) to the Internet
+title: Connect Raspberry Pi Zero (not W) to the Internet
 categories: pi
 comments: true
 ---
