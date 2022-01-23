@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-01-23T13:59:36+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Connect Raspberry Pi Zero (not W) to the Internet</title><link href="https://circuitlover.com/connect-Pi-Zero-to-internet" rel="alternate" type="text/html" title="Connect Raspberry Pi Zero (not W) to the Internet" /><published>2020-12-11T00:00:00+00:00</published><updated>2020-12-11T00:00:00+00:00</updated><id>https://circuitlover.com/connect-Pi-Zero-to-internet</id><content type="html" xml:base="https://circuitlover.com/connect-Pi-Zero-to-internet">&lt;p&gt;Raspi Zero (not W) have neither Wi-Fi no Ethernet, how could we want to update our board on the fly? 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-01-23T14:33:21+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Connect Raspberry Pi Zero (not W) to the Internet</title><link href="https://circuitlover.com/connect-Pi-Zero-to-internet" rel="alternate" type="text/html" title="Connect Raspberry Pi Zero (not W) to the Internet" /><published>2020-12-11T00:00:00+00:00</published><updated>2020-12-11T00:00:00+00:00</updated><id>https://circuitlover.com/connect-Pi-Zero-to-internet</id><content type="html" xml:base="https://circuitlover.com/connect-Pi-Zero-to-internet">&lt;p&gt;Raspi Zero (not W) have neither Wi-Fi no Ethernet, how could we want to update our board on the fly? 
 Well, we can create a virtual Ethernet interface. I’ll show you how to do it.&lt;/p&gt;
 
 &lt;p&gt;The network topology I’m going to deploy as following.&lt;/p&gt;
@@ -121,4 +121,101 @@ PING google.com &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;172.217.24.46&lt;s
 2 packets transmitted, 2 received, 0% packet loss, &lt;span class=&quot;nb&quot;&gt;time &lt;/span&gt;1001ms
 rtt min/avg/max/mdev &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 23.672/23.750/23.829/0.172 ms
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Done! Now you could use the Internet on your Pi Zero.&lt;/p&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pi" /><summary type="html">Raspi Zero (not W) have neither Wi-Fi no Ethernet, how could we want to update our board on the fly? Well, we can create a virtual Ethernet interface. I’ll show you how to do it.</summary></entry></feed>
+&lt;p&gt;Done! Now you could use the Internet on your Pi Zero.&lt;/p&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pi" /><summary type="html">Raspi Zero (not W) have neither Wi-Fi no Ethernet, how could we want to update our board on the fly? Well, we can create a virtual Ethernet interface. I’ll show you how to do it.</summary></entry><entry><title type="html">How to upgrade flash chip on TPLink TL-WR840N v5.</title><link href="https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb" rel="alternate" type="text/html" title="How to upgrade flash chip on TPLink TL-WR840N v5." /><published>2019-02-11T00:00:00+00:00</published><updated>2019-02-11T00:00:00+00:00</updated><id>https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb</id><content type="html" xml:base="https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb">&lt;p&gt;Upgrade TP-Link flash chip on TP-Link from 4mb to 8mb&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Table of content&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#1-pre-requirement&quot;&gt;1. Pre-requirement&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2-lets-do-it&quot;&gt;2. Let’s do it&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#21-desolder-old-flash-chip&quot;&gt;2.1 Desolder old flash chip&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#22-program-new-flash-chip&quot;&gt;2.2 Program new flash chip&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#23-re-solder-new-flash-chip&quot;&gt;2.3 Re-solder new flash chip&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#3-enjoy&quot;&gt;3. Enjoy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;1-pre-requirement&quot;&gt;1. Pre-requirement&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;New flash chip: I used Winbond 8MiB GD25Q64CSIG&lt;/li&gt;
+  &lt;li&gt;Soldering iron: desolder old flash chip and re-solder new flash chip&lt;/li&gt;
+  &lt;li&gt;ROM programer and IC socket: I am using CH-341A (~ 5$)&lt;/li&gt;
+  &lt;li&gt;One PC/Laptop&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2-lets-do-it&quot;&gt;2. Let’s do it&lt;/h2&gt;
+&lt;h3 id=&quot;21-desolder-old-flash-chip&quot;&gt;2.1 Desolder old flash chip&lt;/h3&gt;
+&lt;p&gt;Hot air soldering station is ideally suited for desoldering flash. If you not, you can follow this video to do this.&lt;/p&gt;
+
+&lt;div class=&quot;embed-responsive aspect-w-16 aspect-h-9&quot;&gt;
+  &lt;iframe class=&quot;embed-responsive-item&quot; src=&quot;https://www.youtube.com/embed/nZGEtpECPQY&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;22-program-new-flash-chip&quot;&gt;2.2 Program new flash chip&lt;/h3&gt;
+&lt;p&gt;Firstly, you need to choose new flash chip you want to replace. Why I chose &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Winbond GD25Q64CSIG&lt;/code&gt; for replacement, see table bellow:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=Original_vs_Mod_Chip.md&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;I see the name of flash chip is the same, so I didn’t checked datasheet for compatible.&lt;/p&gt;
+
+&lt;p&gt;Secondly, you need to choose OpenWRT firmware.
+Why I used openwrt-18.06.1-ramips-mt76x8-tl-&lt;strong&gt;wr841n-v13&lt;/strong&gt;-squashfs-sysupgrade instead of openwrt-18.06.1-ramips-mt76x8-tl-&lt;strong&gt;wr840n-v5&lt;/strong&gt;-squashfs-sysupgrade?&lt;/p&gt;
+
+&lt;p&gt;Because it used the same CPU and different in flash and RAM chip.
+&lt;script src=&quot;https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=WR841Nv13_vs_WR840Nv5.md&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;div class=&quot;tldr flex rounded-md bg-blue-300 bg-opacity-25 px-4 my-12&quot;&gt;
+  &lt;div class=&quot;flex items-center&quot;&gt;
+    &lt;div class=&quot;-ml-2 mr-2 my-6 transform rotate-90 tracking-tighter font-semibold text-blue-400&quot;&gt;NOTE&lt;/div&gt;
+    &lt;p class=&quot;lg:text-lg leading-5 text-blue-800&quot;&gt;You are able to use openwrt-18.06.1-ramips-mt76x8-tl-**wr840n-v5**-squashfs-sysupgrade with 8MB flash chip, your router still booting but you can not any configuration after reboot. You may got error `Your image is probably too big, leaving not enough space for jffs2`.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In the first time, I faced this problem. I can not save any configuration after reboot. If you look at boot log, it read:
+&lt;script src=&quot;https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=firmware_bad.log&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;No &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/overlay&lt;/code&gt; will be mounted:
+&lt;script src=&quot;https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=firmware_bad_no_overlay.log&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;If everything is good, it should be like this:
+&lt;script src=&quot;https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=firmware_good.log&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, you have new flash chip and suitable firware, but you can not use this firware to program new flash chip. Because &lt;strong&gt;RAW&lt;/strong&gt; flash need more partion than firmware such as: bootloader and art. See more in &lt;a href=&quot;https://openwrt.org/docs/techref/flash.layout&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can use bellow shell script to generate firmware for any flash with different capacity.
+&lt;script src=&quot;https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=create_new_firmware.sh&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=flash_partition.md&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;If you don’t want to use this script, you can create image by yourself. You may to need hex editor like &lt;a href=&quot;https://mh-nexus.de/en/hxd/&quot;&gt;HxDen&lt;/a&gt; to do this.&lt;/p&gt;
+&lt;figure class=&quot;align-center&quot;&gt;
+  &lt;img src=&quot;https://res.cloudinary.com/crushcoding/image/upload/q_auto,f_auto/2019-02-11-upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb/create_image_manual.jpg&quot; alt=&quot;&quot; /&gt;
+  &lt;figcaption&gt;New firmware layout&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;All file which I used in &lt;a href=&quot;https://drive.google.com/file/d/1kqXvFQYrolipvrrD3Rkv7J7JTZwgVHDn/view?usp=sharing&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;23-re-solder-new-flash-chip&quot;&gt;2.3 Re-solder new flash chip&lt;/h3&gt;
+&lt;p&gt;After use CH341A to program new flash chip, you can re-solder new flash chip on target board.&lt;/p&gt;
+
+&lt;div class=&quot;tldr flex rounded-md bg-blue-300 bg-opacity-25 px-4 my-12&quot;&gt;
+  &lt;div class=&quot;flex items-center&quot;&gt;
+    &lt;div class=&quot;-ml-2 mr-2 my-6 transform rotate-90 tracking-tighter font-semibold text-blue-400&quot;&gt;NOTE&lt;/div&gt;
+    &lt;p class=&quot;lg:text-lg leading-5 text-blue-800&quot;&gt;If your board can not booting, don't worry. You can use [Clip Socket Adapter](https://www.ebay.com/itm/SOIC8-SOP8-Flash-Chip-IC-Test-Clip-Socket-Adapter-BIOS-CH341A-USB-Programmer-/372555847443) to try program flash again with out desolder chip.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;3-enjoy&quot;&gt;3. Enjoy&lt;/h2&gt;
+&lt;figure class=&quot;align-center&quot;&gt;
+  &lt;img src=&quot;https://res.cloudinary.com/crushcoding/image/upload/q_auto,f_auto/2019-02-11-upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb/software_status.jpg&quot; alt=&quot;&quot; /&gt;
+  &lt;figcaption&gt;Software with new flash chip (8MB).&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;div class=&quot;tldr flex rounded-md bg-blue-300 bg-opacity-25 px-4 my-12&quot;&gt;
+  &lt;div class=&quot;flex items-center&quot;&gt;
+    &lt;div class=&quot;-ml-2 mr-2 my-6 transform rotate-90 tracking-tighter font-semibold text-blue-400&quot;&gt;NOTE&lt;/div&gt;
+    &lt;p class=&quot;lg:text-lg leading-5 text-blue-800&quot;&gt;I used image come from **TL-WR841N v13.x**, except for LED will not working, everything work well (Wi-Fi, Ethernet, Router feature).&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="uncategorized" /><category term="TL-WR840N" /><summary type="html">Upgrade TP-Link flash chip on TP-Link from 4mb to 8mb</summary></entry></feed>

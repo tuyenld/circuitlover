@@ -17,6 +17,12 @@
       "slug": "pi",
       "lightColor": "c6f6d5",
       "darkColor": "276749"
+    },
+    {
+      "name": "Uncategorized",
+      "slug": "uncategorized",
+      "lightColor": "e9d8fd",
+      "darkColor": "553c9a"
     }
     
   ],
@@ -26,6 +32,14 @@
       "category": "",
       "date": "2020-12-11T00:00:00Z",
       "url": "/connect-Pi-Zero-to-internet",
+      "description": "",
+      "image": "/"
+    },
+    {
+      "title": "How to upgrade flash chip on TPLink TL-WR840N v5.",
+      "category": "",
+      "date": "2019-02-11T00:00:00Z",
+      "url": "/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb",
       "description": "",
       "image": "/"
     }

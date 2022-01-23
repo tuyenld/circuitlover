@@ -1,0 +1,99 @@
+<p>Upgrade TP-Link flash chip on TP-Link from 4mb to 8mb</p>
+
+<p><strong>Table of content</strong></p>
+<ul>
+  <li><a href="#1-pre-requirement">1. Pre-requirement</a></li>
+  <li><a href="#2-lets-do-it">2. Let’s do it</a>
+    <ul>
+      <li><a href="#21-desolder-old-flash-chip">2.1 Desolder old flash chip</a></li>
+      <li><a href="#22-program-new-flash-chip">2.2 Program new flash chip</a></li>
+      <li><a href="#23-re-solder-new-flash-chip">2.3 Re-solder new flash chip</a></li>
+    </ul>
+  </li>
+  <li><a href="#3-enjoy">3. Enjoy</a></li>
+</ul>
+
+<hr />
+
+<h2 id="1-pre-requirement">1. Pre-requirement</h2>
+<ul>
+  <li>New flash chip: I used Winbond 8MiB GD25Q64CSIG</li>
+  <li>Soldering iron: desolder old flash chip and re-solder new flash chip</li>
+  <li>ROM programer and IC socket: I am using CH-341A (~ 5$)</li>
+  <li>One PC/Laptop</li>
+</ul>
+
+<h2 id="2-lets-do-it">2. Let’s do it</h2>
+<h3 id="21-desolder-old-flash-chip">2.1 Desolder old flash chip</h3>
+<p>Hot air soldering station is ideally suited for desoldering flash. If you not, you can follow this video to do this.</p>
+
+<div class="embed-responsive aspect-w-16 aspect-h-9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nZGEtpECPQY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="22-program-new-flash-chip">2.2 Program new flash chip</h3>
+<p>Firstly, you need to choose new flash chip you want to replace. Why I chose <code class="language-plaintext highlighter-rouge">Winbond GD25Q64CSIG</code> for replacement, see table bellow:</p>
+
+<script src="https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=Original_vs_Mod_Chip.md"></script>
+
+<p>I see the name of flash chip is the same, so I didn’t checked datasheet for compatible.</p>
+
+<p>Secondly, you need to choose OpenWRT firmware.
+Why I used openwrt-18.06.1-ramips-mt76x8-tl-<strong>wr841n-v13</strong>-squashfs-sysupgrade instead of openwrt-18.06.1-ramips-mt76x8-tl-<strong>wr840n-v5</strong>-squashfs-sysupgrade?</p>
+
+<p>Because it used the same CPU and different in flash and RAM chip.
+<script src="https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=WR841Nv13_vs_WR840Nv5.md"></script></p>
+
+<div class="tldr flex rounded-md bg-blue-300 bg-opacity-25 px-4 my-12">
+  <div class="flex items-center">
+    <div class="-ml-2 mr-2 my-6 transform rotate-90 tracking-tighter font-semibold text-blue-400">NOTE</div>
+    <p class="lg:text-lg leading-5 text-blue-800">You are able to use openwrt-18.06.1-ramips-mt76x8-tl-**wr840n-v5**-squashfs-sysupgrade with 8MB flash chip, your router still booting but you can not any configuration after reboot. You may got error `Your image is probably too big, leaving not enough space for jffs2`.</p>
+  </div>
+</div>
+
+<p>In the first time, I faced this problem. I can not save any configuration after reboot. If you look at boot log, it read:
+<script src="https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=firmware_bad.log"></script></p>
+
+<p>No <code class="language-plaintext highlighter-rouge">/overlay</code> will be mounted:
+<script src="https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=firmware_bad_no_overlay.log"></script></p>
+
+<p>If everything is good, it should be like this:
+<script src="https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=firmware_good.log"></script></p>
+
+<p>Now, you have new flash chip and suitable firware, but you can not use this firware to program new flash chip. Because <strong>RAW</strong> flash need more partion than firmware such as: bootloader and art. See more in <a href="https://openwrt.org/docs/techref/flash.layout">here</a></p>
+
+<p>You can use bellow shell script to generate firmware for any flash with different capacity.
+<script src="https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=create_new_firmware.sh"></script></p>
+
+<script src="https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=flash_partition.md"></script>
+
+<p>If you don’t want to use this script, you can create image by yourself. You may to need hex editor like <a href="https://mh-nexus.de/en/hxd/">HxDen</a> to do this.</p>
+<figure class="align-center">
+  <img src="https://res.cloudinary.com/crushcoding/image/upload/q_auto,f_auto/2019-02-11-upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb/create_image_manual.jpg" alt="" />
+  <figcaption>New firmware layout</figcaption>
+</figure>
+
+<p>All file which I used in <a href="https://drive.google.com/file/d/1kqXvFQYrolipvrrD3Rkv7J7JTZwgVHDn/view?usp=sharing">here</a></p>
+<h3 id="23-re-solder-new-flash-chip">2.3 Re-solder new flash chip</h3>
+<p>After use CH341A to program new flash chip, you can re-solder new flash chip on target board.</p>
+
+<div class="tldr flex rounded-md bg-blue-300 bg-opacity-25 px-4 my-12">
+  <div class="flex items-center">
+    <div class="-ml-2 mr-2 my-6 transform rotate-90 tracking-tighter font-semibold text-blue-400">NOTE</div>
+    <p class="lg:text-lg leading-5 text-blue-800">If your board can not booting, don't worry. You can use [Clip Socket Adapter](https://www.ebay.com/itm/SOIC8-SOP8-Flash-Chip-IC-Test-Clip-Socket-Adapter-BIOS-CH341A-USB-Programmer-/372555847443) to try program flash again with out desolder chip.</p>
+  </div>
+</div>
+
+<h2 id="3-enjoy">3. Enjoy</h2>
+<figure class="align-center">
+  <img src="https://res.cloudinary.com/crushcoding/image/upload/q_auto,f_auto/2019-02-11-upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb/software_status.jpg" alt="" />
+  <figcaption>Software with new flash chip (8MB).</figcaption>
+</figure>
+
+<div class="tldr flex rounded-md bg-blue-300 bg-opacity-25 px-4 my-12">
+  <div class="flex items-center">
+    <div class="-ml-2 mr-2 my-6 transform rotate-90 tracking-tighter font-semibold text-blue-400">NOTE</div>
+    <p class="lg:text-lg leading-5 text-blue-800">I used image come from **TL-WR841N v13.x**, except for LED will not working, everything work well (Wi-Fi, Ethernet, Router feature).</p>
+  </div>
+</div>
+
