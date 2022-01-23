@@ -28,6 +28,7 @@ include:
   - .htaccess
   - _newsletters
 markdown: kramdown
+permalink: /:title
 plugins:
 #  - jekyll-feed
   - jekyll-seo-tag
