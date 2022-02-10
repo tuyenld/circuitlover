@@ -24,7 +24,7 @@
 #   darkColor: "285e61"
 
 - name: Power electronics
-  slug: po
+  slug: pe
   color: blue
   lightColor: "bee3f8"
   darkColor: "2c5282"

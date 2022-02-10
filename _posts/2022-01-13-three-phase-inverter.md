@@ -1,6 +1,6 @@
 ---
 published: false
-category: pe
+categories: pe
 date: 2022-01-06
 description: "Three-phase inverter"
 layout: post
