@@ -34,7 +34,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1644479823">
+    <link rel="stylesheet" href="/css/site.css?v=1644486906">
 
     
 
@@ -139,18 +139,10 @@
   "posts": [
     {
       "title": "Complex number and its application in AC analysist",
-      "category": "pe",
+      "category": "",
       "date": "2022-02-10T00:00:00Z",
       "url": "/complex-number-application/",
       "description": "Complex number and its application in AC analysist",
-      "image": "/"
-    },
-    {
-      "title": "What is power factor and why is it matter?",
-      "category": "pe",
-      "date": "2022-01-06T00:00:00Z",
-      "url": "/power-factor/",
-      "description": "",
       "image": "/"
     },
     {
