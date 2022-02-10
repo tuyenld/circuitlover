@@ -36,20 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1644478003">
-
-    
-      <script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', '', {
-  anonymizeIp: true,
-});
-ga('send', 'pageview');
-</script>
+    <link rel="stylesheet" href="/css/site.css?v=1644479823">
 
     
 
@@ -138,7 +125,7 @@ ga('send', 'pageview');
 <ul>
   <li><a href="#1-sinusoidal-time-functions-and-complex-number">1. Sinusoidal time functions and complex number</a>
     <ul>
-      <li>[1.1. Complex number recap <sup id="fnref:ref1" role="doc-noteref"><a href="#fn:ref1" class="footnote">1</a></sup>](#11-complex-number-recap-ref1)</li>
+      <li><a href="#11-complex-number-recap">1.1. Complex number recap</a></li>
       <li><a href="#12-sinusoidal-time-functions">1.2. Sinusoidal Time Functions</a></li>
       <li><a href="#13-summary">1.3. Summary</a></li>
     </ul>
@@ -152,11 +139,11 @@ ga('send', 'pageview');
 
 <h2 id="1-sinusoidal-time-functions-and-complex-number">1. Sinusoidal time functions and complex number</h2>
 
-<h3 id="11-complex-number-recap-">1.1. Complex number recap <sup id="fnref:ref1:1" role="doc-noteref"><a href="#fn:ref1" class="footnote">1</a></sup></h3>
+<h3 id="11-complex-number-recap">1.1. Complex number recap</h3>
 
-<p><img src="images/representation-of-the-complex-number.png" alt="represenation of the complex number" /></p>
+<p><img src="/images/posts/representation-of-the-complex-number.png" alt="represenation of the complex number" /></p>
 
-<p>Magnitude and phase angle of the complex number $\underline{z}$ is</p>
+<p>Magnitude and phase angle of the complex number $\underline{z}$ is <sup id="fnref:ref1" role="doc-noteref"><a href="#fn:ref1" class="footnote">1</a></sup></p>
 
 \[|\underline{z}|=\sqrt{x^{2}+y^{2}} \qquad 
 \phi=\arctan \left(\frac{y}{x}\right)\]
@@ -232,8 +219,10 @@ y=|\underline{X}| \sin (\psi)\]
 
 <h3 id="13-summary">1.3. Summary</h3>
 
-<p>While, expression <code class="language-plaintext highlighter-rouge">(3) and (4)</code> are equivalent since $(\underline{X} e^{j \omega t})^{<em>} = \underline{X}^{</em>} e^{-j \omega t}$, it is advantageous to use one or the other of
-them, according to circumstances.<br />
+<p>Since 
+\((\underline{X} e^{j \omega t})^{*} = \underline{X}^{*} e^{-j \omega t}\)</p>
+
+<p>expression <code class="language-plaintext highlighter-rouge">(3) and (4)</code> are equivalent. It is advantageous to use one or the other of them, according to circumstances.<br />
 It’s easy to notice that $\underline{X}$ is time-independent. This conclusion is used when forming the relationship between voltage and current of inductor and capacitor elements.</p>
 
 <table>
@@ -278,8 +267,8 @@ It’s easy to notice that $\underline{X}$ is time-independent. This conclusion 
   </thead>
   <tbody>
     <tr>
-      <td><img src="images/Leading_lagging.jpg" alt="inductor" /></td>
-      <td><img src="images/Leading_lagging.jpg" alt="capacitor" /></td>
+      <td><img src="/images/posts/Leading_lagging.jpg" alt="inductor" /></td>
+      <td><img src="/images/posts/Leading_lagging.jpg" alt="capacitor" /></td>
     </tr>
     <tr>
       <td>Current is <code class="language-plaintext highlighter-rouge">lagging</code> voltage. (<code class="language-plaintext highlighter-rouge">L</code> means <em>Lower</em> :arrow_lower_right:)</td>
@@ -306,7 +295,7 @@ It’s easy to notice that $\underline{X}$ is time-independent. This conclusion 
 
 <h3 id="example">Example</h3>
 <p>Suppose we are to find the voltage $v(t)$ in the network, in which $i(t) = I cos(\omega t)$
-<img src="images/complex-circuit-ex.png" alt="complex number in circuit example" /></p>
+<img src="/images/posts/complex-circuit-ex.png" alt="complex number in circuit example" /></p>
 
 <p><code class="language-plaintext highlighter-rouge">Step 1.</code> Transform the input <code class="language-plaintext highlighter-rouge">In</code> into complex polar form $In \angle \phi$</p>
 
@@ -315,7 +304,7 @@ It’s easy to notice that $\underline{X}$ is time-independent. This conclusion 
 <p><code class="language-plaintext highlighter-rouge">Step 2.</code> Calculate impedance complex number 
 \(Z \| = \frac{R j \omega L}{R + j \omega L} = \frac{R \omega L}{\sqrt{R^2 + (\omega L)^2}} \angle (arctan \frac{R}{\omega L})\)</p>
 
-<p><img src="images/complex-circuit-ex-phasor.jpg" alt="phasor" /></p>
+<p><img src="/images/posts/complex-circuit-ex-phasor.jpg" alt="phasor" /></p>
 
 <p><code class="language-plaintext highlighter-rouge">Step 3. </code> We found the output voltage in the polar-exponential form</p>
 
@@ -330,7 +319,7 @@ It’s easy to notice that $\underline{X}$ is time-independent. This conclusion 
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:ref1" role="doc-endnote">
-      <p>James Kirtley Jr.. <em>6.061 Introduction to Electric Power Systems.</em> Spring 2011. Massachusetts Institute of Technology: MIT OpenCourseWare, <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-061-introduction-to-electric-power-systems-spring-2011">https://ocw.mit.edu</a>. License: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA</a>. <a href="#fnref:ref1" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:ref1:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+      <p>James Kirtley Jr.. <em>6.061 Introduction to Electric Power Systems.</em> Spring 2011. Massachusetts Institute of Technology: MIT OpenCourseWare, <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-061-introduction-to-electric-power-systems-spring-2011">https://ocw.mit.edu</a>. License: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA</a>. <a href="#fnref:ref1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>

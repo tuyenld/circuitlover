@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-02-10T07:26:42+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Complex number and its application in AC analysist</title><link href="https://circuitlover.com/complex-number-application/" rel="alternate" type="text/html" title="Complex number and its application in AC analysist" /><published>2022-02-10T00:00:00+00:00</published><updated>2022-02-10T00:00:00+00:00</updated><id>https://circuitlover.com/sinusoidal-and-complex-number</id><content type="html" xml:base="https://circuitlover.com/complex-number-application/">&lt;p&gt;Table of contents&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-02-10T07:57:03+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Complex number and its application in AC analysist</title><link href="https://circuitlover.com/complex-number-application/" rel="alternate" type="text/html" title="Complex number and its application in AC analysist" /><published>2022-02-10T00:00:00+00:00</published><updated>2022-02-10T00:00:00+00:00</updated><id>https://circuitlover.com/sinusoidal-and-complex-number</id><content type="html" xml:base="https://circuitlover.com/complex-number-application/">&lt;p&gt;Table of contents&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#1-sinusoidal-time-functions-and-complex-number&quot;&gt;1. Sinusoidal time functions and complex number&lt;/a&gt;
     &lt;ul&gt;
-      &lt;li&gt;[1.1. Complex number recap &lt;sup id=&quot;fnref:ref1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:ref1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;](#11-complex-number-recap-ref1)&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#11-complex-number-recap&quot;&gt;1.1. Complex number recap&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#12-sinusoidal-time-functions&quot;&gt;1.2. Sinusoidal Time Functions&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#13-summary&quot;&gt;1.3. Summary&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
@@ -16,11 +16,11 @@
 
 &lt;h2 id=&quot;1-sinusoidal-time-functions-and-complex-number&quot;&gt;1. Sinusoidal time functions and complex number&lt;/h2&gt;
 
-&lt;h3 id=&quot;11-complex-number-recap-&quot;&gt;1.1. Complex number recap &lt;sup id=&quot;fnref:ref1:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:ref1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;11-complex-number-recap&quot;&gt;1.1. Complex number recap&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;images/representation-of-the-complex-number.png&quot; alt=&quot;represenation of the complex number&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/representation-of-the-complex-number.png&quot; alt=&quot;represenation of the complex number&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Magnitude and phase angle of the complex number $\underline{z}$ is&lt;/p&gt;
+&lt;p&gt;Magnitude and phase angle of the complex number $\underline{z}$ is &lt;sup id=&quot;fnref:ref1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:ref1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 \[|\underline{z}|=\sqrt{x^{2}+y^{2}} \qquad 
 \phi=\arctan \left(\frac{y}{x}\right)\]
@@ -96,8 +96,10 @@ y=|\underline{X}| \sin (\psi)\]
 
 &lt;h3 id=&quot;13-summary&quot;&gt;1.3. Summary&lt;/h3&gt;
 
-&lt;p&gt;While, expression &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(3) and (4)&lt;/code&gt; are equivalent since $(\underline{X} e^{j \omega t})^{&lt;em&gt;} = \underline{X}^{&lt;/em&gt;} e^{-j \omega t}$, it is advantageous to use one or the other of
-them, according to circumstances.&lt;br /&gt;
+&lt;p&gt;Since 
+\((\underline{X} e^{j \omega t})^{*} = \underline{X}^{*} e^{-j \omega t}\)&lt;/p&gt;
+
+&lt;p&gt;expression &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(3) and (4)&lt;/code&gt; are equivalent. It is advantageous to use one or the other of them, according to circumstances.&lt;br /&gt;
 It’s easy to notice that $\underline{X}$ is time-independent. This conclusion is used when forming the relationship between voltage and current of inductor and capacitor elements.&lt;/p&gt;
 
 &lt;table&gt;
@@ -142,8 +144,8 @@ It’s easy to notice that $\underline{X}$ is time-independent. This conclusion 
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;images/Leading_lagging.jpg&quot; alt=&quot;inductor&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;images/Leading_lagging.jpg&quot; alt=&quot;capacitor&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/posts/Leading_lagging.jpg&quot; alt=&quot;inductor&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/posts/Leading_lagging.jpg&quot; alt=&quot;capacitor&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Current is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lagging&lt;/code&gt; voltage. (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;L&lt;/code&gt; means &lt;em&gt;Lower&lt;/em&gt; :arrow_lower_right:)&lt;/td&gt;
@@ -170,7 +172,7 @@ It’s easy to notice that $\underline{X}$ is time-independent. This conclusion 
 
 &lt;h3 id=&quot;example&quot;&gt;Example&lt;/h3&gt;
 &lt;p&gt;Suppose we are to find the voltage $v(t)$ in the network, in which $i(t) = I cos(\omega t)$
-&lt;img src=&quot;images/complex-circuit-ex.png&quot; alt=&quot;complex number in circuit example&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/images/posts/complex-circuit-ex.png&quot; alt=&quot;complex number in circuit example&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Step 1.&lt;/code&gt; Transform the input &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;In&lt;/code&gt; into complex polar form $In \angle \phi$&lt;/p&gt;
 
@@ -179,7 +181,7 @@ It’s easy to notice that $\underline{X}$ is time-independent. This conclusion 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Step 2.&lt;/code&gt; Calculate impedance complex number 
 \(Z \| = \frac{R j \omega L}{R + j \omega L} = \frac{R \omega L}{\sqrt{R^2 + (\omega L)^2}} \angle (arctan \frac{R}{\omega L})\)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;images/complex-circuit-ex-phasor.jpg&quot; alt=&quot;phasor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/complex-circuit-ex-phasor.jpg&quot; alt=&quot;phasor&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Step 3. &lt;/code&gt; We found the output voltage in the polar-exponential form&lt;/p&gt;
 
@@ -194,10 +196,10 @@ It’s easy to notice that $\underline{X}$ is time-independent. This conclusion 
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:ref1&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;James Kirtley Jr.. &lt;em&gt;6.061 Introduction to Electric Power Systems.&lt;/em&gt; Spring 2011. Massachusetts Institute of Technology: MIT OpenCourseWare, &lt;a href=&quot;https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-061-introduction-to-electric-power-systems-spring-2011&quot;&gt;https://ocw.mit.edu&lt;/a&gt;. License: &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;Creative Commons BY-NC-SA&lt;/a&gt;. &lt;a href=&quot;#fnref:ref1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:ref1:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;James Kirtley Jr.. &lt;em&gt;6.061 Introduction to Electric Power Systems.&lt;/em&gt; Spring 2011. Massachusetts Institute of Technology: MIT OpenCourseWare, &lt;a href=&quot;https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-061-introduction-to-electric-power-systems-spring-2011&quot;&gt;https://ocw.mit.edu&lt;/a&gt;. License: &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;Creative Commons BY-NC-SA&lt;/a&gt;. &lt;a href=&quot;#fnref:ref1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents 1. Sinusoidal time functions and complex number [1.1. Complex number recap 1](#11-complex-number-recap-ref1) 1.2. Sinusoidal Time Functions 1.3. Summary 2. Impedance Example James Kirtley Jr.. 6.061 Introduction to Electric Power Systems. Spring 2011. Massachusetts Institute of Technology: MIT OpenCourseWare, https://ocw.mit.edu. License: Creative Commons BY-NC-SA. &amp;#8617;</summary></entry><entry><title type="html">What is power factor and why is it matter?</title><link href="https://circuitlover.com/power-factor/" rel="alternate" type="text/html" title="What is power factor and why is it matter?" /><published>2022-01-06T00:00:00+00:00</published><updated>2022-01-06T00:00:00+00:00</updated><id>https://circuitlover.com/power-factor</id><content type="html" xml:base="https://circuitlover.com/power-factor/">&lt;h2 id=&quot;notification-box&quot;&gt;Notification box&lt;/h2&gt;
+&lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents 1. Sinusoidal time functions and complex number 1.1. Complex number recap 1.2. Sinusoidal Time Functions 1.3. Summary 2. Impedance Example</summary></entry><entry><title type="html">What is power factor and why is it matter?</title><link href="https://circuitlover.com/power-factor/" rel="alternate" type="text/html" title="What is power factor and why is it matter?" /><published>2022-01-06T00:00:00+00:00</published><updated>2022-01-06T00:00:00+00:00</updated><id>https://circuitlover.com/power-factor</id><content type="html" xml:base="https://circuitlover.com/power-factor/">&lt;h2 id=&quot;notification-box&quot;&gt;Notification box&lt;/h2&gt;
 
 &lt;div class=&quot;max-w-sm mx-auto&quot;&gt;
   &lt;img src=&quot;/images/posts/Decreased_power_factor.jpg&quot; alt=&quot;Power factor&quot; class=&quot;rounded-lg shadow-lg mb-0 lg:mb-0&quot; /&gt;
