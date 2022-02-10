@@ -34,7 +34,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1644486906">
+    <link rel="stylesheet" href="/css/site.css?v=1644487226">
 
     
 
@@ -118,7 +118,7 @@
   "categories": [
     {
       "name": "Power electronics",
-      "slug": "po",
+      "slug": "pe",
       "lightColor": "bee3f8",
       "darkColor": "2c5282"
     },
