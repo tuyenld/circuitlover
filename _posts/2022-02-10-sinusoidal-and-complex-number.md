@@ -1,7 +1,7 @@
 ---
 categories: pe
 date: 2022-02-10
-description: "Complex number and its application in AC analysist"
+description: "How to use complex number to simplify the AC circuit analysist"
 layout: post
 permalink: complex-number-application/
 title: Complex number and its application in AC analysist

@@ -6,6 +6,7 @@ description: "Three-phase inverter"
 layout: post
 permalink: three-phase-inverter/
 title: The fundamental of three phase inverter?
+comments: true
 ---
 
 # Vector space and three-phase inverter

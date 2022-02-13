@@ -3,6 +3,7 @@ published: false
 title: What is power factor and why is it matter?
 categories: pe
 permalink: power-factor/
+comments: true
 ---
 
 
