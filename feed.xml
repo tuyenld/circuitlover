@@ -1,4 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-02-10T10:00:26+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Complex number and its application in AC analysist</title><link href="https://circuitlover.com/complex-number-application/" rel="alternate" type="text/html" title="Complex number and its application in AC analysist" /><published>2022-02-10T00:00:00+00:00</published><updated>2022-02-10T00:00:00+00:00</updated><id>https://circuitlover.com/sinusoidal-and-complex-number</id><content type="html" xml:base="https://circuitlover.com/complex-number-application/">&lt;p&gt;Table of contents&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-02-13T21:42:41+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">MOSFET</title><link href="https://circuitlover.com/mosfet/" rel="alternate" type="text/html" title="MOSFET" /><published>2022-02-13T00:00:00+00:00</published><updated>2022-02-13T00:00:00+00:00</updated><id>https://circuitlover.com/MOSFET</id><content type="html" xml:base="https://circuitlover.com/mosfet/">&lt;p&gt;Table of contents&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#n-channel-mosfet&quot;&gt;N-channel MOSFET&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#physical-view&quot;&gt;Physical view&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#electrical-view&quot;&gt;Electrical view&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#circuit-symbol&quot;&gt;Circuit symbol&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#references&quot;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;n-channel-mosfet&quot;&gt;N-channel MOSFET&lt;/h1&gt;
+
+&lt;h2 id=&quot;physical-view&quot;&gt;Physical view&lt;/h2&gt;
+
+&lt;p&gt;Current flows between diffusion terminals if the voltage on the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gate&lt;/code&gt; large enough to create a &lt;strong&gt;conducting channel&lt;/strong&gt;, otherwise the MOSFET is off and the diffusion terminals are not connected. &lt;sup id=&quot;fnref:ref1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:ref1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/mosfet/nmosfet-physical-view.png&quot; alt=&quot;physical view&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;electrical-view&quot;&gt;Electrical view&lt;/h2&gt;
+
+&lt;p&gt;The four terminals of a Field Effect Transitor are &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gate&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Source&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Drain&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Bulk&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/mosfet/nmosfet-electrical-view.png&quot; alt=&quot;electrical view&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;circuit-symbol&quot;&gt;Circuit symbol&lt;/h2&gt;
+
+&lt;p&gt;MOSFET and JFET circuit symbols&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;P-channel&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/posts/mosfet/JFET_P-Channel_Labelled.svg&quot; alt=&quot;s&quot; /&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/posts/mosfet/IGFET_P-Ch_Enh_Labelled.svg&quot; alt=&quot;d&quot; /&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/posts/mosfet/IGFET_P-Ch_Enh_Labelled_simplified.svg&quot; alt=&quot;d&quot; /&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/posts/mosfet/Mosfet_P-Ch_Sedra.svg&quot; alt=&quot;f&quot; /&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;img src=&quot;/images/posts/mosfet/IGFET_P-Ch_Dep_Labelled.svg&quot; alt=&quot;f&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;N-channel&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/posts/mosfet/JFET_N-Channel_Labelled.svg&quot; alt=&quot;d&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/posts/mosfet/IGFET_N-Ch_Enh_Labelled.svg&quot; alt=&quot;e&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/posts/mosfet/IGFET_N-Ch_Enh_Labelled_simplified.svg&quot; alt=&quot;e&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/posts/mosfet/Mosfet_N-Ch_Sedra.svg&quot; alt=&quot;r&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/posts/mosfet/IGFET_N-Ch_Dep_Labelled.svg&quot; alt=&quot;r&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;JFET&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;MOSFET enhancement mode&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;MOSFET enhancement mode (no bulk)&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;MOSFET enhancement mode (no bulk)&lt;/td&gt;
+      &lt;td&gt;MOSFET depletion mode&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:ref1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Chris Terman. &lt;em&gt;6.004 Computation Structures.&lt;/em&gt; Spring 2017. Massachusetts Institute of Technology: MIT OpenCourseWare, &lt;a href=&quot;https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-004-computation-structures-spring-2017&quot;&gt;https://ocw.mit.edu&lt;/a&gt;. License: &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;Creative Commons BY-NC-SA&lt;/a&gt;. &lt;a href=&quot;#fnref:ref1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents N-channel MOSFET Physical view Electrical view Circuit symbol References</summary></entry><entry><title type="html">Complex number and its application in AC analysist</title><link href="https://circuitlover.com/complex-number-application/" rel="alternate" type="text/html" title="Complex number and its application in AC analysist" /><published>2022-02-10T00:00:00+00:00</published><updated>2022-02-10T00:00:00+00:00</updated><id>https://circuitlover.com/sinusoidal-and-complex-number</id><content type="html" xml:base="https://circuitlover.com/complex-number-application/">&lt;p&gt;Table of contents&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#1-sinusoidal-time-functions-and-complex-number&quot;&gt;1. Sinusoidal time functions and complex number&lt;/a&gt;
     &lt;ul&gt;

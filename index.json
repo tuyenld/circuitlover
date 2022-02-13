@@ -34,7 +34,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1644487226">
+    <link rel="stylesheet" href="/css/site.css?v=1644788561">
 
     
 
@@ -113,7 +113,7 @@
     "intro": "Hi! 👋 I'm Dinh-Tuyen Le, I'm interested in embedded system.",
     "hero-1": "I would love to work together!",
     "hero-2": "Send me an email to get in touch.",
-    "cta": "Email Tuyen"
+    "cta": "Email Le"
   },
   "categories": [
     {
@@ -138,11 +138,19 @@
   ],
   "posts": [
     {
+      "title": "MOSFET",
+      "category": "",
+      "date": "2022-02-13T00:00:00Z",
+      "url": "/mosfet/",
+      "description": "Some notes about MOSFET",
+      "image": "/"
+    },
+    {
       "title": "Complex number and its application in AC analysist",
       "category": "",
       "date": "2022-02-10T00:00:00Z",
       "url": "/complex-number-application/",
-      "description": "Complex number and its application in AC analysist",
+      "description": "How to use complex number to simplify the AC circuit analysist",
       "image": "/"
     },
     {
