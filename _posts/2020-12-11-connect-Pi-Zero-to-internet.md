@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Connect Raspberry Pi Zero (not W) to the Internet
-categories: pi
+category: pi
 comments: true
 description: "How to connect Pi Zero to the Internet without using any extra devices."
 ---

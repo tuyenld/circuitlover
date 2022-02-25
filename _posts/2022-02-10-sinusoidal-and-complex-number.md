@@ -1,5 +1,5 @@
 ---
-categories: pe
+category: pe
 date: 2022-02-10
 description: "How to use complex number to simplify the AC circuit analysist."
 layout: post

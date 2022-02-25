@@ -1,6 +1,6 @@
 ---
 published: false
-categories: pe
+category: pe
 date: 2022-01-06
 description: "Single-phase and three-phase PWM inverter."
 layout: post

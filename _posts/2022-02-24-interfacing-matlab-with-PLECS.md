@@ -1,7 +1,7 @@
 ---
 title: "Interfacing Matlab Simulink with Plexim PLECS"
 description: "How to interface Matlab Simulink with Plexim PLECS"
-categories: pe
+category: pe
 layout: post
 maths: false
 comments: true

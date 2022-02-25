@@ -1,7 +1,7 @@
 ---
 title: "Control of grid connected inverter"
 description: ""
-categories: pe
+category: pe
 layout: post
 maths: false
 comments: true
