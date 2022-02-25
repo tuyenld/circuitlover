@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-02-13T21:42:41+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">MOSFET</title><link href="https://circuitlover.com/mosfet/" rel="alternate" type="text/html" title="MOSFET" /><published>2022-02-13T00:00:00+00:00</published><updated>2022-02-13T00:00:00+00:00</updated><id>https://circuitlover.com/MOSFET</id><content type="html" xml:base="https://circuitlover.com/mosfet/">&lt;p&gt;Table of contents&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-02-25T23:14:48+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">MOSFET and IGBT</title><link href="https://circuitlover.com/mosfet-igbt/" rel="alternate" type="text/html" title="MOSFET and IGBT" /><published>2022-02-13T00:00:00+00:00</published><updated>2022-02-13T00:00:00+00:00</updated><id>https://circuitlover.com/MOSFET</id><content type="html" xml:base="https://circuitlover.com/mosfet-igbt/">&lt;p&gt;Table of contents&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#n-channel-mosfet&quot;&gt;N-channel MOSFET&lt;/a&gt;
     &lt;ul&gt;
@@ -14,7 +14,7 @@
 
 &lt;h2 id=&quot;physical-view&quot;&gt;Physical view&lt;/h2&gt;
 
-&lt;p&gt;Current flows between diffusion terminals if the voltage on the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gate&lt;/code&gt; large enough to create a &lt;strong&gt;conducting channel&lt;/strong&gt;, otherwise the MOSFET is off and the diffusion terminals are not connected. &lt;sup id=&quot;fnref:ref1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:ref1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Current flows between diffusion terminals if the voltage on the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gate&lt;/code&gt; large enough to create a &lt;strong&gt;conducting channel&lt;/strong&gt;, otherwise the MOSFET is off and the diffusion terminals are not connected. &lt;sup id=&quot;fnref:ref1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:ref1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/mosfet/nmosfet-physical-view.png&quot; alt=&quot;physical view&quot; /&gt;&lt;/p&gt;
 
@@ -50,20 +50,32 @@
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;JFET&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;JFET (they are only in depletion mode)&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;MOSFET enhancement mode&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;MOSFET enhancement mode (no bulk)&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;MOSFET enhancement mode (no bulk)&lt;/td&gt;
-      &lt;td&gt;MOSFET depletion mode&lt;/td&gt;
+      &lt;td&gt;MOSFET depletion mode (switched on)&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;div class=&quot;tldr flex rounded-md bg-blue-300 bg-opacity-25 px-4 my-12&quot;&gt;
+  &lt;div class=&quot;flex items-center&quot;&gt;
+    &lt;div class=&quot;-ml-2 mr-2 my-6 transform rotate-90 tracking-tighter font-semibold text-blue-400&quot;&gt;TRICK&lt;/div&gt;
+    &lt;p class=&quot;lg:text-lg leading-5 text-blue-800&quot;&gt;The arrow forms the pn junction from `buck` to `gate` in the symbol of MOSFET&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;When a channel exists in a MOSFET, current can flow from source to drain as well as from drain to source - it’s just a matter of how the device is connected in the circuit &lt;sup id=&quot;fnref:ref2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:ref2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Conventional current flows from Drain to Source in an N Channel MOSFET.&lt;/p&gt;
 
 &lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:ref1&quot; role=&quot;doc-endnote&quot;&gt;
       &lt;p&gt;Chris Terman. &lt;em&gt;6.004 Computation Structures.&lt;/em&gt; Spring 2017. Massachusetts Institute of Technology: MIT OpenCourseWare, &lt;a href=&quot;https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-004-computation-structures-spring-2017&quot;&gt;https://ocw.mit.edu&lt;/a&gt;. License: &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;Creative Commons BY-NC-SA&lt;/a&gt;. &lt;a href=&quot;#fnref:ref1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:ref2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Adam Lawrence (https://electronics.stackexchange.com/users/1293/adam-lawrence), In an NMOS, does current flow from source to drain or vice-versa?, URL (version: 2012-11-11): https://electronics.stackexchange.com/q/48671 &lt;a href=&quot;#fnref:ref2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents N-channel MOSFET Physical view Electrical view Circuit symbol References</summary></entry><entry><title type="html">Complex number and its application in AC analysist</title><link href="https://circuitlover.com/complex-number-application/" rel="alternate" type="text/html" title="Complex number and its application in AC analysist" /><published>2022-02-10T00:00:00+00:00</published><updated>2022-02-10T00:00:00+00:00</updated><id>https://circuitlover.com/sinusoidal-and-complex-number</id><content type="html" xml:base="https://circuitlover.com/complex-number-application/">&lt;p&gt;Table of contents&lt;/p&gt;
@@ -88,7 +100,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/representation-of-the-complex-number.png&quot; alt=&quot;represenation of the complex number&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Magnitude and phase angle of the complex number $\underline{z}$ is &lt;sup id=&quot;fnref:ref1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:ref1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Magnitude and phase angle of the complex number $\underline{z}$ is &lt;sup id=&quot;fnref:ref1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:ref1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 \[|\underline{z}|=\sqrt{x^{2}+y^{2}} \qquad 
 \phi=\arctan \left(\frac{y}{x}\right)\]
@@ -267,10 +279,10 @@ It’s easy to notice that $\underline{X}$ is time-independent. This conclusion 
       &lt;p&gt;James Kirtley Jr.. &lt;em&gt;6.061 Introduction to Electric Power Systems.&lt;/em&gt; Spring 2011. Massachusetts Institute of Technology: MIT OpenCourseWare, &lt;a href=&quot;https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-061-introduction-to-electric-power-systems-spring-2011&quot;&gt;https://ocw.mit.edu&lt;/a&gt;. License: &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;Creative Commons BY-NC-SA&lt;/a&gt;. &lt;a href=&quot;#fnref:ref1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents 1. Sinusoidal time functions and complex number 1.1. Complex number recap 1.2. Sinusoidal Time Functions 1.3. Summary 2. Impedance Example</summary></entry><entry><title type="html">Connect Raspberry Pi Zero (not W) to the Internet</title><link href="https://circuitlover.com/connect-Pi-Zero-to-internet" rel="alternate" type="text/html" title="Connect Raspberry Pi Zero (not W) to the Internet" /><published>2020-12-11T00:00:00+00:00</published><updated>2020-12-11T00:00:00+00:00</updated><id>https://circuitlover.com/connect-Pi-Zero-to-internet</id><content type="html" xml:base="https://circuitlover.com/connect-Pi-Zero-to-internet">&lt;p&gt;Raspi Zero (not W) have neither Wi-Fi no Ethernet, how could we want to update our board on the fly? 
+&lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents 1. Sinusoidal time functions and complex number 1.1. Complex number recap 1.2. Sinusoidal Time Functions 1.3. Summary 2. Impedance Example</summary></entry><entry><title type="html">Connect Raspberry Pi Zero (not W) to the Internet</title><link href="https://circuitlover.com/connect-Pi-Zero-to-internet" rel="alternate" type="text/html" title="Connect Raspberry Pi Zero (not W) to the Internet" /><published>2020-12-11T00:00:00+00:00</published><updated>2020-12-11T00:00:00+00:00</updated><id>https://circuitlover.com/connect-Pi-Zero-to-internet</id><content type="html" xml:base="https://circuitlover.com/connect-Pi-Zero-to-internet">&lt;p&gt;Raspi Zero (not W) have neither Wi-Fi nor Ethernet, so how could we want to update our board on the fly? 
 Well, we can create a virtual Ethernet interface. I’ll show you how to do it.&lt;/p&gt;
 
-&lt;p&gt;The network topology I’m going to deploy as following.&lt;/p&gt;
+&lt;p&gt;The network topology I’m going to deploy it as follows.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/Pi-Zero-internet.jpg&quot; alt=&quot;Pi Zero Internet&quot; /&gt;&lt;/p&gt;
 
@@ -390,7 +402,7 @@ PING google.com &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;172.217.24.46&lt;s
 2 packets transmitted, 2 received, 0% packet loss, &lt;span class=&quot;nb&quot;&gt;time &lt;/span&gt;1001ms
 rtt min/avg/max/mdev &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 23.672/23.750/23.829/0.172 ms
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Done! Now you could use the Internet on your Pi Zero.&lt;/p&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pi" /><summary type="html">Raspi Zero (not W) have neither Wi-Fi no Ethernet, how could we want to update our board on the fly? Well, we can create a virtual Ethernet interface. I’ll show you how to do it.</summary></entry><entry><title type="html">How to upgrade flash chip on TPLink TL-WR840N v5.</title><link href="https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb" rel="alternate" type="text/html" title="How to upgrade flash chip on TPLink TL-WR840N v5." /><published>2019-02-11T00:00:00+00:00</published><updated>2019-02-11T00:00:00+00:00</updated><id>https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb</id><content type="html" xml:base="https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb">&lt;p&gt;Upgrade TP-Link flash chip on TP-Link from 4mb to 8mb&lt;/p&gt;
+&lt;p&gt;Done! Now you could use the Internet on your Pi Zero.&lt;/p&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pi" /><summary type="html">Raspi Zero (not W) have neither Wi-Fi nor Ethernet, so how could we want to update our board on the fly? Well, we can create a virtual Ethernet interface. I’ll show you how to do it.</summary></entry><entry><title type="html">How to upgrade flash chip on TPLink TL-WR840N v5.</title><link href="https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb" rel="alternate" type="text/html" title="How to upgrade flash chip on TPLink TL-WR840N v5." /><published>2019-02-11T00:00:00+00:00</published><updated>2019-02-11T00:00:00+00:00</updated><id>https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb</id><content type="html" xml:base="https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb">&lt;p&gt;Upgrade TP-Link flash chip on TP-Link from 4mb to 8mb&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Table of content&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;

@@ -5,24 +5,24 @@
     <meta charset="utf-8">
     <link type="application/atom+xml" rel="alternate" href="https://circuitlover.com/feed.xml" title="circuitlover.com" />
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>MOSFET | circuitlover.com</title>
+<title>MOSFET and IGBT | circuitlover.com</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="MOSFET" />
+<meta property="og:title" content="MOSFET and IGBT" />
 <meta name="author" content="Dinh-Tuyen Le" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Some notes about MOSFET" />
-<meta property="og:description" content="Some notes about MOSFET" />
-<link rel="canonical" href="https://circuitlover.com/mosfet/" />
-<meta property="og:url" content="https://circuitlover.com/mosfet/" />
+<meta name="description" content="MOSFET and IGBT structure and how to use them properly." />
+<meta property="og:description" content="MOSFET and IGBT structure and how to use them properly." />
+<link rel="canonical" href="https://circuitlover.com/mosfet-igbt/" />
+<meta property="og:url" content="https://circuitlover.com/mosfet-igbt/" />
 <meta property="og:site_name" content="circuitlover.com" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-02-13T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="MOSFET" />
+<meta property="twitter:title" content="MOSFET and IGBT" />
 <meta name="twitter:site" content="@tuyen_ld" />
 <meta name="twitter:creator" content="@tuyen_ld" />
 <script type="application/ld+json">
-{"headline":"MOSFET","description":"Some notes about MOSFET","datePublished":"2022-02-13T00:00:00+00:00","dateModified":"2022-02-13T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://circuitlover.com/mosfet/"},"url":"https://circuitlover.com/mosfet/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://circuitlover.com/images/avatar-circle.png"},"name":"Dinh-Tuyen Le"},"author":{"@type":"Person","name":"Dinh-Tuyen Le"},"@context":"https://schema.org"}</script>
+{"description":"MOSFET and IGBT structure and how to use them properly.","@type":"BlogPosting","headline":"MOSFET and IGBT","dateModified":"2022-02-13T00:00:00+00:00","datePublished":"2022-02-13T00:00:00+00:00","url":"https://circuitlover.com/mosfet-igbt/","mainEntityOfPage":{"@type":"WebPage","@id":"https://circuitlover.com/mosfet-igbt/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://circuitlover.com/images/avatar-circle.png"},"name":"Dinh-Tuyen Le"},"author":{"@type":"Person","name":"Dinh-Tuyen Le"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta property="author" content="Dinh-Tuyen Le">
@@ -36,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1644788561">
+    <link rel="stylesheet" href="/css/site.css?v=1645830888">
 
     
 
@@ -85,7 +85,7 @@
   </div>
 
   <h1 class="text-center p-name mx-auto mb-4 lg:mb-8">
-    <a href="/mosfet/" class="u-url no-underline">MOSFET</a>
+    <a href="/mosfet-igbt/" class="u-url no-underline">MOSFET and IGBT</a>
   </h1>
 
   <div class="flex justify-center space-x-8 sm:space-x-12">
@@ -107,7 +107,7 @@
 
 
   <p class="inline-block text-sm rounded-full bg-green-200 bg-opacity-25 text-green-800 px-4 py-2">
-    1 minute read
+    2 minute read
   </p>
 
 
@@ -130,7 +130,7 @@
 
 <h2 id="physical-view">Physical view</h2>
 
-<p>Current flows between diffusion terminals if the voltage on the <code class="language-plaintext highlighter-rouge">Gate</code> large enough to create a <strong>conducting channel</strong>, otherwise the MOSFET is off and the diffusion terminals are not connected. <sup id="fnref:ref1" role="doc-noteref"><a href="#fn:ref1" class="footnote">1</a></sup></p>
+<p>Current flows between diffusion terminals if the voltage on the <code class="language-plaintext highlighter-rouge">Gate</code> large enough to create a <strong>conducting channel</strong>, otherwise the MOSFET is off and the diffusion terminals are not connected. <sup id="fnref:ref1" role="doc-noteref"><a href="#fn:ref1" class="footnote" rel="footnote">1</a></sup></p>
 
 <p><img src="/images/posts/mosfet/nmosfet-physical-view.png" alt="physical view" /></p>
 
@@ -166,20 +166,32 @@
     </tr>
     <tr>
       <td style="text-align: center"> </td>
-      <td style="text-align: center">JFET</td>
+      <td style="text-align: center">JFET (they are only in depletion mode)</td>
       <td style="text-align: center">MOSFET enhancement mode</td>
       <td style="text-align: center">MOSFET enhancement mode (no bulk)</td>
       <td style="text-align: center">MOSFET enhancement mode (no bulk)</td>
-      <td>MOSFET depletion mode</td>
+      <td>MOSFET depletion mode (switched on)</td>
     </tr>
   </tbody>
 </table>
+
+<div class="tldr flex rounded-md bg-blue-300 bg-opacity-25 px-4 my-12">
+  <div class="flex items-center">
+    <div class="-ml-2 mr-2 my-6 transform rotate-90 tracking-tighter font-semibold text-blue-400">TRICK</div>
+    <p class="lg:text-lg leading-5 text-blue-800">The arrow forms the pn junction from `buck` to `gate` in the symbol of MOSFET</p>
+  </div>
+</div>
+
+<p>When a channel exists in a MOSFET, current can flow from source to drain as well as from drain to source - it’s just a matter of how the device is connected in the circuit <sup id="fnref:ref2" role="doc-noteref"><a href="#fn:ref2" class="footnote" rel="footnote">2</a></sup>. Conventional current flows from Drain to Source in an N Channel MOSFET.</p>
 
 <h1 id="references">References</h1>
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:ref1" role="doc-endnote">
       <p>Chris Terman. <em>6.004 Computation Structures.</em> Spring 2017. Massachusetts Institute of Technology: MIT OpenCourseWare, <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-004-computation-structures-spring-2017">https://ocw.mit.edu</a>. License: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA</a>. <a href="#fnref:ref1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:ref2" role="doc-endnote">
+      <p>Adam Lawrence (https://electronics.stackexchange.com/users/1293/adam-lawrence), In an NMOS, does current flow from source to drain or vice-versa?, URL (version: 2012-11-11): https://electronics.stackexchange.com/q/48671 <a href="#fnref:ref2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -205,32 +217,31 @@
   
 
   
-  <!-- <div class="sm:pt-4">
-  <h2 class="text-3xl lg:text-3xl leading-9 font-extrabold tracking-tight text-gray-900">
-    Testing, development, and product sneak peeks.
-    <br class="hidden sm:inline">
-    <span class="text-green-600">Sign up for my monthly newsletter.</span>
-  </h2>
-
-  <form class="sm:flex" action="https://static.mailerlite.com/webforms/submit/p1q2b1" data-code="p1q2b1" method="post" target="_blank">
-    <input aria-label="Email address" type="email" name="fields[email]" autocomplete="email" placeholder="Enter your email" required class="appearance-none w-full px-5 py-3 border border-gray-300 text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:ring focus:border-green-300 transition duration-150 ease-in-out sm:max-w-xs">
-    <input type="hidden" name="ml-submit" value="1">
-
-    <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-      <button class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:bg-green-400 transition duration-150 ease-in-out">
-        Sign up
-      </button>
+  <!-- <div class="bg-white">
+  <div class="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:py-32 lg:px-8 lg:flex lg:items-center">
+    <div class="lg:w-0 lg:flex-1">
+      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        Sign up for the ⚡️ <a href="/hotwire" class="underline">Hotwire dev newsletter</a>
+      </h2>
+      <p class="mt-3 max-w-3xl text-lg text-gray-600">
+        A monthly newsletter on Turbo (Native), Stimulus, and Strada articles, code, courses, and more. Plus, exclusive insights into how I build Turbo Native apps.
+      </p>
     </div>
-
-    
-      <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-        
-        <a href="/" class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-green-600 bg-white hover:bg-gray-50 no-underline">
-          Read the latest
-        </a>
-      </div>
-    
-  </form>
+    <div class="mt-8 lg:mt-0 lg:ml-8">
+      <form action="https://www.getrevue.co/profile/hotwire/add_subscriber" method="post" target="_blank" class="sm:flex">
+        <label for="email-address" class="sr-only">Email address</label>
+        <input id="email-address" name="member[email]" type="email" autocomplete="email" placeholder="Enter your email" required class="w-full px-5 py-3 border border-gray-300 shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-green-500 focus:border-green-500 sm:max-w-xs rounded-md" placeholder="Enter your email">
+        <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+          <button type="submit" name="member[subscribe]" class="w-full flex items-center justify-center py-3 px-5 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+            Notify me
+          </button>
+        </div>
+      </form>
+      <p class="mt-3 text-xs text-gray-600">
+        By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms" class="hover:text-gray-800">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy" class="hover:text-gray-800">Privacy Policy</a>.
+      </p>
+    </div>
+  </div>
 </div>
  -->
 </article>
