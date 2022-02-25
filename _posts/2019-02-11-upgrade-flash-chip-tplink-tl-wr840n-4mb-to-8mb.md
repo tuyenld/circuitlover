@@ -1,5 +1,6 @@
 ---
 title: "How to upgrade flash chip on TPLink TL-WR840N v5."
+description: "TPLink TL-WR840N v5 came with only 4Mb of flash, it was not enough for me. I want more functionality on this device, so I decided to upgrade its flash to 8Mb."
 categories: uncategorized
 tags: [TL-WR840N]
 comments: true

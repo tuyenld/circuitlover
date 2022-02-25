@@ -3,13 +3,14 @@ layout: post
 title: Connect Raspberry Pi Zero (not W) to the Internet
 categories: pi
 comments: true
+description: "How to connect Pi Zero to the Internet without using any extra devices."
 ---
 
 
-Raspi Zero (not W) have neither Wi-Fi no Ethernet, how could we want to update our board on the fly? 
+Raspi Zero (not W) have neither Wi-Fi nor Ethernet, so how could we want to update our board on the fly? 
 Well, we can create a virtual Ethernet interface. I'll show you how to do it.
 
-The network topology I'm going to deploy as following.
+The network topology I'm going to deploy it as follows.
 
 ![Pi Zero Internet](/images/posts/Pi-Zero-internet.jpg)
 
