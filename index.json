@@ -34,7 +34,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1645830888">
+    <link rel="stylesheet" href="/css/site.css?v=1645832392">
 
     
 
@@ -143,7 +143,7 @@
   "posts": [
     {
       "title": "MOSFET and IGBT",
-      "category": "",
+      "category": "pe",
       "date": "2022-02-13T00:00:00Z",
       "url": "/mosfet-igbt/",
       "description": "MOSFET and IGBT structure and how to use them properly.",
@@ -151,7 +151,7 @@
     },
     {
       "title": "Complex number and its application in AC analysist",
-      "category": "",
+      "category": "pe",
       "date": "2022-02-10T00:00:00Z",
       "url": "/complex-number-application/",
       "description": "How to use complex number to simplify the AC circuit analysist.",
@@ -159,7 +159,7 @@
     },
     {
       "title": "Connect Raspberry Pi Zero (not W) to the Internet",
-      "category": "",
+      "category": "pi",
       "date": "2020-12-11T00:00:00Z",
       "url": "/connect-Pi-Zero-to-internet",
       "description": "How to connect Pi Zero to the Internet without using any extra devices.",
@@ -167,7 +167,7 @@
     },
     {
       "title": "How to upgrade flash chip on TPLink TL-WR840N v5.",
-      "category": "",
+      "category": "uncategorized",
       "date": "2019-02-11T00:00:00Z",
       "url": "/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb",
       "description": "TPLink TL-WR840N v5 came with only 4Mb of flash, it was not enough for me. I want more functionality on this device, so I decided to upgrade its flash to 8Mb.",
