@@ -1,4 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-03-03T20:30:04+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">MOSFET and IGBT</title><link href="https://circuitlover.com/mosfet-igbt/" rel="alternate" type="text/html" title="MOSFET and IGBT" /><published>2022-02-13T00:00:00+00:00</published><updated>2022-02-13T00:00:00+00:00</updated><id>https://circuitlover.com/MOSFET</id><content type="html" xml:base="https://circuitlover.com/mosfet-igbt/">&lt;p&gt;Table of contents&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-03-03T22:30:55+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Lifetime calculation for Electrolytic Capacitors</title><link href="https://circuitlover.com/capacitor-life-time-cal" rel="alternate" type="text/html" title="Lifetime calculation for Electrolytic Capacitors" /><published>2022-03-03T00:00:00+00:00</published><updated>2022-03-03T00:00:00+00:00</updated><id>https://circuitlover.com/capacitor-life-time-cal</id><content type="html" xml:base="https://circuitlover.com/capacitor-life-time-cal">&lt;p&gt;On the process of making new inverter/converter products, we are talking about what type of topology will be used, power losses and cost estimation. It is easy to forgot about the &lt;strong&gt;Lifetime of capacitors&lt;/strong&gt;. This article is quick note how to estimate lifetime of electrolytic capacitor (elcap) provided by &lt;strong&gt;JIANGHAI&lt;/strong&gt; &lt;sup id=&quot;fnref:fn1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:fn1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Other manufactures may have different ways to estimate lifetime of these capacitors. Please look up manufacturer application note for more detail.&lt;/p&gt;
+
+&lt;p&gt;Table of contents&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#lifetime-model&quot;&gt;Lifetime model&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#temperature-factor-k_t&quot;&gt;Temperature factor $K_T$&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ripple-current-factor-k_r&quot;&gt;Ripple current factor $K_R$&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#voltage-factor-k_v&quot;&gt;Voltage factor $K_V$&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#references&quot;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;lifetime-model&quot;&gt;Lifetime model&lt;/h1&gt;
+
+&lt;p&gt;The lifetime $L$ of the electrolytic capacitor can be estimated by using numerical lifetime model:&lt;/p&gt;
+
+\[L = L_0 \cdot K_T \cdot K_R \cdot K_V\]
+
+&lt;p&gt;where&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;$L_0$ is specified lifetime from the datasheet of given capacitor at norminal ripple.&lt;/li&gt;
+  &lt;li&gt;$K_T$ temperature factor (ambient temperature)&lt;/li&gt;
+  &lt;li&gt;$K_R$ ripple current factor (self-heating)&lt;/li&gt;
+  &lt;li&gt;$K_V$ voltage factor (operating voltage)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;temperature-factor-k_t&quot;&gt;Temperature factor $K_T$&lt;/h1&gt;
+
+&lt;p&gt;“10-Kelvin-rule” is wide used in the industry: a drop of the ambient temperature by $10K$ double the lifetime of capacitor.&lt;/p&gt;
+
+&lt;p&gt;\(K_T = 2^{\cfrac {T_O - T_A}{10K}}\)
+Where&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;$T_0$ rated temperature&lt;/li&gt;
+  &lt;li&gt;$T_A$ ambient temperature&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;ripple-current-factor-k_r&quot;&gt;Ripple current factor $K_R$&lt;/h1&gt;
+
+&lt;p&gt;\(K_R = K_i^{A \cdot \cfrac{\delta T_0}{10K}}\)
+where&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;$A = 1 - (\frac{I_A}{I_R})^2$&lt;/li&gt;
+  &lt;li&gt;$I_A$ ripple current in the application&lt;/li&gt;
+  &lt;li&gt;$I_R$ rated ripple current&lt;/li&gt;
+  &lt;li&gt;$\delta T_0$ core temperature increase of the elcap
+    &lt;ul&gt;
+      &lt;li&gt;$T_0=105 ^{\circ}C$ typ. 3.5~5K&lt;/li&gt;
+      &lt;li&gt;$T_0 = 85 ^\circ C$ typ. 3.5~10K&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;$K_i$ empirical safety factor
+    &lt;ul&gt;
+      &lt;li&gt;$T_0=105 ^{\circ}C$ if ($I&amp;gt;I_R$) then $K_i = 4$ else $K_i = 2$&lt;/li&gt;
+      &lt;li&gt;$T_0 = 85 ^\circ C \rightarrow K_i = 2$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;voltage-factor-k_v&quot;&gt;Voltage factor $K_V$&lt;/h1&gt;
+
+&lt;p&gt;If $0.6 \le \cfrac{U_A}{U_R} \le 1$ then
+\(K_V = \left( \cfrac{U_A}{U_R} \right) ^{-2.5}\)
+else
+\(K_V = 3.59\)
+where&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;$U_R$ rated voltage&lt;/li&gt;
+  &lt;li&gt;$U_A$ actual operating voltage&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:fn1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Albertsen, A. 2010. Electrolytic capacitor lifetime estimation [Online]. JIANGHAI Eur. GmbH. Available: https://jianghai-europe.com/wp-content/uploads/Jianghai-Europe-E-Cap-Lifetime-Estimation-long-AAL-2018-09-18.pdf [Accessed March 3, 2022]. &lt;a href=&quot;#fnref:fn1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">On the process of making new inverter/converter products, we are talking about what type of topology will be used, power losses and cost estimation. It is easy to forgot about the Lifetime of capacitors. This article is quick note how to estimate lifetime of electrolytic capacitor (elcap) provided by JIANGHAI 1. Other manufactures may have different ways to estimate lifetime of these capacitors. Please look up manufacturer application note for more detail. Albertsen, A. 2010. Electrolytic capacitor lifetime estimation [Online]. JIANGHAI Eur. GmbH. Available: https://jianghai-europe.com/wp-content/uploads/Jianghai-Europe-E-Cap-Lifetime-Estimation-long-AAL-2018-09-18.pdf [Accessed March 3, 2022]. &amp;#8617;</summary></entry><entry><title type="html">MOSFET and IGBT</title><link href="https://circuitlover.com/mosfet-igbt/" rel="alternate" type="text/html" title="MOSFET and IGBT" /><published>2022-02-13T00:00:00+00:00</published><updated>2022-02-13T00:00:00+00:00</updated><id>https://circuitlover.com/MOSFET</id><content type="html" xml:base="https://circuitlover.com/mosfet-igbt/">&lt;p&gt;Table of contents&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#n-channel-mosfet&quot;&gt;N-channel MOSFET&lt;/a&gt;
     &lt;ul&gt;
