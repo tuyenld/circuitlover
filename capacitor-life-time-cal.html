@@ -36,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1646346655">
+    <link rel="stylesheet" href="/css/site.css?v=1646347128">
 
     
 
@@ -129,14 +129,17 @@
 
 <p>Table of contents</p>
 <ul>
-  <li><a href="#lifetime-model">Lifetime model</a></li>
-  <li><a href="#temperature-factor-k_t">Temperature factor $K_T$</a></li>
-  <li><a href="#ripple-current-factor-k_r">Ripple current factor $K_R$</a></li>
-  <li><a href="#voltage-factor-k_v">Voltage factor $K_V$</a></li>
+  <li><a href="#lifetime-model">Lifetime model</a>
+    <ul>
+      <li><a href="#temperature-factor-k_t">Temperature factor $K_T$</a></li>
+      <li><a href="#ripple-current-factor-k_r">Ripple current factor $K_R$</a></li>
+      <li><a href="#voltage-factor-k_v">Voltage factor $K_V$</a></li>
+    </ul>
+  </li>
   <li><a href="#references">References</a></li>
 </ul>
 
-<h1 id="lifetime-model">Lifetime model</h1>
+<h2 id="lifetime-model">Lifetime model</h2>
 
 <p>The lifetime $L$ of the electrolytic capacitor can be estimated by using numerical lifetime model:</p>
 
@@ -150,26 +153,28 @@
   <li>$K_V$ voltage factor (operating voltage)</li>
 </ul>
 
-<h1 id="temperature-factor-k_t">Temperature factor $K_T$</h1>
+<h3 id="temperature-factor-k_t">Temperature factor $K_T$</h3>
 
 <p>“10-Kelvin-rule” is wide used in the industry: a drop of the ambient temperature by $10K$ double the lifetime of capacitor.</p>
 
-<p>\(K_T = 2^{\cfrac {T_O - T_A}{10K}}\)
-Where</p>
+\[K_T = 2^{\cfrac {T_O - T_A}{10K}}\]
+
+<p>Where</p>
 <ul>
   <li>$T_0$ rated temperature</li>
   <li>$T_A$ ambient temperature</li>
 </ul>
 
-<h1 id="ripple-current-factor-k_r">Ripple current factor $K_R$</h1>
+<h3 id="ripple-current-factor-k_r">Ripple current factor $K_R$</h3>
 
-<p>\(K_R = K_i^{A \cdot \cfrac{\delta T_0}{10K}}\)
-where</p>
+\[K_R = K_i^{A \cdot \cfrac{\Delta T_0}{10K}}\]
+
+<p>where</p>
 <ul>
   <li>$A = 1 - (\frac{I_A}{I_R})^2$</li>
   <li>$I_A$ ripple current in the application</li>
   <li>$I_R$ rated ripple current</li>
-  <li>$\delta T_0$ core temperature increase of the elcap
+  <li>$\Delta T_0$ core temperature increase of the elcap
     <ul>
       <li>$T_0=105 ^{\circ}C$ typ. 3.5~5K</li>
       <li>$T_0 = 85 ^\circ C$ typ. 3.5~10K</li>
@@ -183,19 +188,20 @@ where</p>
   </li>
 </ul>
 
-<h1 id="voltage-factor-k_v">Voltage factor $K_V$</h1>
+<h3 id="voltage-factor-k_v">Voltage factor $K_V$</h3>
 
 <p>If $0.6 \le \cfrac{U_A}{U_R} \le 1$ then
 \(K_V = \left( \cfrac{U_A}{U_R} \right) ^{-2.5}\)
 else
-\(K_V = 3.59\)
-where</p>
+\(K_V = 3.59\)</p>
+
+<p>where</p>
 <ul>
   <li>$U_R$ rated voltage</li>
   <li>$U_A$ actual operating voltage</li>
 </ul>
 
-<h1 id="references">References</h1>
+<h2 id="references">References</h2>
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:fn1" role="doc-endnote">
