@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-03-04T14:59:29+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Lifetime calculation for Electrolytic Capacitors</title><link href="https://circuitlover.com/capacitor-life-time-cal/" rel="alternate" type="text/html" title="Lifetime calculation for Electrolytic Capacitors" /><published>2022-03-03T00:00:00+00:00</published><updated>2022-03-03T00:00:00+00:00</updated><id>https://circuitlover.com/capacitor-life-time-cal</id><content type="html" xml:base="https://circuitlover.com/capacitor-life-time-cal/">&lt;p&gt;On the process of making new inverter/converter products, we are talking about what type of topology will be used, power losses and cost estimation. It is easy to forgot about the &lt;strong&gt;Lifetime of capacitors&lt;/strong&gt;. This article is quick note how to estimate lifetime of electrolytic capacitor (elcap) provided by &lt;strong&gt;JIANGHAI&lt;/strong&gt; &lt;sup id=&quot;fnref:fn1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:fn1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Other manufactures may have different ways to estimate lifetime of these capacitors. Please look up manufacturer application note for more detail.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-03-04T21:20:09+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Lifetime calculation for Electrolytic Capacitors</title><link href="https://circuitlover.com/capacitor-life-time-cal/" rel="alternate" type="text/html" title="Lifetime calculation for Electrolytic Capacitors" /><published>2022-03-03T00:00:00+00:00</published><updated>2022-03-03T00:00:00+00:00</updated><id>https://circuitlover.com/capacitor-life-time-cal</id><content type="html" xml:base="https://circuitlover.com/capacitor-life-time-cal/">&lt;p&gt;On the process of making new inverter/converter products, we are talking about what type of topology will be used, power losses and cost estimation. It is easy to forgot about the &lt;strong&gt;Lifetime of capacitors&lt;/strong&gt;. This article is quick note how to estimate lifetime of electrolytic capacitor (elcap) provided by &lt;strong&gt;JIANGHAI&lt;/strong&gt; &lt;sup id=&quot;fnref:fn1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:fn1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Other manufactures may have different ways to estimate lifetime of these capacitors. Please look up manufacturer application note for more detail.&lt;/p&gt;
 
 &lt;p&gt;Table of contents&lt;/p&gt;
 &lt;ul&gt;
@@ -362,130 +362,272 @@ It’s easy to notice that $\underline{X}$ is time-independent. This conclusion 
       &lt;p&gt;James Kirtley Jr.. &lt;em&gt;6.061 Introduction to Electric Power Systems.&lt;/em&gt; Spring 2011. Massachusetts Institute of Technology: MIT OpenCourseWare, &lt;a href=&quot;https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-061-introduction-to-electric-power-systems-spring-2011&quot;&gt;https://ocw.mit.edu&lt;/a&gt;. License: &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;Creative Commons BY-NC-SA&lt;/a&gt;. &lt;a href=&quot;#fnref:ref1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents 1. Sinusoidal time functions and complex number 1.1. Complex number recap 1.2. Sinusoidal Time Functions 1.3. Summary 2. Impedance Example</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Connect Raspberry Pi Zero (not W) to the Internet</title><link href="https://circuitlover.com/connect-Pi-Zero-to-internet/" rel="alternate" type="text/html" title="Connect Raspberry Pi Zero (not W) to the Internet" /><published>2020-12-11T00:00:00+00:00</published><updated>2020-12-11T00:00:00+00:00</updated><id>https://circuitlover.com/connect-Pi-Zero-to-internet</id><content type="html" xml:base="https://circuitlover.com/connect-Pi-Zero-to-internet/">&lt;p&gt;Raspi Zero (not W) have neither Wi-Fi nor Ethernet, so how could we want to update our board on the fly? 
-Well, we can create a virtual Ethernet interface. I’ll show you how to do it.&lt;/p&gt;
+&lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents 1. Sinusoidal time functions and complex number 1.1. Complex number recap 1.2. Sinusoidal Time Functions 1.3. Summary 2. Impedance Example</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Connect Raspberry Pi Zero (not W) to the Internet</title><link href="https://circuitlover.com/connect-Pi-Zero-to-internet/" rel="alternate" type="text/html" title="Connect Raspberry Pi Zero (not W) to the Internet" /><published>2020-12-11T00:00:00+00:00</published><updated>2020-12-11T00:00:00+00:00</updated><id>https://circuitlover.com/connect-Pi-Zero-to-internet</id><content type="html" xml:base="https://circuitlover.com/connect-Pi-Zero-to-internet/">&lt;p&gt;Raspi Zero (not W) have neither Wi-Fi nor Ethernet, so how could we want to update your raspbian without remove the microSD card? 
+Well, you can create a virtual Ethernet interface. This method is tested on &lt;strong&gt;Window 10&lt;/strong&gt;, you could get the same idea when using Linux/Mac computer.&lt;/p&gt;
+
+&lt;p&gt;I am testing &lt;a href=&quot;https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2022-01-28/2022-01-28-raspios-bullseye-armhf-lite.zip&quot;&gt;2022-01-28-raspios-bullseye-armhf-lite image&lt;/a&gt; version.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pi@raspberrypi:~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;uname&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt;
+Linux raspberrypi 5.10.92+ &lt;span class=&quot;c&quot;&gt;#1514 Mon Jan 17 17:35:21 GMT 2022 armv6l GNU/Linux&lt;/span&gt;
+pi@raspberrypi:~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; /proc/device-tree/model
+Raspberry Pi Zero Rev 1.3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Table of contents&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#1-update-cmdlinetxt-settings&quot;&gt;1. Update cmdline.txt settings&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2-script-to-create-a-virtual-udc-ethernet-interface&quot;&gt;2. Script to create a virtual UDC ethernet interface&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#3-window-settings-for-internet-connection-sharing&quot;&gt;3. Window settings for Internet Connection Sharing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#4-references&quot;&gt;4. References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;The network topology I’m going to deploy it as follows.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/posts/Pi-Zero-internet.jpg&quot; alt=&quot;Pi Zero Internet&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/pi/Pi-Zero-internet.png&quot; alt=&quot;Pi Zero Internet&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;First, you need to run this script. It will create a virtual UDC ethernet interface.&lt;/p&gt;
+&lt;h3 id=&quot;1-update-cmdlinetxt-settings&quot;&gt;1. Update cmdline.txt settings&lt;/h3&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+&lt;p&gt;This method is using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;libcomposite&lt;/code&gt;, so you need to include &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;libcomposite&lt;/code&gt; in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;modules-load&lt;/code&gt; directive as the following. For other methods, please visit &lt;a href=&quot;https://gist.github.com/gbaman&quot;&gt;gbaman&lt;/a&gt;/&lt;a href=&quot;https://gist.github.com/gbaman/50b6cca61dd1c3f88f41&quot;&gt;HowToOTG.md&lt;/a&gt;.&lt;/p&gt;
 
-&lt;span class=&quot;c&quot;&gt;# https://www.isticktoit.net/?p=1383&lt;/span&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;root@raspberrypi:/home/pi# &lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; /boot/cmdline.txt
+&lt;span class=&quot;nv&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;serial0,115200 &lt;span class=&quot;nv&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;tty1 &lt;span class=&quot;nv&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PARTUUID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;22e47bc0-02 &lt;span class=&quot;nv&quot;&gt;rootfstype&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ext4 fsck.repair&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;yes &lt;/span&gt;rootwait modules-load&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;dwc2,libcomposite
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;span class=&quot;nv&quot;&gt;CONFIG&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/sys/kernel/config/usb_gadget/piwebcam
+&lt;h3 id=&quot;2-script-to-create-a-virtual-udc-ethernet-interface&quot;&gt;2. Script to create a virtual UDC ethernet interface&lt;/h3&gt;
+
+&lt;p&gt;The script below will create a virtual UDC ethernet interface.&lt;/p&gt;
+
+&lt;div role=&quot;alert&quot;&gt;
+  &lt;div class=&quot;bg-red-500 text-white font-bold rounded-t px-4 py-2&quot;&gt;
+    Note
+  &lt;/div&gt;
+  &lt;div class=&quot;border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700&quot;&gt;
+    &lt;p&gt;In order to make Pi Zero to become plug-and-play as much as possible, I am faking IBM Corporation RNDIS Driver on Window because of lacking the Linux Driver on the Window 7. If you are using MacOS/Linux, you should change OS_CONFIG to macos/linux accordingly.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Thanks to&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#   wismna: http://github.com/wismna/raspberry-pi/hackpi&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#   RoganDawes: https://github.com/RoganDawes/P4wnP1&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# https://docs.microsoft.com/en-us/windows-hardware/drivers/usbcon/enumeration-of-the-composite-parent-device&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# https://docs.microsoft.com/en-us/windows-hardware/drivers/usbcon/usb-common-class-generic-parent-driver&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;OS_CONFIG&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;window&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;IP_SELF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;192.168.137.2&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;IP_HOST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;192.168.137.1&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;MAC_HOST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;48:6f:73:74:50:43&quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# &quot;Mac address for host PC&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;MAC_SELF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;42:61:64:55:53:42&quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# &quot;MAC address for PiZero&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;CONFIG&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/sys/kernel/config/usb_gadget/PiZero
+
 &lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$CONFIG&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$CONFIG&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;1
 
-&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0x1d6b &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; idVendor &lt;span class=&quot;c&quot;&gt;# Linux Foundation&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0x0104 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; idProduct &lt;span class=&quot;c&quot;&gt;# Multifunction Composite Gadget&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0x0100 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; bcdDevice &lt;span class=&quot;c&quot;&gt;# v1.0.0&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0x0200 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; bcdUSB &lt;span class=&quot;c&quot;&gt;# USB2&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 0x04b3 = 1203&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# {&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#     &quot;name&quot;: &quot;IBM Corporation&quot;,&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#     &quot;field_vid&quot;: &quot;1203&quot;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# },&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$OS_CONFIG&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in
+  &lt;/span&gt;window&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# wismna hack for Window&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# IBM Corporation RNDIS Driver will be loaded&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0x04b3 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; idVendor
+    &lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0x4010 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; idProduct
+    &lt;span class=&quot;p&quot;&gt;;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0x1d6b &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; idVendor   &lt;span class=&quot;c&quot;&gt;# Linux Foundation&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0x0104 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; idProduct  &lt;span class=&quot;c&quot;&gt;# Multifunction Composite Gadget&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;esac&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0x0100 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; bcdDevice
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0x0200 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; bcdUSB
+
+&lt;span class=&quot;c&quot;&gt;# Mandatory for Multiple Gadgets&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0xEF &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; bDeviceClass
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0x02 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; bDeviceSubClass
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0x01 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; bDeviceProtocol
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0x40 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; bMaxPacketSize0
+
 &lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; strings/0x409
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;fedcba9876543210&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; strings/0x409/serialnumber
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Tobias Girstmair&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; strings/0x409/manufacturer
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;iSticktoit.net USB Device&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; strings/0x409/product
 &lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; configs/c.1/strings/0x409
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Config 1: ECM network&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; configs/c.1/strings/0x409/configuration
-&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;250 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; configs/c.1/MaxPower
-&lt;span class=&quot;c&quot;&gt;# Add functions here&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# see gadget configurations below&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# End functions&lt;/span&gt;
-udevadm settle &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; 5 &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; :
-&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; /sys/class/udc &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; UDC
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;100000000d2386db         &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; strings/0x409/serialnumber
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;PiZero Project&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; strings/0x409/manufacturer
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;PiZero &quot;&lt;/span&gt;              &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; strings/0x409/product
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;250                      &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; configs/c.1/MaxPower
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;PiZero&quot;&lt;/span&gt;               &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; configs/c.1/strings/0x409/configuration
+
+config_acm&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; functions/acm.usb0
+  &lt;span class=&quot;nb&quot;&gt;ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; functions/acm.usb0 configs/c.1/acm.usb0
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;# Ethernet Adapter&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;#-------------------------------------------&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Add functions here&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; functions/ecm.usb0
-&lt;span class=&quot;c&quot;&gt;# first byte of address must be even&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;HOST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;48:6f:73:74:50:43&quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# &quot;HostPC&quot;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;SELF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;42:61:64:55:53:42&quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# &quot;BadUSB&quot;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$HOST&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; functions/ecm.usb0/host_addr
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$SELF&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; functions/ecm.usb0/dev_addr
-&lt;span class=&quot;nb&quot;&gt;ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; functions/ecm.usb0 configs/c.1/
-&lt;span class=&quot;c&quot;&gt;# End functions&lt;/span&gt;
+config_rndis &lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; functions/rndis.usb0
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$MAC_HOST&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; functions/rndis.usb0/host_addr
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$MAC_SELF&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; functions/rndis.usb0/dev_addr
+
+  &lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; os_desc
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;0x80&quot;&lt;/span&gt;     &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; configs/c.1/bmAttributes
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; os_desc/use
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;0xbc&quot;&lt;/span&gt;     &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; os_desc/b_vendor_code
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;MSFT100&quot;&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; os_desc/qw_sign
+
+  &lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; functions/rndis.usb0/os_desc/interface.rndis
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;RNDIS&quot;&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; functions/rndis.usb0/os_desc/interface.rndis/compatible_id
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;5162001&quot;&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; functions/rndis.usb0/os_desc/interface.rndis/sub_compatible_id
+
+  &lt;span class=&quot;nb&quot;&gt;ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; functions/rndis.usb0 configs/c.1/
+  &lt;span class=&quot;nb&quot;&gt;ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; configs/c.1/ os_desc
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+config_ecm &lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; functions/ecm.usb0
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$MAC_HOST&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; functions/ecm.usb0/host_addr
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$MAC_SELF&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; functions/ecm.usb0/dev_addr
+  &lt;span class=&quot;nb&quot;&gt;ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; functions/ecm.usb0 configs/c.1/
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$OS_CONFIG&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in
+  &lt;/span&gt;window&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    config_rndis
+    &lt;span class=&quot;p&quot;&gt;;;&lt;/span&gt;
+  macos &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; linux&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    config_ecm
+    &lt;span class=&quot;p&quot;&gt;;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    config_acm
+    &lt;span class=&quot;p&quot;&gt;;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;esac&lt;/span&gt;
+
 udevadm settle &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; 5 &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; :
 &lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; /sys/class/udc &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; UDC
-&lt;span class=&quot;c&quot;&gt;#put this at the very end of the file:&lt;/span&gt;
-ifconfig usb0 10.0.0.1 netmask 255.255.255.252 up
-route add &lt;span class=&quot;nt&quot;&gt;-net&lt;/span&gt; default gw 10.0.0.2
-
-&lt;span class=&quot;c&quot;&gt;# USB Mass storage&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#-------------------------------------------&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Add functions here&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;FILE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/dev/mmcblk0p2
-&lt;span class=&quot;c&quot;&gt;# FILE=/home/pi/usbdisk.img&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# mkdir -p ${FILE/img/d}&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# mount -o loop,ro,offset=1048576 -t ext4 $FILE ${FILE/img/d} # FOR OLD WAY OF MAKING THE IMAGE&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# mount -o loop,ro, -t vfat $FILE ${FILE/img/d} # FOR IMAGE CREATED WITH DD&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; functions/mass_storage.usb0
-&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; functions/mass_storage.usb0/stall
-&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;1 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;functions/mass_storage.usb0/lun.0/removable
-&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; functions/mass_storage.usb0/lun.0/cdrom
-&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; functions/mass_storage.usb0/lun.0/ro
-&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; functions/mass_storage.usb0/lun.0/nofua
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$FILE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; functions/mass_storage.usb0/lun.0/file
-&lt;span class=&quot;nb&quot;&gt;ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; functions/mass_storage.usb0 configs/c.1/
-&lt;span class=&quot;c&quot;&gt;# End functions&lt;/span&gt;
-udevadm settle &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; 5 &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; :
-&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; /sys/class/udc &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; UDC
-
-&lt;span class=&quot;c&quot;&gt;# REMOVE USB Mass Storage&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# rm configs/c.1/mass_storage.usb0&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# rm -rf functions/mass_storage.usb0&lt;/span&gt;
+ifconfig usb0 &lt;span class=&quot;nv&quot;&gt;$IP_SELF&lt;/span&gt; netmask 255.255.255.252 up
+route add &lt;span class=&quot;nt&quot;&gt;-net&lt;/span&gt; default gw &lt;span class=&quot;nv&quot;&gt;$IP_HOST&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Now, try to ping from your Pi to the host PC &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ping 10.0.0.2&lt;/code&gt;.&lt;/p&gt;
+&lt;p class=&quot;text rounded-lg bg-blue-200 bg-opacity-25 text-blue-700 px-8 py-4 my-4&quot;&gt;
+  I am using 192.168.137.2 address because when I enable Internet Connection Sharing (ICS) on my Wi-Fi adapter, the second NIC get shared Internet will get 192.168.137.1 as you can see in the following step. You should change it accordingly to your situation.
+&lt;/p&gt;
 
-&lt;p&gt;You created another network, so you need to “register” it to your router.&lt;/p&gt;
+&lt;p&gt;Save the file as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;runme.sh&lt;/code&gt;, don’t forget to change its permission to executable file.&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;## Add route to your Gateway Network&lt;/span&gt;
-ldtuyen@pc:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh root@172.16.10.1
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Enter username and password]
-
-root@OpenWrt:~# route &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt;
-Kernel IP routing table
-Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
-0.0.0.0         192.168.1.1     0.0.0.0         UG    0      0        0 eth0.2
-172.16.10.0     0.0.0.0         255.255.255.0   U     0      0        0 br-lan
-192.168.1.0     0.0.0.0         255.255.255.0   U     0      0        0 eth0.2
-root@OpenWrt:~# ip route add 10.0.0.0/24 via 172.16.10.159
-root@OpenWrt:~# 
-root@OpenWrt:~# route &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt;
-Kernel IP routing table
-Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
-0.0.0.0         192.168.1.1     0.0.0.0         UG    0      0        0 eth0.2
-10.0.0.0        172.16.10.159   255.255.255.0   UG    0      0        0 br-lan
-172.16.10.0     0.0.0.0         255.255.255.0   U     0      0        0 br-lan
-192.168.1.0     0.0.0.0         255.255.255.0   U     0      0        0 eth0.2
-root@OpenWrt:~# 
-
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;root@raspberrypi:/home/pi# &lt;span class=&quot;nb&quot;&gt;chmod&lt;/span&gt; +x runme.sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Try to ping from your Pi to Google &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ping 8.8.8.8&lt;/code&gt;. If it fails, you may be need to check your network topology.&lt;/p&gt;
+&lt;p&gt;In order to get the script run at boot up, you need to add this script into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rc.local&lt;/code&gt;. See more ways to do this at &lt;a href=&quot;https://learn.sparkfun.com/tutorials/how-to-run-a-raspberry-pi-program-on-startup/all&quot;&gt;How to Run a Raspberry Pi Program on Startup&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;In order to use the Internet, the DNS server of your Raspberry Pi need to be changed.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;root@raspberrypi:/home/pi# &lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; /etc/rc.local
+&lt;span class=&quot;c&quot;&gt;#!/bin/sh -e&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# rc.local&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# This script is executed at the end of each multiuser runlevel.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Make sure that the script will &quot;exit 0&quot; on success or any other&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# value on error.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# In order to enable or disable this script just change the execution&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# bits.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# By default this script does nothing.&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Print the IP address&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;_IP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;hostname&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-I&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_IP&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
+  &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;printf&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;My IP address is %s&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_IP&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+
+/home/pi/runme.sh &amp;amp;
+
+&lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you want to ssh to your PiZero, you could enable SSHD for later use.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;ssh
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl start ssh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It is time to reboot your PI to apply these settings.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-window-settings-for-internet-connection-sharing&quot;&gt;3. Window settings for Internet Connection Sharing&lt;/h3&gt;
+
+&lt;p&gt;Go to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Control Panel\Network and Internet\Network Connections&lt;/code&gt;. If everything is good, you should see a new Ethernet Adapter (i.e. Ethernet 4 in my case).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/pi/window-setting-new-NIC.png&quot; alt=&quot;Window IP setting&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, you need to share the Internet from your main NIC to the new created NIC by PiZero.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/pi/window-setting-sharing.png&quot; alt=&quot;Window network sharing&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Right click on it, go to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Properties&lt;/code&gt; and then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sharing&lt;/code&gt; tab.&lt;/li&gt;
+  &lt;li&gt;Check the Allow Other Network Users to Connect Through This Computer’s Internet Connection check box.&lt;/li&gt;
+  &lt;li&gt;Under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;How networking connection&lt;/code&gt;, choose the new NIC (i.e. Ethernet 4 in my case)&lt;/li&gt;
+  &lt;li&gt;Click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OK&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;You will see a pop-up state that &lt;strong&gt;Ethernet 4&lt;/strong&gt; IP address will be changed to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;19.268.137.1&lt;/code&gt;. That is why I used this IP address in the above &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;runme.sh&lt;/code&gt; script.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/pi/window-setting-IP-forwarding.png&quot; alt=&quot;Window setting IP&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Try to connect from your PC to your Pi Zero. I am using SSH to connect because I already enabled SSHD service on PiZero.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;C:&lt;span class=&quot;se&quot;&gt;\W&lt;/span&gt;indows&lt;span class=&quot;se&quot;&gt;\s&lt;/span&gt;ystem32&amp;gt;ssh pi@192.168.137.2
+The authenticity of host &lt;span class=&quot;s1&quot;&gt;'192.168.137.2 (192.168.137.2)'&lt;/span&gt; can&lt;span class=&quot;s1&quot;&gt;'t be established.
+ECDSA key fingerprint is SHA256:LxSEz/DS/6u6EQQWI+rr.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '&lt;/span&gt;192.168.137.2&lt;span class=&quot;s1&quot;&gt;' (ECDSA) to the list of known hosts.
+pi@192.168.137.2'&lt;/span&gt;s password:
+Linux raspberrypi 5.10.92+ &lt;span class=&quot;c&quot;&gt;#1514 Mon Jan 17 17:35:21 GMT 2022 armv6l&lt;/span&gt;
+
+The programs included with the Debian GNU/Linux system are free software&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+the exact distribution terms &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;each program are described &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;the
+individual files &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; /usr/share/doc/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Jan 28 05:07:48 2022
+
+SSH is enabled and the default password &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;the &lt;span class=&quot;s1&quot;&gt;'pi'&lt;/span&gt; user has not been changed.
+This is a security risk - please login as the &lt;span class=&quot;s1&quot;&gt;'pi'&lt;/span&gt; user and &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'passwd'&lt;/span&gt; to &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;a new password.
+
+pi@raspberrypi:~ &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
+pi@raspberrypi:~ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ping google.com
+PING google.com &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;216.58.207.206&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 56&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;84&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; bytes of data.
+64 bytes from arn11s04-in-f14.1e100.net &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;216.58.207.206&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;: &lt;span class=&quot;nv&quot;&gt;icmp_seq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;nv&quot;&gt;ttl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;58 &lt;span class=&quot;nb&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;16.7 ms
+64 bytes from arn11s04-in-f14.1e100.net &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;216.58.207.206&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;: &lt;span class=&quot;nv&quot;&gt;icmp_seq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2 &lt;span class=&quot;nv&quot;&gt;ttl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;58 &lt;span class=&quot;nb&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;16.4 ms
+^C
+&lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt; google.com ping statistics &lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;
+2 packets transmitted, 2 received, 0% packet loss, &lt;span class=&quot;nb&quot;&gt;time &lt;/span&gt;1002ms
+rtt min/avg/max/mdev &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 16.397/16.525/16.654/0.128 ms
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In case you have problem with the DNS, try to change the DNS server on Pi by edit &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/resolv.conf&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; /etc/resolv.conf
 &lt;span class=&quot;c&quot;&gt;# Generated by resolvconf&lt;/span&gt;
 nameserver 8.8.8.8 
-nameserver fe80::3e47:11ff:fe87:fc43%wlan0
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ping google.com
-PING google.com &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;172.217.24.46&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 56&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;84&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; bytes of data.
-64 bytes from hkg07s23-in-f46.1e100.net &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;172.217.24.46&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;: &lt;span class=&quot;nv&quot;&gt;icmp_seq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;nv&quot;&gt;ttl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;115 &lt;span class=&quot;nb&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;23.8 ms
-64 bytes from hkg07s23-in-f46.1e100.net &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;172.217.24.46&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;: &lt;span class=&quot;nv&quot;&gt;icmp_seq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2 &lt;span class=&quot;nv&quot;&gt;ttl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;115 &lt;span class=&quot;nb&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;23.6 ms
-^C
-&lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt; google.com ping statistics &lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;
-2 packets transmitted, 2 received, 0% packet loss, &lt;span class=&quot;nb&quot;&gt;time &lt;/span&gt;1001ms
-rtt min/avg/max/mdev &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 23.672/23.750/23.829/0.172 ms
+&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Done! Now you could use the Internet on your Pi Zero.&lt;/p&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pi" /><summary type="html">Raspi Zero (not W) have neither Wi-Fi nor Ethernet, so how could we want to update our board on the fly? Well, we can create a virtual Ethernet interface. I’ll show you how to do it.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How to upgrade flash chip on TPLink TL-WR840N v5.</title><link href="https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb/" rel="alternate" type="text/html" title="How to upgrade flash chip on TPLink TL-WR840N v5." /><published>2019-02-11T00:00:00+00:00</published><updated>2019-02-11T00:00:00+00:00</updated><id>https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb</id><content type="html" xml:base="https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb/">&lt;p&gt;Upgrade TP-Link flash chip on TP-Link from 4mb to 8mb&lt;/p&gt;
+
+&lt;p&gt;Done! Now you could use the Internet on your Pi Zero.&lt;/p&gt;
+
+&lt;h3 id=&quot;4-references&quot;&gt;4. References&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/showmewebcam/showmewebcam/pull/76/files&quot;&gt;showmewebcam #76&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://learn.sparkfun.com/tutorials/how-to-run-a-raspberry-pi-program-on-startup/all&quot;&gt;How to Run a Raspberry Pi Program on Startup&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/gbaman&quot;&gt;gbaman&lt;/a&gt;/&lt;a href=&quot;https://gist.github.com/gbaman/50b6cca61dd1c3f88f41&quot;&gt;HowToOTG.md&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pi" /><summary type="html">Raspi Zero (not W) have neither Wi-Fi nor Ethernet, so how could we want to update your raspbian without remove the microSD card? Well, you can create a virtual Ethernet interface. This method is tested on Window 10, you could get the same idea when using Linux/Mac computer.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How to upgrade flash chip on TPLink TL-WR840N v5.</title><link href="https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb/" rel="alternate" type="text/html" title="How to upgrade flash chip on TPLink TL-WR840N v5." /><published>2019-02-11T00:00:00+00:00</published><updated>2019-02-11T00:00:00+00:00</updated><id>https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb</id><content type="html" xml:base="https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb/">&lt;p&gt;Upgrade TP-Link flash chip on TP-Link from 4mb to 8mb&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Table of content&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
