@@ -36,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1646429980">
+    <link rel="stylesheet" href="/css/site.css?v=1646431406">
 
     
 
@@ -177,7 +177,7 @@
       "date": "2020-12-11T00:00:00Z",
       "url": "/connect-Pi-Zero-to-internet/",
       "description": "How to connect Pi Zero to the Internet without using any extra components.",
-      "image": "//images/author.png"
+      "image": "//images/posts/pi/Pi-Zero-internet.png"
     },
     {
       "title": "How to upgrade flash chip on TPLink TL-WR840N v5.",
