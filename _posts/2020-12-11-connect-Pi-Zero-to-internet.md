@@ -3,6 +3,7 @@ layout: post
 title: Connect Raspberry Pi Zero (not W) to the Internet
 category: pi
 comments: true
+image: /images/posts/pi/Pi-Zero-internet.png
 description: "How to connect Pi Zero to the Internet without using any extra components."
 ---
 
@@ -226,7 +227,7 @@ It is time to reboot your PI to apply these settings.
 
 ### 3. Window settings for Internet Connection Sharing
 
-Go to `Control Panel\Network and Internet\Network Connections`. If everything is good, you should see a new Ethernet Adapter (i.e. Ethernet 4 in my case).
+Go to `Control Panel\Network and Internet\Network Connections`. If everything is good, you should see a new Ethernet Adapter (i.e., Ethernet 4 in my case).
 
 ![Window IP setting](/images/posts/pi/window-setting-new-NIC.png)
 
@@ -235,8 +236,8 @@ Now, you need to share the Internet from your main NIC to the new created NIC by
 ![Window network sharing](/images/posts/pi/window-setting-sharing.png)
 
 1. Right click on NIC icon choose `Properties`, go to `Properties` one more and then `Sharing` tab.
-2. Check the `Allow Other Network Users to Connect Through This Computer’s Internet Connection` check box.
-3. Under `How networking connection`, choose the new NIC (i.e. `Ethernet 4` in my case)
+2. Check the `Allow Other Network Users ... ` check box.
+3. Under `Home networking connection`, choose the new NIC (i.e., `Ethernet 4` in my case)
 4. Click `OK`
 
 You will see a pop-up states that **Ethernet 4** IP address will be changed to `19.268.137.1`. That is why I used this IP address in the above `runme.sh` script.
