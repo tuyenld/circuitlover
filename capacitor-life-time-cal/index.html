@@ -5,26 +5,26 @@
     <meta charset="utf-8">
     <link type="application/atom+xml" rel="alternate" href="https://circuitlover.com/feed.xml" title="circuitlover.com" />
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>How to upgrade flash chip on TPLink TL-WR840N v5. | circuitlover.com</title>
+<title>Lifetime calculation for Electrolytic Capacitors | circuitlover.com</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="How to upgrade flash chip on TPLink TL-WR840N v5." />
+<meta property="og:title" content="Lifetime calculation for Electrolytic Capacitors" />
 <meta name="author" content="Dinh-Tuyen Le" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="TPLink TL-WR840N v5 came with only 4Mb of flash, it was not enough for me. I want more functionality on this device, so I decided to upgrade its flash to 8Mb." />
-<meta property="og:description" content="TPLink TL-WR840N v5 came with only 4Mb of flash, it was not enough for me. I want more functionality on this device, so I decided to upgrade its flash to 8Mb." />
-<link rel="canonical" href="https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb" />
-<meta property="og:url" content="https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb" />
+<meta name="description" content="An example of calculation lifetime of JIANGHAI electrolytic capacitor." />
+<meta property="og:description" content="An example of calculation lifetime of JIANGHAI electrolytic capacitor." />
+<link rel="canonical" href="https://circuitlover.com/capacitor-life-time-cal/" />
+<meta property="og:url" content="https://circuitlover.com/capacitor-life-time-cal/" />
 <meta property="og:site_name" content="circuitlover.com" />
 <meta property="og:image" content="https://circuitlover.com/images/author.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-02-11T00:00:00+00:00" />
+<meta property="article:published_time" content="2022-03-03T00:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://circuitlover.com/images/author.png" />
-<meta property="twitter:title" content="How to upgrade flash chip on TPLink TL-WR840N v5." />
+<meta property="twitter:title" content="Lifetime calculation for Electrolytic Capacitors" />
 <meta name="twitter:site" content="@tuyen_ld" />
 <meta name="twitter:creator" content="@tuyen_ld" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb","headline":"How to upgrade flash chip on TPLink TL-WR840N v5.","dateModified":"2019-02-11T00:00:00+00:00","datePublished":"2019-02-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb"},"image":"https://circuitlover.com/images/author.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://circuitlover.com/images/avatar-circle.png"},"name":"Dinh-Tuyen Le"},"author":{"@type":"Person","name":"Dinh-Tuyen Le"},"description":"TPLink TL-WR840N v5 came with only 4Mb of flash, it was not enough for me. I want more functionality on this device, so I decided to upgrade its flash to 8Mb.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://circuitlover.com/capacitor-life-time-cal/","headline":"Lifetime calculation for Electrolytic Capacitors","dateModified":"2022-03-03T00:00:00+00:00","datePublished":"2022-03-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://circuitlover.com/capacitor-life-time-cal/"},"image":"https://circuitlover.com/images/author.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://circuitlover.com/images/avatar-circle.png"},"name":"Dinh-Tuyen Le"},"author":{"@type":"Person","name":"Dinh-Tuyen Le"},"description":"An example of calculation lifetime of JIANGHAI electrolytic capacitor.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta property="author" content="Dinh-Tuyen Le">
@@ -38,10 +38,17 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1646405033">
+    <link rel="stylesheet" href="/css/site.css?v=1646405969">
 
     
 
+    
+      <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+      </script>
+      <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      </script>
     
   </head>
 
@@ -78,20 +85,20 @@
         <article class="prose lg:prose-lg max-w-3xl mx-auto px-4 pt-8 md:pt-0 pb-16">
   <div class="flex justify-center mb-2">
     <time datetime="" class="block text-center text-gray-600 mr-2 post-date">
-      February 11, 2019
+      March 3, 2022
     </time>
 
     
     
-    <a href="/topics/#uncategorized" class="inline-block no-underline mr-4">
-      <span class="inline-flex items-center px-4 leading-8 rounded-full font-medium leading-5 bg-purple-200 text-purple-800 hover:bg-purple-300 ml-4">
-        Uncategorized
+    <a href="/topics/#pe" class="inline-block no-underline mr-4">
+      <span class="inline-flex items-center px-4 leading-8 rounded-full font-medium leading-5 bg-blue-200 text-blue-800 hover:bg-blue-300 ml-4">
+        Power electronics
       </span>
     </a>
   </div>
 
   <h1 class="text-center p-name mx-auto mb-4 lg:mb-8">
-    <a href="/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb" class="u-url no-underline">How to upgrade flash chip on TPLink TL-WR840N v5.</a>
+    <a href="/capacitor-life-time-cal/" class="u-url no-underline">Lifetime calculation for Electrolytic Capacitors</a>
   </h1>
 
   <div class="flex justify-center space-x-8 sm:space-x-12">
@@ -113,112 +120,97 @@
 
 
   <p class="inline-block text-sm rounded-full bg-green-200 bg-opacity-25 text-green-800 px-4 py-2">
-    3 minute read
+    2 minute read
   </p>
 
 
     
 
   </div>
-  <p>Upgrade TP-Link flash chip on TP-Link from 4mb to 8mb</p>
+  <p>On the process of making new inverter/converter products, we are talking about what type of topology will be used, power losses and cost estimation. It is easy to forgot about the <strong>Lifetime of capacitors</strong>. This article is quick note how to estimate lifetime of electrolytic capacitor (elcap) provided by <strong>JIANGHAI</strong> <sup id="fnref:fn1" role="doc-noteref"><a href="#fn:fn1" class="footnote" rel="footnote">1</a></sup>. Other manufactures may have different ways to estimate lifetime of these capacitors. Please look up manufacturer application note for more detail.</p>
 
-<p><strong>Table of content</strong></p>
+<p>Table of contents</p>
 <ul>
-  <li><a href="#1-pre-requirement">1. Pre-requirement</a></li>
-  <li><a href="#2-lets-do-it">2. Let’s do it</a>
+  <li><a href="#lifetime-model">Lifetime model</a>
     <ul>
-      <li><a href="#21-desolder-old-flash-chip">2.1 Desolder old flash chip</a></li>
-      <li><a href="#22-program-new-flash-chip">2.2 Program new flash chip</a></li>
-      <li><a href="#23-re-solder-new-flash-chip">2.3 Re-solder new flash chip</a></li>
+      <li><a href="#temperature-factor-k_t">Temperature factor $K_T$</a></li>
+      <li><a href="#ripple-current-factor-k_r">Ripple current factor $K_R$</a></li>
+      <li><a href="#voltage-factor-k_v">Voltage factor $K_V$</a></li>
     </ul>
   </li>
-  <li><a href="#3-enjoy">3. Enjoy</a></li>
+  <li><a href="#references">References</a></li>
 </ul>
 
-<hr />
+<h2 id="lifetime-model">Lifetime model</h2>
 
-<h2 id="1-pre-requirement">1. Pre-requirement</h2>
+<p>The lifetime $L$ of the electrolytic capacitor can be estimated by using numerical lifetime model:</p>
+
+\[L = L_0 \cdot K_T \cdot K_R \cdot K_V\]
+
+<p>where</p>
 <ul>
-  <li>New flash chip: I used Winbond 8MiB GD25Q64CSIG</li>
-  <li>Soldering iron: desolder old flash chip and re-solder new flash chip</li>
-  <li>ROM programer and IC socket: I am using CH-341A (~ 5$)</li>
-  <li>One PC/Laptop</li>
+  <li>$L_0$ is specified lifetime from the datasheet of given capacitor at norminal ripple.</li>
+  <li>$K_T$ temperature factor (ambient temperature)</li>
+  <li>$K_R$ ripple current factor (self-heating)</li>
+  <li>$K_V$ voltage factor (operating voltage)</li>
 </ul>
 
-<h2 id="2-lets-do-it">2. Let’s do it</h2>
-<h3 id="21-desolder-old-flash-chip">2.1 Desolder old flash chip</h3>
-<p>Hot air soldering station is ideally suited for desoldering flash. If you not, you can follow this video to do this.</p>
+<h3 id="temperature-factor-k_t">Temperature factor $K_T$</h3>
 
-<div class="embed-responsive aspect-w-16 aspect-h-9">
-  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nZGEtpECPQY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+<p>“10-Kelvin-rule” is wide used in the industry: a drop of the ambient temperature by $10K$ double the lifetime of capacitor.</p>
+
+\[K_T = 2^{\cfrac {T_O - T_A}{10K}}\]
+
+<p>Where</p>
+<ul>
+  <li>$T_0$ rated temperature</li>
+  <li>$T_A$ ambient temperature</li>
+</ul>
+
+<h3 id="ripple-current-factor-k_r">Ripple current factor $K_R$</h3>
+
+\[K_R = K_i^{A \cdot \cfrac{\Delta T_0}{10K}}\]
+
+<p>where</p>
+<ul>
+  <li>$A = 1 - (\frac{I_A}{I_R})^2$</li>
+  <li>$I_A$ ripple current in the application</li>
+  <li>$I_R$ rated ripple current</li>
+  <li>$\Delta T_0$ core temperature increase of the elcap
+    <ul>
+      <li>$T_0=105 ^{\circ}C$ typ. 3.5~5K</li>
+      <li>$T_0 = 85 ^\circ C$ typ. 3.5~10K</li>
+    </ul>
+  </li>
+  <li>$K_i$ empirical safety factor
+    <ul>
+      <li>$T_0=105 ^{\circ}C$ if ($I&gt;I_R$) then $K_i = 4$ else $K_i = 2$</li>
+      <li>$T_0 = 85 ^\circ C \rightarrow K_i = 2$</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="voltage-factor-k_v">Voltage factor $K_V$</h3>
+
+<p>If $0.6 \le \cfrac{U_A}{U_R} \le 1$ then
+\(K_V = \left( \cfrac{U_A}{U_R} \right) ^{-2.5}\)
+else
+\(K_V = 3.59\)</p>
+
+<p>where</p>
+<ul>
+  <li>$U_R$ rated voltage</li>
+  <li>$U_A$ actual operating voltage</li>
+</ul>
+
+<h2 id="references">References</h2>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:fn1" role="doc-endnote">
+      <p>Albertsen, A. 2010. Electrolytic capacitor lifetime estimation [Online]. JIANGHAI Eur. GmbH. Available: https://jianghai-europe.com/wp-content/uploads/Jianghai-Europe-E-Cap-Lifetime-Estimation-long-AAL-2018-09-18.pdf [Accessed March 3, 2022]. <a href="#fnref:fn1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
 </div>
-
-<h3 id="22-program-new-flash-chip">2.2 Program new flash chip</h3>
-<p>Firstly, you need to choose new flash chip you want to replace. Why I chose <code class="language-plaintext highlighter-rouge">Winbond GD25Q64CSIG</code> for replacement, see table bellow:</p>
-
-<script src="https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=Original_vs_Mod_Chip.md"></script>
-
-<p>I see the name of flash chip is the same, so I didn’t checked datasheet for compatible.</p>
-
-<p>Secondly, you need to choose OpenWRT firmware.
-Why I used openwrt-18.06.1-ramips-mt76x8-tl-<strong>wr841n-v13</strong>-squashfs-sysupgrade instead of openwrt-18.06.1-ramips-mt76x8-tl-<strong>wr840n-v5</strong>-squashfs-sysupgrade?</p>
-
-<p>Because it used the same CPU and different in flash and RAM chip.
-<script src="https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=WR841Nv13_vs_WR840Nv5.md"></script></p>
-
-<div class="tldr flex rounded-md bg-blue-300 bg-opacity-25 px-4 my-12">
-  <div class="flex items-center">
-    <div class="-ml-2 mr-2 my-6 transform rotate-90 tracking-tighter font-semibold text-blue-400">NOTE</div>
-    <p class="lg:text-lg leading-5 text-blue-800">You are able to use openwrt-18.06.1-ramips-mt76x8-tl-**wr840n-v5**-squashfs-sysupgrade with 8MB flash chip, your router still booting but you can not any configuration after reboot. You may got error `Your image is probably too big, leaving not enough space for jffs2`.</p>
-  </div>
-</div>
-
-<p>In the first time, I faced this problem. I can not save any configuration after reboot. If you look at boot log, it read:
-<script src="https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=firmware_bad.log"></script></p>
-
-<p>No <code class="language-plaintext highlighter-rouge">/overlay</code> will be mounted:
-<script src="https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=firmware_bad_no_overlay.log"></script></p>
-
-<p>If everything is good, it should be like this:
-<script src="https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=firmware_good.log"></script></p>
-
-<p>Now, you have new flash chip and suitable firware, but you can not use this firware to program new flash chip. Because <strong>RAW</strong> flash need more partion than firmware such as: bootloader and art. See more in <a href="https://openwrt.org/docs/techref/flash.layout">here</a></p>
-
-<p>You can use bellow shell script to generate firmware for any flash with different capacity.
-<script src="https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=create_new_firmware.sh"></script></p>
-
-<script src="https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=flash_partition.md"></script>
-
-<p>If you don’t want to use this script, you can create image by yourself. You may to need hex editor like <a href="https://mh-nexus.de/en/hxd/">HxDen</a> to do this.</p>
-<figure class="align-center">
-  <img src="https://res.cloudinary.com/crushcoding/image/upload/q_auto,f_auto/2019-02-11-upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb/create_image_manual.jpg" alt="" />
-  <figcaption>New firmware layout</figcaption>
-</figure>
-
-<p>All file which I used in <a href="https://drive.google.com/file/d/1kqXvFQYrolipvrrD3Rkv7J7JTZwgVHDn/view?usp=sharing">here</a></p>
-<h3 id="23-re-solder-new-flash-chip">2.3 Re-solder new flash chip</h3>
-<p>After use CH341A to program new flash chip, you can re-solder new flash chip on target board.</p>
-
-<div class="tldr flex rounded-md bg-blue-300 bg-opacity-25 px-4 my-12">
-  <div class="flex items-center">
-    <div class="-ml-2 mr-2 my-6 transform rotate-90 tracking-tighter font-semibold text-blue-400">NOTE</div>
-    <p class="lg:text-lg leading-5 text-blue-800">If your board can not booting, don't worry. You can use [Clip Socket Adapter](https://www.ebay.com/itm/SOIC8-SOP8-Flash-Chip-IC-Test-Clip-Socket-Adapter-BIOS-CH341A-USB-Programmer-/372555847443) to try program flash again with out desolder chip.</p>
-  </div>
-</div>
-
-<h2 id="3-enjoy">3. Enjoy</h2>
-<figure class="align-center">
-  <img src="https://res.cloudinary.com/crushcoding/image/upload/q_auto,f_auto/2019-02-11-upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb/software_status.jpg" alt="" />
-  <figcaption>Software with new flash chip (8MB).</figcaption>
-</figure>
-
-<div class="tldr flex rounded-md bg-blue-300 bg-opacity-25 px-4 my-12">
-  <div class="flex items-center">
-    <div class="-ml-2 mr-2 my-6 transform rotate-90 tracking-tighter font-semibold text-blue-400">NOTE</div>
-    <p class="lg:text-lg leading-5 text-blue-800">I used image come from **TL-WR841N v13.x**, except for LED will not working, everything work well (Wi-Fi, Ethernet, Router feature).</p>
-  </div>
-</div>
-
 
   
     

@@ -36,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1646405033">
+    <link rel="stylesheet" href="/css/site.css?v=1646405969">
 
     
 
@@ -151,7 +151,7 @@
       "title": "Lifetime calculation for Electrolytic Capacitors",
       "category": "pe",
       "date": "2022-03-03T00:00:00Z",
-      "url": "/capacitor-life-time-cal",
+      "url": "/capacitor-life-time-cal/",
       "description": "An example of calculation lifetime of JIANGHAI electrolytic capacitor.",
       "image": "//images/author.png"
     },
@@ -175,7 +175,7 @@
       "title": "Connect Raspberry Pi Zero (not W) to the Internet",
       "category": "pi",
       "date": "2020-12-11T00:00:00Z",
-      "url": "/connect-Pi-Zero-to-internet",
+      "url": "/connect-Pi-Zero-to-internet/",
       "description": "How to connect Pi Zero to the Internet without using any extra devices.",
       "image": "//images/author.png"
     },
@@ -183,7 +183,7 @@
       "title": "How to upgrade flash chip on TPLink TL-WR840N v5.",
       "category": "uncategorized",
       "date": "2019-02-11T00:00:00Z",
-      "url": "/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb",
+      "url": "/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb/",
       "description": "TPLink TL-WR840N v5 came with only 4Mb of flash, it was not enough for me. I want more functionality on this device, so I decided to upgrade its flash to 8Mb.",
       "image": "//images/author.png"
     }
