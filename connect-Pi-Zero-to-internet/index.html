@@ -38,7 +38,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1646428809">
+    <link rel="stylesheet" href="/css/site.css?v=1646429678">
 
     
 
@@ -133,7 +133,7 @@ Raspberry Pi Zero Rev 1.3
 
 <p>Table of contents</p>
 <ul>
-  <li><a href="#1-update-cmdlinetxt-settings">1. Update cmdline.txt settings</a></li>
+  <li><a href="#1-update-cmdlinetxt-and-configtxt-settings">1. Update cmdline.txt and config.txt settings</a></li>
   <li><a href="#2-script-to-create-a-virtual-udc-ethernet-interface">2. Script to create a virtual UDC ethernet interface</a></li>
   <li><a href="#3-window-settings-for-internet-connection-sharing">3. Window settings for Internet Connection Sharing</a></li>
   <li><a href="#4-references">4. References</a></li>
@@ -143,12 +143,36 @@ Raspberry Pi Zero Rev 1.3
 
 <p><img src="/images/posts/pi/Pi-Zero-internet.png" alt="Pi Zero Internet" /></p>
 
-<h3 id="1-update-cmdlinetxt-settings">1. Update cmdline.txt settings</h3>
+<h3 id="1-update-cmdlinetxt-and-configtxt-settings">1. Update cmdline.txt and config.txt settings</h3>
 
 <p>This method is using <code class="language-plaintext highlighter-rouge">libcomposite</code>, so you need to include <code class="language-plaintext highlighter-rouge">libcomposite</code> in the <code class="language-plaintext highlighter-rouge">modules-load</code> directive as the following. For other methods, please visit <a href="https://gist.github.com/gbaman">gbaman</a>/<a href="https://gist.github.com/gbaman/50b6cca61dd1c3f88f41">HowToOTG.md</a>.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@raspberrypi:/home/pi# <span class="nb">cat</span> /boot/cmdline.txt
 <span class="nv">console</span><span class="o">=</span>serial0,115200 <span class="nv">console</span><span class="o">=</span>tty1 <span class="nv">root</span><span class="o">=</span><span class="nv">PARTUUID</span><span class="o">=</span>22e47bc0-02 <span class="nv">rootfstype</span><span class="o">=</span>ext4 fsck.repair<span class="o">=</span><span class="nb">yes </span>rootwait modules-load<span class="o">=</span>dwc2,libcomposite
+</code></pre></div></div>
+
+<p>Add <code class="language-plaintext highlighter-rouge">dtoverlay=dwc2</code> at the end of <code class="language-plaintext highlighter-rouge">/boot/config.txt</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@raspberrypi:/home/pi# <span class="nb">cat</span> /boot/config.txt
+<span class="c">#</span>
+<span class="c"># Omitted</span>
+<span class="c">#</span>
+<span class="o">[</span>cm4]
+<span class="c"># Enable host mode on the 2711 built-in XHCI USB controller.</span>
+<span class="c"># This line should be removed if the legacy DWC2 controller is required</span>
+<span class="c"># (e.g. for USB device mode) or if USB support is not required.</span>
+<span class="nv">otg_mode</span><span class="o">=</span>1
+
+<span class="o">[</span>all]
+
+<span class="o">[</span>pi4]
+<span class="c"># Run as fast as firmware / board allows</span>
+<span class="nv">arm_boost</span><span class="o">=</span>1
+
+<span class="o">[</span>all]
+<span class="c"># Enable UART</span>
+<span class="nv">enable_uart</span><span class="o">=</span>1
+<span class="nv">dtoverlay</span><span class="o">=</span>dwc2
 </code></pre></div></div>
 
 <h3 id="2-script-to-create-a-virtual-udc-ethernet-interface">2. Script to create a virtual UDC ethernet interface</h3>
@@ -274,30 +298,21 @@ route add <span class="nt">-net</span> default gw <span class="nv">$IP_HOST</spa
 </code></pre></div></div>
 
 <p class="text rounded-lg bg-blue-200 bg-opacity-25 text-blue-700 px-8 py-4 my-4">
-  I am using 192.168.137.2 address because when I enable Internet Connection Sharing (ICS) on my Wi-Fi adapter, the second NIC get shared Internet will get 192.168.137.1 as you can see in the following step. You should change it accordingly to your situation.
+  I am using 192.168.137.2 address because when I enable Internet Connection Sharing (ICS) on my Wi-Fi adapter, the second NIC get shared Internet will get 192.168.137.1 as you can see in the following steps. You should change the IP address accordingly to your situation.
 </p>
 
-<p>Save the file as <code class="language-plaintext highlighter-rouge">runme.sh</code>, don’t forget to change its permission to executable file.</p>
+<p>Save the file as <code class="language-plaintext highlighter-rouge">runme.sh</code>, and don’t forget to change its permission to executable file.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@raspberrypi:/home/pi# <span class="nb">chmod</span> +x runme.sh
 </code></pre></div></div>
 
-<p>In order to get the script run at boot up, you need to add this script into <code class="language-plaintext highlighter-rouge">rc.local</code>. See more ways to do this at <a href="https://learn.sparkfun.com/tutorials/how-to-run-a-raspberry-pi-program-on-startup/all">How to Run a Raspberry Pi Program on Startup</a></p>
+<p>In order to get the script run at boot up, one simple way is adding this script into <code class="language-plaintext highlighter-rouge">rc.local</code>. See more ways to do this at <a href="https://learn.sparkfun.com/tutorials/how-to-run-a-raspberry-pi-program-on-startup/all">How to Run a Raspberry Pi Program on Startup</a>.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@raspberrypi:/home/pi# <span class="nb">cat</span> /etc/rc.local
 <span class="c">#!/bin/sh -e</span>
 <span class="c">#</span>
-<span class="c"># rc.local</span>
+<span class="c"># Omitted</span>
 <span class="c">#</span>
-<span class="c"># This script is executed at the end of each multiuser runlevel.</span>
-<span class="c"># Make sure that the script will "exit 0" on success or any other</span>
-<span class="c"># value on error.</span>
-<span class="c">#</span>
-<span class="c"># In order to enable or disable this script just change the execution</span>
-<span class="c"># bits.</span>
-<span class="c">#</span>
-<span class="c"># By default this script does nothing.</span>
-
 <span class="c"># Print the IP address</span>
 <span class="nv">_IP</span><span class="o">=</span><span class="si">$(</span><span class="nb">hostname</span> <span class="nt">-I</span><span class="si">)</span> <span class="o">||</span> <span class="nb">true
 </span><span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$_IP</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
@@ -328,13 +343,13 @@ route add <span class="nt">-net</span> default gw <span class="nv">$IP_HOST</spa
 <p><img src="/images/posts/pi/window-setting-sharing.png" alt="Window network sharing" /></p>
 
 <ol>
-  <li>Right click on it, go to <code class="language-plaintext highlighter-rouge">Properties</code> and then <code class="language-plaintext highlighter-rouge">Sharing</code> tab.</li>
-  <li>Check the Allow Other Network Users to Connect Through This Computer’s Internet Connection check box.</li>
-  <li>Under <code class="language-plaintext highlighter-rouge">How networking connection</code>, choose the new NIC (i.e. Ethernet 4 in my case)</li>
+  <li>Right click on NIC icon choose <code class="language-plaintext highlighter-rouge">Properties</code>, go to <code class="language-plaintext highlighter-rouge">Properties</code> one more and then <code class="language-plaintext highlighter-rouge">Sharing</code> tab.</li>
+  <li>Check the <code class="language-plaintext highlighter-rouge">Allow Other Network Users to Connect Through This Computer’s Internet Connection</code> check box.</li>
+  <li>Under <code class="language-plaintext highlighter-rouge">How networking connection</code>, choose the new NIC (i.e. <code class="language-plaintext highlighter-rouge">Ethernet 4</code> in my case)</li>
   <li>Click <code class="language-plaintext highlighter-rouge">OK</code></li>
 </ol>
 
-<p>You will see a pop-up state that <strong>Ethernet 4</strong> IP address will be changed to <code class="language-plaintext highlighter-rouge">19.268.137.1</code>. That is why I used this IP address in the above <code class="language-plaintext highlighter-rouge">runme.sh</code> script.</p>
+<p>You will see a pop-up states that <strong>Ethernet 4</strong> IP address will be changed to <code class="language-plaintext highlighter-rouge">19.268.137.1</code>. That is why I used this IP address in the above <code class="language-plaintext highlighter-rouge">runme.sh</code> script.</p>
 
 <p><img src="/images/posts/pi/window-setting-IP-forwarding.png" alt="Window setting IP" /></p>
 
@@ -348,17 +363,6 @@ Warning: Permanently added '</span>192.168.137.2<span class="s1">' (ECDSA) to th
 pi@192.168.137.2'</span>s password:
 Linux raspberrypi 5.10.92+ <span class="c">#1514 Mon Jan 17 17:35:21 GMT 2022 armv6l</span>
 
-The programs included with the Debian GNU/Linux system are free software<span class="p">;</span>
-the exact distribution terms <span class="k">for </span>each program are described <span class="k">in </span>the
-individual files <span class="k">in</span> /usr/share/doc/<span class="k">*</span>/copyright.
-
-Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
-permitted by applicable law.
-Last login: Fri Jan 28 05:07:48 2022
-
-SSH is enabled and the default password <span class="k">for </span>the <span class="s1">'pi'</span> user has not been changed.
-This is a security risk - please login as the <span class="s1">'pi'</span> user and <span class="nb">type</span> <span class="s1">'passwd'</span> to <span class="nb">set </span>a new password.
-
 pi@raspberrypi:~ <span class="err">$</span>
 pi@raspberrypi:~ <span class="nv">$ </span>ping google.com
 PING google.com <span class="o">(</span>216.58.207.206<span class="o">)</span> 56<span class="o">(</span>84<span class="o">)</span> bytes of data.
@@ -370,12 +374,11 @@ PING google.com <span class="o">(</span>216.58.207.206<span class="o">)</span> 5
 rtt min/avg/max/mdev <span class="o">=</span> 16.397/16.525/16.654/0.128 ms
 </code></pre></div></div>
 
-<p>In case you have problem with the DNS, try to change the DNS server on Pi by edit <code class="language-plaintext highlighter-rouge">/etc/resolv.conf</code></p>
+<p>In case you have problem with the DNS, try to change the DNS server on PiZero by editing <code class="language-plaintext highlighter-rouge">/etc/resolv.conf</code> file.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat</span> /etc/resolv.conf
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pi@raspberrypi:~ <span class="nv">$ </span><span class="nb">cat</span> /etc/resolv.conf
 <span class="c"># Generated by resolvconf</span>
 nameserver 8.8.8.8 
-<span class="err">$</span>
 </code></pre></div></div>
 
 <p>Done! Now you could use the Internet on your Pi Zero.</p>
