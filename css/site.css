@@ -15,12 +15,14 @@
 <link rel="canonical" href="https://circuitlover.com/css/site.css" />
 <meta property="og:url" content="https://circuitlover.com/css/site.css" />
 <meta property="og:site_name" content="circuitlover.com" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="https://circuitlover.com/images/author.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://circuitlover.com/images/author.png" />
 <meta property="twitter:title" content="circuitlover.com" />
 <meta name="twitter:site" content="@tuyen_ld" />
 <meta name="twitter:creator" content="@tuyen_ld" />
 <script type="application/ld+json">
-{"@type":"WebPage","url":"https://circuitlover.com/css/site.css","headline":"circuitlover.com","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://circuitlover.com/images/avatar-circle.png"},"name":"Dinh-Tuyen Le"},"author":{"@type":"Person","name":"Dinh-Tuyen Le"},"description":"A blog from Dinh-Tuyen Le.","@context":"https://schema.org"}</script>
+{"@type":"WebPage","url":"https://circuitlover.com/css/site.css","headline":"circuitlover.com","image":"https://circuitlover.com/images/author.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://circuitlover.com/images/avatar-circle.png"},"name":"Dinh-Tuyen Le"},"author":{"@type":"Person","name":"Dinh-Tuyen Le"},"description":"A blog from Dinh-Tuyen Le.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta property="author" content="Dinh-Tuyen Le">
@@ -34,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1646404701">
+    <link rel="stylesheet" href="/css/site.css?v=1646405052">
 
     
 

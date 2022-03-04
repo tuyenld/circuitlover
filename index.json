@@ -15,12 +15,14 @@
 <link rel="canonical" href="https://circuitlover.com/index.json" />
 <meta property="og:url" content="https://circuitlover.com/index.json" />
 <meta property="og:site_name" content="circuitlover.com" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="https://circuitlover.com/images/author.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://circuitlover.com/images/author.png" />
 <meta property="twitter:title" content="index.json" />
 <meta name="twitter:site" content="@tuyen_ld" />
 <meta name="twitter:creator" content="@tuyen_ld" />
 <script type="application/ld+json">
-{"@type":"WebPage","url":"https://circuitlover.com/index.json","headline":"index.json","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://circuitlover.com/images/avatar-circle.png"},"name":"Dinh-Tuyen Le"},"author":{"@type":"Person","name":"Dinh-Tuyen Le"},"description":"A blog from Dinh-Tuyen Le.","@context":"https://schema.org"}</script>
+{"@type":"WebPage","url":"https://circuitlover.com/index.json","headline":"index.json","image":"https://circuitlover.com/images/author.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://circuitlover.com/images/avatar-circle.png"},"name":"Dinh-Tuyen Le"},"author":{"@type":"Person","name":"Dinh-Tuyen Le"},"description":"A blog from Dinh-Tuyen Le.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta property="author" content="Dinh-Tuyen Le">
@@ -34,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1646404683">
+    <link rel="stylesheet" href="/css/site.css?v=1646405033">
 
     
 
@@ -151,7 +153,7 @@
       "date": "2022-03-03T00:00:00Z",
       "url": "/capacitor-life-time-cal",
       "description": "An example of calculation lifetime of JIANGHAI electrolytic capacitor.",
-      "image": "/"
+      "image": "//images/author.png"
     },
     {
       "title": "MOSFET and IGBT",
@@ -159,7 +161,7 @@
       "date": "2022-02-13T00:00:00Z",
       "url": "/mosfet-igbt/",
       "description": "MOSFET and IGBT structure and how to use them properly.",
-      "image": "/"
+      "image": "//images/author.png"
     },
     {
       "title": "Complex number and its application in AC analysist",
@@ -167,7 +169,7 @@
       "date": "2022-02-10T00:00:00Z",
       "url": "/complex-number-application/",
       "description": "How to use complex number to simplify the AC circuit analysist.",
-      "image": "/"
+      "image": "//images/author.png"
     },
     {
       "title": "Connect Raspberry Pi Zero (not W) to the Internet",
@@ -175,7 +177,7 @@
       "date": "2020-12-11T00:00:00Z",
       "url": "/connect-Pi-Zero-to-internet",
       "description": "How to connect Pi Zero to the Internet without using any extra devices.",
-      "image": "/"
+      "image": "//images/author.png"
     },
     {
       "title": "How to upgrade flash chip on TPLink TL-WR840N v5.",
@@ -183,7 +185,7 @@
       "date": "2019-02-11T00:00:00Z",
       "url": "/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb",
       "description": "TPLink TL-WR840N v5 came with only 4Mb of flash, it was not enough for me. I want more functionality on this device, so I decided to upgrade its flash to 8Mb.",
-      "image": "/"
+      "image": "//images/author.png"
     }
     
   ]
