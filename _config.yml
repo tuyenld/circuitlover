@@ -7,13 +7,13 @@ author:
 collections:
   newsletters:
     output: true
-defaults:
-  -
-    scope:
-      path: "_newsletters/**"
-    values:
-      sitemap: false
-      image: /images/author.png
+# defaults:
+#   -
+#     scope:
+#       path: "_newsletters/**"
+#     values:
+#       sitemap: false
+      
 exclude:
   - yarn.lock
   - package-lock.json
@@ -29,7 +29,7 @@ include:
   - .htaccess
   - _newsletters
 markdown: kramdown
-permalink: /:title
+permalink: /:title/
 plugins:
 #  - jekyll-feed
   - jekyll-seo-tag
@@ -62,6 +62,7 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "post"
+      image: /images/author.png # opengraph default image
 
 # Set which comment system to use
 comments:
