@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-03-12T16:47:45+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Lifetime calculation for Electrolytic Capacitors</title><link href="https://circuitlover.com/capacitor-life-time-cal/" rel="alternate" type="text/html" title="Lifetime calculation for Electrolytic Capacitors" /><published>2022-03-03T00:00:00+00:00</published><updated>2022-03-03T00:00:00+00:00</updated><id>https://circuitlover.com/capacitor-life-time-cal</id><content type="html" xml:base="https://circuitlover.com/capacitor-life-time-cal/">&lt;p&gt;On the process of making new inverter/converter products, we are talking about what type of topology will be used, power losses and cost estimation. It is easy to forgot about the &lt;strong&gt;Lifetime of capacitors&lt;/strong&gt;. This article is quick note how to estimate lifetime of electrolytic capacitor (elcap) provided by &lt;strong&gt;JIANGHAI&lt;/strong&gt; &lt;sup id=&quot;fnref:fn1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:fn1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Other manufactures may have different ways to estimate lifetime of these capacitors. Please look up manufacturer application note for more detail.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-03-12T16:49:44+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Lifetime calculation for Electrolytic Capacitors</title><link href="https://circuitlover.com/capacitor-life-time-cal/" rel="alternate" type="text/html" title="Lifetime calculation for Electrolytic Capacitors" /><published>2022-03-03T00:00:00+00:00</published><updated>2022-03-03T00:00:00+00:00</updated><id>https://circuitlover.com/capacitor-life-time-cal</id><content type="html" xml:base="https://circuitlover.com/capacitor-life-time-cal/">&lt;p&gt;On the process of making new inverter/converter products, we are talking about what type of topology will be used, power losses and cost estimation. It is easy to forgot about the &lt;strong&gt;Lifetime of capacitors&lt;/strong&gt;. This article is quick note how to estimate lifetime of electrolytic capacitor (elcap) provided by &lt;strong&gt;JIANGHAI&lt;/strong&gt; &lt;sup id=&quot;fnref:fn1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:fn1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Other manufactures may have different ways to estimate lifetime of these capacitors. Please look up manufacturer application note for more detail.&lt;/p&gt;
 
 &lt;p&gt;Table of contents&lt;/p&gt;
 &lt;ul&gt;
@@ -362,7 +362,104 @@ It’s easy to notice that $\underline{X}$ is time-independent. This conclusion 
       &lt;p&gt;James Kirtley Jr.. &lt;em&gt;6.061 Introduction to Electric Power Systems.&lt;/em&gt; Spring 2011. Massachusetts Institute of Technology: MIT OpenCourseWare, &lt;a href=&quot;https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-061-introduction-to-electric-power-systems-spring-2011&quot;&gt;https://ocw.mit.edu&lt;/a&gt;. License: &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;Creative Commons BY-NC-SA&lt;/a&gt;. &lt;a href=&quot;#fnref:ref1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents 1. Sinusoidal time functions and complex number 1.1. Complex number recap 1.2. Sinusoidal Time Functions 1.3. Summary 2. Impedance Example</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Connect Raspberry Pi Zero (not W) to the Internet</title><link href="https://circuitlover.com/connect-Pi-Zero-to-internet/" rel="alternate" type="text/html" title="Connect Raspberry Pi Zero (not W) to the Internet" /><published>2020-12-11T00:00:00+00:00</published><updated>2020-12-11T00:00:00+00:00</updated><id>https://circuitlover.com/connect-Pi-Zero-to-internet</id><content type="html" xml:base="https://circuitlover.com/connect-Pi-Zero-to-internet/">&lt;p&gt;Raspi Zero (not W) have neither Wi-Fi nor Ethernet, so how could we want to update your raspbian without remove the microSD card? 
+&lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents 1. Sinusoidal time functions and complex number 1.1. Complex number recap 1.2. Sinusoidal Time Functions 1.3. Summary 2. Impedance Example</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The fundamental of DC-AC inverter</title><link href="https://circuitlover.com/dc-ac-inverter/" rel="alternate" type="text/html" title="The fundamental of DC-AC inverter" /><published>2022-01-06T00:00:00+00:00</published><updated>2022-01-06T00:00:00+00:00</updated><id>https://circuitlover.com/ac-dc-inverter</id><content type="html" xml:base="https://circuitlover.com/dc-ac-inverter/">&lt;p&gt;Table of contents&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#1-full-brige-inverters&quot;&gt;1. Full-brige inverters&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#11-biploar-pwm&quot;&gt;1.1. Biploar PWM&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#12-unipolar-pwm&quot;&gt;1.2. Unipolar PWM&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#13-hybrid-pwm&quot;&gt;1.3. Hybrid PWM&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#vector-space-and-three-phase-inverter&quot;&gt;Vector space and three-phase inverter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#power-losses-and-heating-design-of-an-dc-ac-inverter&quot;&gt;Power losses and heating design of an DC-AC inverter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#references&quot;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;1-full-brige-inverters&quot;&gt;1. Full-brige inverters&lt;/h1&gt;
+&lt;p&gt;TL;DR&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Unipolar by definition: having or oriented in respect to a single pole.&lt;/li&gt;
+  &lt;li&gt;Bipolar by definiton: having or involving the use of two poles or polarities.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;11-biploar-pwm&quot;&gt;1.1. Biploar PWM&lt;/h2&gt;
+
+&lt;h2 id=&quot;12-unipolar-pwm&quot;&gt;1.2. Unipolar PWM&lt;/h2&gt;
+
+&lt;h2 id=&quot;13-hybrid-pwm&quot;&gt;1.3. Hybrid PWM&lt;/h2&gt;
+
+&lt;h1 id=&quot;vector-space-and-three-phase-inverter&quot;&gt;Vector space and three-phase inverter&lt;/h1&gt;
+
+&lt;h1 id=&quot;power-losses-and-heating-design-of-an-dc-ac-inverter&quot;&gt;Power losses and heating design of an DC-AC inverter&lt;/h1&gt;
+&lt;p&gt;Power losses of an inverter is defined as&lt;/p&gt;
+
+\[P_{Loss} = P_{in} - P_{out}\]
+
+&lt;p&gt;We could measure the losses in two ways.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Direct&lt;/strong&gt; measure $P_{in}$ and $P_{out}$. The stability of this method is difficult to achieve. A small variant in input or output could lead to a large error.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Indrect&lt;/strong&gt; by using Calorimetric methos. Highest accuracy is achieved, but it is complicate to operate.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;A alternative of measuring the losses is &lt;strong&gt;deriving the losses&lt;/strong&gt;. The losses can be calculated by estimate of 4 types of power losses.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Switching losses&lt;/li&gt;
+  &lt;li&gt;Conducting Losses&lt;/li&gt;
+  &lt;li&gt;Blocking losses (neglecgable)&lt;/li&gt;
+  &lt;li&gt;Driving losses (neglecable)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The rule of thumb for a good design is 50% of switching losses and 50% of conducting losses. Let take a closer look at the three-phase inverter.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/dc-ac-inverter/three-phase-inverter.png&quot; alt=&quot;three phase inverter&quot; /&gt;&lt;/p&gt;
+
+\[P_{conduction} = \frac{1}{2 \pi} \int_{0}^{2 \pi} v (\omega t) i (\omega t) dt\]
+
+&lt;p&gt;Power switch is only conducting for half of period.&lt;/p&gt;
+
+\[P_C^{IGBT} = \frac{1}{2 \pi} \int_{0}^{\pi} \left[ V_{CE,0} \cdot i_{IGBT}(\omega t) + R_{CE} \cdot i_{IGBT}^2 (\omega t) \right] dt\]
+
+\[P_C^{MOSFET} = \frac{1}{2 \pi} \int_0^{\pi} \left [ r_{ds} \cdot i_{MOS}^2 (\omega t) \right ] dt\]
+
+\[P_C^{Diode} = \frac{1}{2 \pi} \int_0^{\pi} \left [ V_{Forward} \cdot i_{diode} (\omega t) + R_F \cdot i_{diode}^2 (\omega t) \right] dt\]
+
+\[\textcolor{red}{Note: } V_{CE,0}, \; R_{CE}, \; R_{DS}, \;V_{F,0}, \; R_{F} \text{ are from the datasheets of Mosfet/IGBT/Diode.}\]
+
+&lt;p&gt;Using Kirchhoff’s current law, we have,&lt;/p&gt;
+
+\[i_{IGBT} (\omega t) + i_{Diode} (\omega t) = \hat{i}_N \; sin(\omega t)\]
+
+&lt;p&gt;where&lt;/p&gt;
+
+\[i_{IGBT}(\omega t) = m_{IGBT} (\omega t) \cdot \hat{i}_N \; sin(\omega t) \qquad (1) \\
+i_{Diode}(\omega t) = m_{Diode} (\omega t) \cdot \hat{i}_N \; sin (\omega t)\]
+
+&lt;p&gt;In case of Sine-triangle PWM modulation, modulation function $m = M \cdot sin(\omega t + \phi)$ with $M$ is modulation index.&lt;/p&gt;
+
+\[m_{IGBT} - m_{Diode} = m \qquad (2) \\
+m_{IGBT} + m_{Diode} = 1\]
+
+&lt;p&gt;we have,&lt;/p&gt;
+
+\[m_{IGBT} = \frac{1+m}{2} = \frac{1}{2} \left( 1 + M \cdot sin(\omega t) \right) \qquad (3) \\
+m_{Diode} = \frac{1-m}{2} = \frac{1}{2} \left( 1 - M \cdot sin(\omega t) \right)\]
+
+&lt;p&gt;Replace equation &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(1)&lt;/code&gt; by equation &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(3)&lt;/code&gt; we get,&lt;/p&gt;
+
+\[i_{IGBT} (\omega t) = \frac{1}{2}  \left[ 1 + M \cdot sin(\omega t) \right]  \hat{i}_N \; sin(\omega t) \\
+i_{Diode} (\omega t) = \frac{1}{2}  \left[ 1 - M \cdot sin(\omega t) \right]  \hat{i}_N \; sin(\omega t)\]
+
+&lt;p&gt;Finally, we get the important formular for conduction losses.&lt;/p&gt;
+
+\[P^{IGBT}_C = \frac{\hat{i_N} \cdot V_{CE,0}}{2 \pi} \left( 1 + \frac{M \cdot \pi}{4} cos \phi \right) + \frac{R_{CE} \cdot \hat{i_N}^2}{2 \pi} (\frac{\pi}{4} + \frac{2M}{3} cos\phi)\]
+
+\[P^{MOS}_C = \frac{R_{DS} \cdot \hat{i_N}^2}{2 \pi} (\frac{\pi}{4} + \frac{2M}{3} cos\phi) \qquad (V_{CE,0} = 0)\]
+
+\[P^{Diode}_C = \frac{\hat{i_N} \cdot V_{F,0}}{2 \pi} \left( 1 - \frac{M \cdot \pi}{4} cos \phi \right) + \frac{R_{F} \cdot \hat{i_N}^2}{2 \pi} (\frac{\pi}{4} - \frac{2M}{3} cos\phi)\]
+
+&lt;p&gt;Since $R_{DS} \gg R_{CE}$, we could say that $P_C^{MOS}$ is not smaller than $P_C^{IBGT}$.&lt;/p&gt;
+&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents 1. Full-brige inverters 1.1. Biploar PWM 1.2. Unipolar PWM 1.3. Hybrid PWM Vector space and three-phase inverter Power losses and heating design of an DC-AC inverter References</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Connect Raspberry Pi Zero (not W) to the Internet</title><link href="https://circuitlover.com/connect-Pi-Zero-to-internet/" rel="alternate" type="text/html" title="Connect Raspberry Pi Zero (not W) to the Internet" /><published>2020-12-11T00:00:00+00:00</published><updated>2020-12-11T00:00:00+00:00</updated><id>https://circuitlover.com/connect-Pi-Zero-to-internet</id><content type="html" xml:base="https://circuitlover.com/connect-Pi-Zero-to-internet/">&lt;p&gt;Raspi Zero (not W) have neither Wi-Fi nor Ethernet, so how could we want to update your raspbian without remove the microSD card? 
 Well, you can create a virtual Ethernet interface. This method is tested on &lt;strong&gt;Window 10&lt;/strong&gt;, you could get the same idea when using Linux/Mac computer.&lt;/p&gt;
 
 &lt;p&gt;I am testing &lt;a href=&quot;https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2022-01-28/2022-01-28-raspios-bullseye-armhf-lite.zip&quot;&gt;2022-01-28-raspios-bullseye-armhf-lite image&lt;/a&gt; version.&lt;/p&gt;

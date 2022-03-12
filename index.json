@@ -36,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1647103665">
+    <link rel="stylesheet" href="/css/site.css?v=1647103784">
 
     
 
@@ -169,6 +169,14 @@
       "date": "2022-02-10T00:00:00Z",
       "url": "/complex-number-application/",
       "description": "How to use complex number to simplify the AC circuit analysist.",
+      "image": "//images/author.png"
+    },
+    {
+      "title": "The fundamental of DC-AC inverter",
+      "category": "pe",
+      "date": "2022-01-06T00:00:00Z",
+      "url": "/dc-ac-inverter/",
+      "description": "Single-phase and three-phase PWM inverter.",
       "image": "//images/author.png"
     },
     {
