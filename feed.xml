@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-03-12T17:11:49+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Lifetime calculation for Electrolytic Capacitors</title><link href="https://circuitlover.com/capacitor-life-time-cal/" rel="alternate" type="text/html" title="Lifetime calculation for Electrolytic Capacitors" /><published>2022-03-03T00:00:00+00:00</published><updated>2022-03-03T00:00:00+00:00</updated><id>https://circuitlover.com/capacitor-life-time-cal</id><content type="html" xml:base="https://circuitlover.com/capacitor-life-time-cal/">&lt;p&gt;On the process of making new inverter/converter products, we are talking about what type of topology will be used, power losses and cost estimation. It is easy to forgot about the &lt;strong&gt;Lifetime of capacitors&lt;/strong&gt;. This article is quick note how to estimate lifetime of electrolytic capacitor (elcap) provided by &lt;strong&gt;JIANGHAI&lt;/strong&gt; &lt;sup id=&quot;fnref:fn1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:fn1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Other manufactures may have different ways to estimate lifetime of these capacitors. Please look up manufacturer application note for more detail.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-03-12T17:46:00+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Lifetime calculation for Electrolytic Capacitors</title><link href="https://circuitlover.com/capacitor-life-time-cal/" rel="alternate" type="text/html" title="Lifetime calculation for Electrolytic Capacitors" /><published>2022-03-03T00:00:00+00:00</published><updated>2022-03-03T00:00:00+00:00</updated><id>https://circuitlover.com/capacitor-life-time-cal</id><content type="html" xml:base="https://circuitlover.com/capacitor-life-time-cal/">&lt;p&gt;On the process of making new inverter/converter products, we are talking about what type of topology will be used, power losses and cost estimation. It is easy to forgot about the &lt;strong&gt;Lifetime of capacitors&lt;/strong&gt;. This article is quick note how to estimate lifetime of electrolytic capacitor (elcap) provided by &lt;strong&gt;JIANGHAI&lt;/strong&gt; &lt;sup id=&quot;fnref:fn1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:fn1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Other manufactures may have different ways to estimate lifetime of these capacitors. Please look up manufacturer application note for more detail.&lt;/p&gt;
 
 &lt;p&gt;Table of contents&lt;/p&gt;
 &lt;ul&gt;
@@ -418,13 +418,17 @@ It’s easy to notice that $\underline{X}$ is time-independent. This conclusion 
 
 &lt;p&gt;Power switch is only conducting for half of period.&lt;/p&gt;
 
-\[P_C^{IGBT} = \frac{1}{2 \pi} \int_{0}^{\pi} \left[ V_{CE,0} \cdot i_{IGBT}(\omega t) + R_{CE} \cdot i_{IGBT}^2 (\omega t) \right] dt\]
+\[\begin{align*}
 
-\[P_C^{MOSFET} = \frac{1}{2 \pi} \int_0^{\pi} \left [ r_{ds} \cdot i_{MOS}^2 (\omega t) \right ] dt\]
+&amp;amp; P_C^{IGBT} = \frac{1}{2 \pi} \int_{0}^{\pi} \left[ V_{CE,0} \cdot i_{IGBT}(\omega t) + R_{CE} \cdot i_{IGBT}^2 (\omega t) \right] dt \\
+  
+&amp;amp; P_C^{MOSFET} = \frac{1}{2 \pi} \int_0^{\pi} \left [ r_{ds} \cdot i_{MOS}^2 (\omega t) \right ] dt \\
 
-\[P_C^{Diode} = \frac{1}{2 \pi} \int_0^{\pi} \left [ V_{Forward} \cdot i_{diode} (\omega t) + R_F \cdot i_{diode}^2 (\omega t) \right] dt\]
+&amp;amp; P_C^{Diode} = \frac{1}{2 \pi} \int_0^{\pi} \left [ V_{Forward} \cdot i_{diode} (\omega t) + R_F \cdot i_{diode}^2 (\omega t) \right] dt
 
-\[\textcolor{red}{Note: } V_{CE,0}, \; R_{CE}, \; R_{DS}, \;V_{F,0}, \; R_{F} \text{ are from the datasheets of Mosfet/IGBT/Diode.}\]
+\end{align*}\]
+
+\[\text{Note: } V_{CE,0}, \; R_{CE}, \; R_{DS}, \;V_{F,0}, \; R_{F} \text{ are from the datasheets of Mosfet/IGBT/Diode.}\]
 
 &lt;p&gt;Using Kirchhoff’s current law, we have,&lt;/p&gt;
 
@@ -432,18 +436,31 @@ It’s easy to notice that $\underline{X}$ is time-independent. This conclusion 
 
 &lt;p&gt;where&lt;/p&gt;
 
-\[i_{IGBT}(\omega t) = m_{IGBT} (\omega t) \cdot \hat{i}_N \; sin(\omega t) \qquad (1) \\
-i_{Diode}(\omega t) = m_{Diode} (\omega t) \cdot \hat{i}_N \; sin (\omega t)\]
+\[\begin{align*}
+  
+&amp;amp; i_{IGBT}(\omega t) = m_{IGBT} (\omega t) \cdot \hat{i}_N \; sin(\omega t) \qquad (1) \\
+&amp;amp; i_{Diode}(\omega t) = m_{Diode} (\omega t) \cdot \hat{i}_N \; sin (\omega t)
+
+\end{align*}\]
 
 &lt;p&gt;In case of Sine-triangle PWM modulation, modulation function $m = M \cdot sin(\omega t + \phi)$ with $M$ is modulation index.&lt;/p&gt;
 
-\[m_{IGBT} - m_{Diode} = m \qquad (2) \\
-m_{IGBT} + m_{Diode} = 1\]
+\[\begin{align*}
+  
+&amp;amp; m_{IGBT} - m_{Diode} = m \qquad (2) \\
+&amp;amp; m_{IGBT} + m_{Diode} = 1
+
+\end{align*}\]
 
 &lt;p&gt;we have,&lt;/p&gt;
 
-\[m_{IGBT} = \frac{1+m}{2} = \frac{1}{2} \left( 1 + M \cdot sin(\omega t) \right) \qquad (3) \\
-m_{Diode} = \frac{1-m}{2} = \frac{1}{2} \left( 1 - M \cdot sin(\omega t) \right)\]
+\[\begin{align*}
+  
+&amp;amp;m_{IGBT} = \frac{1+m}{2} = \frac{1}{2} \left( 1 + M \cdot sin(\omega t) \right) \qquad (3) \\
+
+&amp;amp;m_{Diode} = \frac{1-m}{2} = \frac{1}{2} \left( 1 - M \cdot sin(\omega t) \right) 
+
+\end{align*}\]
 
 &lt;p&gt;Replace equation &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(1)&lt;/code&gt; by equation &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(3)&lt;/code&gt; we get,&lt;/p&gt;
 
@@ -452,32 +469,18 @@ i_{Diode} (\omega t) = \frac{1}{2}  \left[ 1 - M \cdot sin(\omega t) \right]  \h
 
 &lt;p&gt;Finally, we get the important formular for conduction losses.&lt;/p&gt;
 
-\[\begin{aligned}
-  
-P^{IGBT}_C = \frac{\hat{i_N} \cdot V_{CE,0}}{2 \pi} \left( 1 + \frac{M \cdot \pi}{4} cos \phi \right) + \frac{R_{CE} \cdot \hat{i_N}^2}{2 \pi} (\frac{\pi}{4} + \frac{2M}{3} cos\phi) \\
-
-P^{MOS}_C = \frac{R_{DS} \cdot \hat{i_N}^2}{2 \pi} (\frac{\pi}{4} + \frac{2M}{3} cos\phi) \qquad (V_{CE,0} = 0) \\
-
-P^{Diode}_C = \frac{\hat{i_N} \cdot V_{F,0}}{2 \pi} \left( 1 - \frac{M \cdot \pi}{4} cos \phi \right) + \frac{R_{F} \cdot \hat{i_N}^2}{2 \pi} (\frac{\pi}{4} - \frac{2M}{3} cos\phi)
-
-\end{aligned}\]
-
 \[\begin{align*}
-  &amp;amp; \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
-  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
-  &amp;amp; (x_1, \ldots, x_n) \left( \begin{array}{ccc}
-      \phi(e_1, e_1) &amp;amp; \cdots &amp;amp; \phi(e_1, e_n) \\
-      \vdots &amp;amp; \ddots &amp;amp; \vdots \\
-      \phi(e_n, e_1) &amp;amp; \cdots &amp;amp; \phi(e_n, e_n)
-    \end{array} \right)
-  \left( \begin{array}{c}
-      y_1 \\
-      \vdots \\
-      y_n
-    \end{array} \right)
+  
+&amp;amp; P^{IGBT}_C = \frac{\hat{i_N} \cdot V_{CE,0}}{2 \pi} \left( 1 + \frac{M \cdot \pi}{4} cos \phi \right) + \frac{R_{CE} \cdot \hat{i_N}^2}{2 \pi} (\frac{\pi}{4} + \frac{2M}{3} cos\phi) \\
+
+&amp;amp; P^{MOS}_C = \frac{R_{DS} \cdot \hat{i_N}^2}{2 \pi} (\frac{\pi}{4} + \frac{2M}{3} cos\phi) \qquad (V_{CE,0} = 0) \\
+
+&amp;amp; P^{Diode}_C = \frac{\hat{i_N} \cdot V_{F,0}}{2 \pi} \left( 1 - \frac{M \cdot \pi}{4} cos \phi \right) + \frac{R_{F} \cdot \hat{i_N}^2}{2 \pi} (\frac{\pi}{4} - \frac{2M}{3} cos\phi)
+
 \end{align*}\]
 
 &lt;p&gt;Since $R_{DS} \gg R_{CE}$, we could say that $P_C^{MOS}$ is not smaller than $P_C^{IBGT}$.&lt;/p&gt;
+
 &lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents 1. Full-brige inverters 1.1. Biploar PWM 1.2. Unipolar PWM 1.3. Hybrid PWM Vector space and three-phase inverter Power losses and heating design of an DC-AC inverter References</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Connect Raspberry Pi Zero (not W) to the Internet</title><link href="https://circuitlover.com/connect-Pi-Zero-to-internet/" rel="alternate" type="text/html" title="Connect Raspberry Pi Zero (not W) to the Internet" /><published>2020-12-11T00:00:00+00:00</published><updated>2020-12-11T00:00:00+00:00</updated><id>https://circuitlover.com/connect-Pi-Zero-to-internet</id><content type="html" xml:base="https://circuitlover.com/connect-Pi-Zero-to-internet/">&lt;p&gt;Raspi Zero (not W) have neither Wi-Fi nor Ethernet, so how could we want to update your raspbian without remove the microSD card? 
 Well, you can create a virtual Ethernet interface. This method is tested on &lt;strong&gt;Window 10&lt;/strong&gt;, you could get the same idea when using Linux/Mac computer.&lt;/p&gt;
 
