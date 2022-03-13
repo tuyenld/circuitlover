@@ -1,4 +1,4 @@
-Theme by [Joe Masilotti](https://github.com/joemasilotti)
+Forked from [Joe Masilotti](https://github.com/joemasilotti)
 
 ## Install
 
@@ -34,8 +34,6 @@ bin/start
 # Create a new post
 bin/new POST_TITLE
 ```
-
-----
 
 ## Post
 [ ] Clarke transform (ref#4, 15.6)
