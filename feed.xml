@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-03-12T17:54:45+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Lifetime calculation for Electrolytic Capacitors</title><link href="https://circuitlover.com/capacitor-life-time-cal/" rel="alternate" type="text/html" title="Lifetime calculation for Electrolytic Capacitors" /><published>2022-03-03T00:00:00+00:00</published><updated>2022-03-03T00:00:00+00:00</updated><id>https://circuitlover.com/capacitor-life-time-cal</id><content type="html" xml:base="https://circuitlover.com/capacitor-life-time-cal/">&lt;p&gt;On the process of making new inverter/converter products, we are talking about what type of topology will be used, power losses and cost estimation. It is easy to forgot about the &lt;strong&gt;Lifetime of capacitors&lt;/strong&gt;. This article is quick note how to estimate lifetime of electrolytic capacitor (elcap) provided by &lt;strong&gt;JIANGHAI&lt;/strong&gt; &lt;sup id=&quot;fnref:fn1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:fn1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Other manufactures may have different ways to estimate lifetime of these capacitors. Please look up manufacturer application note for more detail.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-03-13T15:36:07+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Lifetime calculation for Electrolytic Capacitors</title><link href="https://circuitlover.com/capacitor-life-time-cal/" rel="alternate" type="text/html" title="Lifetime calculation for Electrolytic Capacitors" /><published>2022-03-03T00:00:00+00:00</published><updated>2022-03-03T00:00:00+00:00</updated><id>https://circuitlover.com/capacitor-life-time-cal</id><content type="html" xml:base="https://circuitlover.com/capacitor-life-time-cal/">&lt;p&gt;On the process of making new inverter/converter products, we are talking about what type of topology will be used, power losses and cost estimation. It is easy to forgot about the &lt;strong&gt;Lifetime of capacitors&lt;/strong&gt;. This article is quick note how to estimate lifetime of electrolytic capacitor (elcap) provided by &lt;strong&gt;JIANGHAI&lt;/strong&gt; &lt;sup id=&quot;fnref:fn1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:fn1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Other manufactures may have different ways to estimate lifetime of these capacitors. Please look up manufacturer application note for more detail.&lt;/p&gt;
 
 &lt;p&gt;Table of contents&lt;/p&gt;
 &lt;ul&gt;
@@ -183,34 +183,36 @@ else
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/representation-of-the-complex-number.png&quot; alt=&quot;represenation of the complex number&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Magnitude and phase angle of the complex number $\underline{z}$ is &lt;sup id=&quot;fnref:ref1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:ref1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Magnitude and phase angle of the complex number $\vec{z}$ is &lt;sup id=&quot;fnref:ref1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:ref1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
-\[|\underline{z}|=\sqrt{x^{2}+y^{2}} \qquad 
+\[\textcolor{red}{Note: } \text{The author was used } \underline{z} \text{ to denote a vector. However, I am using } \vec{z} \text{ to do this because of my personal preference.}\]
+
+\[|\vec{z}|=\sqrt{x^{2}+y^{2}} \qquad 
 \phi=\arctan \left(\frac{y}{x}\right)\]
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Euler&lt;/code&gt; relation&lt;/p&gt;
 
 \[e^{j \phi}=\cos (\phi)+j \sin (\phi) \qquad 
-\underline{z}=x+j y=|\underline{z}| e^{j \phi}\]
+\vec{z}=x+j y=|\vec{z}| e^{j \phi}\]
 
 &lt;p&gt;The product and the ratio of two complex numbers are&lt;/p&gt;
 
-\[\underline{z}_{1}=\left|\underline{z}_{1}\right| e^{j \phi_{1}} \qquad
-\underline{z}_{2}=\left|\underline{z}_{2}\right| e^{j \phi_{2}}
+\[\vec{z}_{1}=\left|\vec{z}_{1}\right| e^{j \phi_{1}} \qquad
+\vec{z}_{2}=\left|\vec{z}_{2}\right| e^{j \phi_{2}}
 \qquad
-\underline{z}_{1} \underline{z}_{2}=\left|\underline{z}_{1}\right|\left|\underline{z}_{2}\right| e^{j\left(\phi_{1}+\phi_{2}\right)}
+\vec{z}_{1} \vec{z}_{2}=\left|\vec{z}_{1}\right|\left|\vec{z}_{2}\right| e^{j\left(\phi_{1}+\phi_{2}\right)}
 \qquad
-\frac{\underline{z}_{1}}{\underline{z}_{2}}=\frac{\left|\underline{z}_{1}\right|}{\left|\underline{z}_{2}\right|} e^{j\left(\phi_{1}-\phi_{2}\right)}\]
+\frac{\vec{z}_{1}}{\vec{z}_{2}}=\frac{\left|\vec{z}_{1}\right|}{\left|\vec{z}_{2}\right|} e^{j\left(\phi_{1}-\phi_{2}\right)}\]
 
 &lt;p&gt;The complex conjugate of a complex number is given by&lt;/p&gt;
 
-\[\underline{z}=x+j y
+\[\vec{z}=x+j y
 \quad
-z^{*}=x-j y
+\vec{z}^{*}=x-j y
 \qquad
-\underline{z}+\underline{z}^{*}=2 \operatorname{Re}(\underline{z})=2 x
+\vec{z}+\vec{z}^{*}=2 \operatorname{Re}(\vec{z})=2 x
 \qquad
-\underline{z}-\underline{z}^{*}=2 j \operatorname{Im}(\underline{z})=2 j y\]
+\vec{z}-\vec{z}^{*}=2 j \operatorname{Im}(\vec{z})=2 j y\]
 
 &lt;h3 id=&quot;12-sinusoidal-time-functions&quot;&gt;1.2. Sinusoidal Time Functions&lt;/h3&gt;
 
@@ -220,69 +222,69 @@ z^{*}=x-j y
 
 \[f(t)=B \cos (\omega t)+C \sin (\omega t) \qquad (2)\]
 
-\[f(t)=\underline{X} e^{j \omega t}+\underline{X}^{*} e^{-j \omega t} \qquad (3)\]
+\[f(t)=\vec{X} e^{j \omega t}+\vec{X}^{*} e^{-j \omega t} \qquad (3)\]
 
 &lt;p&gt;Equation &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(3)&lt;/code&gt; makes sure that that the resulting function is real. Now, let find out the relationship between equation &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(1) and (3)&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Let say&lt;/p&gt;
 
-\[\underline{X}=|\underline{X}| e^{j \psi}\]
+\[\vec{X}=|\vec{X}| e^{j \psi}\]
 
 &lt;p&gt;then
-\(f(t) =|\underline{X}| e^{j \psi} e^{j \omega t}+|\underline{X}|^{*} e^{-j \psi} e^{-j \omega t} =|\underline{X}| e^{j(\psi+\omega t)}+|\underline{X}|^{*} e^{-j(\psi+\omega t)}\)&lt;/p&gt;
+\(f(t) =|\vec{X}| e^{j \psi} e^{j \omega t}+|\vec{X}|^{*} e^{-j \psi} e^{-j \omega t} =|\vec{X}| e^{j(\psi+\omega t)}+|\vec{X}|^{*} e^{-j(\psi+\omega t)}\)&lt;/p&gt;
 
-\[f(t)=2|\underline{X}| \cos (\omega t+\psi)\]
+\[f(t)=2|\vec{X}| \cos (\omega t+\psi)\]
 
 &lt;p&gt;so we have&lt;/p&gt;
 
-\[|\underline{X}| =\frac{A}{2} \qquad \psi =\phi\]
+\[|\vec{X}| =\frac{A}{2} \qquad \psi =\phi\]
 
 &lt;p&gt;Next, finding the relationship between equation &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(2) and (3)&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Alternatively, we could write&lt;/p&gt;
 
-\[\underline{X}=x+j y 
+\[\vec{X}=x+j y 
 \qquad \text{where} \quad
-x=|\underline{X}| \cos (\psi)
+x=|\vec{X}| \cos (\psi)
 \qquad
-y=|\underline{X}| \sin (\psi)\]
+y=|\vec{X}| \sin (\psi)\]
 
 &lt;p&gt;thus&lt;/p&gt;
 
-\[f(t)=\underline{X} e^{j \omega t}+\underline{X}^{*} e^{-j \omega t} = x\left(e^{j \omega t}+e^{-j \omega t}\right)+j y\left(e^{j \omega t}-e^{-j \omega t}\right)\]
+\[f(t)=\vec{X} e^{j \omega t}+\vec{X}^{*} e^{-j \omega t} = x\left(e^{j \omega t}+e^{-j \omega t}\right)+j y\left(e^{j \omega t}-e^{-j \omega t}\right)\]
 
 \[f(t) =2 x \cos (\omega t)-2 y \sin (\omega t)\]
 
 &lt;p&gt;Finally, we get&lt;/p&gt;
 
-\[B = 2x \qquad C = -2y \qquad \underline{X} = \frac{B}{2} - j \frac{C}{2}\]
+\[B = 2x \qquad C = -2y \qquad \vec{X} = \frac{B}{2} - j \frac{C}{2}\]
 
 &lt;h3 id=&quot;13-summary&quot;&gt;1.3. Summary&lt;/h3&gt;
 
 &lt;p&gt;Since 
-\((\underline{X} e^{j \omega t})^{*} = \underline{X}^{*} e^{-j \omega t}\)&lt;/p&gt;
+\((\vec{X} e^{j \omega t})^{*} = \vec{X}^{*} e^{-j \omega t}\)&lt;/p&gt;
 
 &lt;p&gt;expression &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(3) and (4)&lt;/code&gt; are equivalent. It is advantageous to use one or the other of them, according to circumstances.&lt;br /&gt;
-It’s easy to notice that $\underline{X}$ is time-independent. This conclusion is used when forming the relationship between voltage and current of inductor and capacitor elements.&lt;/p&gt;
+It’s easy to notice that $\vec{X}$ is time-independent. This conclusion is used when forming the relationship between voltage and current of inductor and capacitor elements.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;Sinusoidal form&lt;/th&gt;
       &lt;th&gt;Complex number form&lt;/th&gt;
-      &lt;th&gt;$\underline{X}$&lt;/th&gt;
+      &lt;th&gt;$\vec{X}$&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;$f(t)=A \cos (\omega t+\phi)$&lt;/td&gt;
-      &lt;td&gt;$f(t)=\underline{X} e^{j \omega t}+\underline{X}^{*} e^{-j \omega t} \quad (3)$&lt;/td&gt;
-      &lt;td&gt;$\underline{X}={A}/{2} \angle \phi$&lt;/td&gt;
+      &lt;td&gt;$f(t)=\vec{X} e^{j \omega t}+\vec{X}^{*} e^{-j \omega t} \quad (3)$&lt;/td&gt;
+      &lt;td&gt;$\vec{X}={A}/{2} \angle \phi$&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;$f(t)=B \cos (\omega t)+C \sin (\omega t)$&lt;/td&gt;
-      &lt;td&gt;$f(t)=Re(2\underline{X} e^{j \omega t}) = Re(A e^{j \phi} e^{j \omega t})\quad (4)$&lt;/td&gt;
-      &lt;td&gt;$\underline{X} = {B}/{2} - j {C}/{2}$&lt;/td&gt;
+      &lt;td&gt;$f(t)=Re(2\vec{X} e^{j \omega t}) = Re(A e^{j \phi} e^{j \omega t})\quad (4)$&lt;/td&gt;
+      &lt;td&gt;$\vec{X} = {B}/{2} - j {C}/{2}$&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -319,19 +321,19 @@ It’s easy to notice that $\underline{X}$ is time-independent. This conclusion 
       &lt;td&gt;$i = C \; {dV_C}/{dt}$&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;$v = \underline{V}e^{j \omega t} + \underline{V}^{*} e^{-j \omega t}$&lt;/td&gt;
-      &lt;td&gt;$i = \underline{I}e^{j \omega t} + \underline{I}^{*} e^{-j \omega t}$&lt;/td&gt;
+      &lt;td&gt;$v = \vec{V}e^{j \omega t} + \vec{V}^{*} e^{-j \omega t}$&lt;/td&gt;
+      &lt;td&gt;$i = \vec{I}e^{j \omega t} + \vec{I}^{*} e^{-j \omega t}$&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;$\underline{V}=j \omega L \underline{I} = \underline{Z}_L \; \underline{I} \quad \text{where } \underline{Z}_L = j \omega L$&lt;/td&gt;
-      &lt;td&gt;$\underline{I}=j \omega C \underline{V} = \underline{V} / \underline{Z}_C \quad \text{where } \underline{Z}_C = 1 / (j \omega C)$&lt;/td&gt;
+      &lt;td&gt;$\vec{V}=j \omega L \vec{I} = \vec{Z}_L \; \vec{I} \quad \text{where } \vec{Z}_L = j \omega L$&lt;/td&gt;
+      &lt;td&gt;$\vec{I}=j \omega C \vec{V} = \vec{V} / \vec{Z}_C \quad \text{where } \vec{Z}_C = 1 / (j \omega C)$&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
 &lt;p&gt;The inverse of impedance is &lt;strong&gt;admittance&lt;/strong&gt;&lt;/p&gt;
 
-\[\underline{Y} = 1/ \underline{Z}\]
+\[\vec{Y} = 1/ \vec{Z}\]
 
 &lt;h3 id=&quot;example&quot;&gt;Example&lt;/h3&gt;
 &lt;p&gt;Suppose we are to find the voltage $v(t)$ in the network, in which $i(t) = I cos(\omega t)$
@@ -342,13 +344,13 @@ It’s easy to notice that $\underline{X}$ is time-independent. This conclusion 
 \[i(t) = Re(I e^{\omega t})\]
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Step 2.&lt;/code&gt; Calculate impedance complex number 
-\(Z \| = \frac{R j \omega L}{R + j \omega L} = \frac{R \omega L}{\sqrt{R^2 + (\omega L)^2}} \angle (arctan \frac{R}{\omega L})\)&lt;/p&gt;
+\(Z _\| = \frac{R j \omega L}{R + j \omega L} = \frac{R \omega L}{\sqrt{R^2 + (\omega L)^2}} \angle (arctan \frac{R}{\omega L})\)&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/complex-circuit-ex-phasor.jpg&quot; alt=&quot;phasor&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Step 3. &lt;/code&gt; We found the output voltage in the polar-exponential form&lt;/p&gt;
 
-\[V = Z \| I = \frac{IR \omega L}{\sqrt{R^2 + (\omega L)^2}} \angle (arctan \frac{R}{\omega L})\]
+\[V = Z_\| I = \frac{IR \omega L}{\sqrt{R^2 + (\omega L)^2}} \angle (arctan \frac{R}{\omega L})\]
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Step 4.&lt;/code&gt; Using expression &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(4)&lt;/code&gt; to find out $v(t)$&lt;/p&gt;
 
