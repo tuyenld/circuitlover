@@ -36,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1647196985">
+    <link rel="stylesheet" href="/css/site.css?v=1647197130">
 
     
 
@@ -153,6 +153,14 @@
       "date": "2022-03-03T00:00:00Z",
       "url": "/capacitor-life-time-cal/",
       "description": "An example of calculation lifetime of JIANGHAI electrolytic capacitor.",
+      "image": "//images/author.png"
+    },
+    {
+      "title": "Control of grid connected inverter",
+      "category": "pe",
+      "date": "2022-02-24T00:00:00Z",
+      "url": "/control-of-grid-connected/",
+      "description": "Fundamental of grid connected inverter",
       "image": "//images/author.png"
     },
     {
