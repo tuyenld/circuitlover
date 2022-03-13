@@ -38,7 +38,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1647197130">
+    <link rel="stylesheet" href="/css/site.css?v=1647197615">
 
     
 
@@ -146,64 +146,61 @@
 
 <h2 id="11-what-is-postitive-negative-and-zero-sequence">1.1. What is postitive, negative and zero sequence?</h2>
 
-<p>These components are so-called <strong>symmetrical components</strong> [^fn1].</p>
+<p>These components are so-called <strong>symmetrical components</strong> <sup id="fnref:ref1" role="doc-noteref"><a href="#fn:ref1" class="footnote" rel="footnote">1</a></sup>.</p>
 
 \[{\color{red}{\text{Note: }}} \text{The author was used } \underline{z} \text{ to denote a vector. However, I am using } \vec{z} \text{ to do this because of my personal preference.}\]
 
 <p>Symmetrical components allow unbalanced phase quantities such as currents and voltages to be replaced by three separate balanced symmetrical components</p>
 
-<p>The transformation is defined as:
-$$
+<p>The transformation is defined as:</p>
+
+\[\begin{bmatrix}
+\vec{V}_+  \\
+\vec{V}_-  \\
+\vec{V}_0  \\
+\end{bmatrix}
+
+= \frac{1}{3}
+
 \begin{bmatrix}
-\vec{V}<em>+  <br />
-\vec{V}</em>-  <br />
-\vec{V}_0  <br />
-\end{bmatrix}</p>
+1 &amp; \vec{a} &amp; \vec{a}^2  \\
+1 &amp; \vec{a}^2 &amp; \vec{a} \\
+1 &amp; 1 &amp; 1 \\
+\end{bmatrix}
 
-<p>= \frac{1}{3}</p>
-
-<p>\begin{bmatrix}
-1 &amp; \vec{a} &amp; \vec{a}^2  <br />
-1 &amp; \vec{a}^2 &amp; \vec{a} <br />
-1 &amp; 1 &amp; 1 <br />
-\end{bmatrix}</p>
-
-<p>\begin{bmatrix}
-\vec{V}_a  <br />
-\vec{V}_b  <br />
-\vec{V}_c  <br />
-\end{bmatrix}</p>
-
-<p>\qquad \text{ where } \vec{a} = e^{j 2 \pi /3}
-$$</p>
-
-<p>The invert transformation is:
-$$
 \begin{bmatrix}
-\vec{V}_a  <br />
-\vec{V}_b  <br />
-\vec{V}_c  <br />
-\end{bmatrix}</p>
+\vec{V}_a  \\
+\vec{V}_b  \\
+\vec{V}_c  \\
+\end{bmatrix}
 
-<p>=</p>
+\qquad \text{ where } \vec{a} = e^{j 2 \pi /3}\]
 
-<p>\begin{bmatrix}
-1 &amp; 1 &amp; 1  <br />
-\vec{a}^2 &amp; \vec{a} &amp; 1 <br />
-\vec{a} &amp; \vec{a}^2 &amp; 1 <br />
-\end{bmatrix}</p>
+<p>The invert transformation is:</p>
 
-<p>\begin{bmatrix}
-\vec{V}<em>+  <br />
-\vec{V}</em>-  <br />
-\vec{V}_0  <br />
-\end{bmatrix}</p>
+\[\begin{bmatrix}
+\vec{V}_a  \\
+\vec{V}_b  \\
+\vec{V}_c  \\
+\end{bmatrix}
 
-<p>$$</p>
+= 
+
+\begin{bmatrix}
+1 &amp; 1 &amp; 1  \\
+\vec{a}^2 &amp; \vec{a} &amp; 1 \\
+\vec{a} &amp; \vec{a}^2 &amp; 1 \\
+\end{bmatrix}
+
+\begin{bmatrix}
+\vec{V}_+  \\
+\vec{V}_-  \\
+\vec{V}_0  \\
+\end{bmatrix}\]
 
 <p>Let take an example. Obtain the symmetrical components of a set of unbalanced voltage.</p>
 
-\[\vec{V_a} = 5 \angle 53 \degree \qquad \vec{V_b} = 7 \angle -164 \degree \qquad \vec{V_c} = 7 \angle 105 \degree\]
+\[\vec{V_a} = 5 \angle 53 ^{\circ} \qquad \vec{V_b} = 7 \angle -164 ^{\circ} \qquad \vec{V_c} = 7 \angle 105 ^{\circ}\]
 
 <p>Run this Matlab script to get the result.</p>
 
@@ -336,6 +333,14 @@ ic = 0;
 \end{align*}\]
 
 <h1 id="references">References</h1>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:ref1" role="doc-endnote">
+      <p>James Kirtley Jr.. <em>6.061 Introduction to Electric Power Systems.</em> Spring 2011. Massachusetts Institute of Technology: MIT OpenCourseWare, <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-061-introduction-to-electric-power-systems-spring-2011/readings/MIT6_061S11_ch4.pdf">https://ocw.mit.edu</a> License: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA</a>. <a href="#fnref:ref1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 
   
     

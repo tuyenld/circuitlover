@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-03-13T18:45:29+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Lifetime calculation for Electrolytic Capacitors</title><link href="https://circuitlover.com/capacitor-life-time-cal/" rel="alternate" type="text/html" title="Lifetime calculation for Electrolytic Capacitors" /><published>2022-03-03T00:00:00+00:00</published><updated>2022-03-03T00:00:00+00:00</updated><id>https://circuitlover.com/capacitor-life-time-cal</id><content type="html" xml:base="https://circuitlover.com/capacitor-life-time-cal/">&lt;p&gt;On the process of making new inverter/converter products, we are talking about what type of topology will be used, power losses and cost estimation. It is easy to forgot about the &lt;strong&gt;Lifetime of capacitors&lt;/strong&gt;. This article is quick note how to estimate lifetime of electrolytic capacitor (elcap) provided by &lt;strong&gt;JIANGHAI&lt;/strong&gt; &lt;sup id=&quot;fnref:fn1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:fn1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Other manufactures may have different ways to estimate lifetime of these capacitors. Please look up manufacturer application note for more detail.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-03-13T18:53:35+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Lifetime calculation for Electrolytic Capacitors</title><link href="https://circuitlover.com/capacitor-life-time-cal/" rel="alternate" type="text/html" title="Lifetime calculation for Electrolytic Capacitors" /><published>2022-03-03T00:00:00+00:00</published><updated>2022-03-03T00:00:00+00:00</updated><id>https://circuitlover.com/capacitor-life-time-cal</id><content type="html" xml:base="https://circuitlover.com/capacitor-life-time-cal/">&lt;p&gt;On the process of making new inverter/converter products, we are talking about what type of topology will be used, power losses and cost estimation. It is easy to forgot about the &lt;strong&gt;Lifetime of capacitors&lt;/strong&gt;. This article is quick note how to estimate lifetime of electrolytic capacitor (elcap) provided by &lt;strong&gt;JIANGHAI&lt;/strong&gt; &lt;sup id=&quot;fnref:fn1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:fn1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Other manufactures may have different ways to estimate lifetime of these capacitors. Please look up manufacturer application note for more detail.&lt;/p&gt;
 
 &lt;p&gt;Table of contents&lt;/p&gt;
 &lt;ul&gt;
@@ -95,64 +95,61 @@ else
 
 &lt;h2 id=&quot;11-what-is-postitive-negative-and-zero-sequence&quot;&gt;1.1. What is postitive, negative and zero sequence?&lt;/h2&gt;
 
-&lt;p&gt;These components are so-called &lt;strong&gt;symmetrical components&lt;/strong&gt; [^fn1].&lt;/p&gt;
+&lt;p&gt;These components are so-called &lt;strong&gt;symmetrical components&lt;/strong&gt; &lt;sup id=&quot;fnref:ref1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:ref1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
 \[{\color{red}{\text{Note: }}} \text{The author was used } \underline{z} \text{ to denote a vector. However, I am using } \vec{z} \text{ to do this because of my personal preference.}\]
 
 &lt;p&gt;Symmetrical components allow unbalanced phase quantities such as currents and voltages to be replaced by three separate balanced symmetrical components&lt;/p&gt;
 
-&lt;p&gt;The transformation is defined as:
-$$
+&lt;p&gt;The transformation is defined as:&lt;/p&gt;
+
+\[\begin{bmatrix}
+\vec{V}_+  \\
+\vec{V}_-  \\
+\vec{V}_0  \\
+\end{bmatrix}
+
+= \frac{1}{3}
+
 \begin{bmatrix}
-\vec{V}&lt;em&gt;+  &lt;br /&gt;
-\vec{V}&lt;/em&gt;-  &lt;br /&gt;
-\vec{V}_0  &lt;br /&gt;
-\end{bmatrix}&lt;/p&gt;
+1 &amp;amp; \vec{a} &amp;amp; \vec{a}^2  \\
+1 &amp;amp; \vec{a}^2 &amp;amp; \vec{a} \\
+1 &amp;amp; 1 &amp;amp; 1 \\
+\end{bmatrix}
 
-&lt;p&gt;= \frac{1}{3}&lt;/p&gt;
-
-&lt;p&gt;\begin{bmatrix}
-1 &amp;amp; \vec{a} &amp;amp; \vec{a}^2  &lt;br /&gt;
-1 &amp;amp; \vec{a}^2 &amp;amp; \vec{a} &lt;br /&gt;
-1 &amp;amp; 1 &amp;amp; 1 &lt;br /&gt;
-\end{bmatrix}&lt;/p&gt;
-
-&lt;p&gt;\begin{bmatrix}
-\vec{V}_a  &lt;br /&gt;
-\vec{V}_b  &lt;br /&gt;
-\vec{V}_c  &lt;br /&gt;
-\end{bmatrix}&lt;/p&gt;
-
-&lt;p&gt;\qquad \text{ where } \vec{a} = e^{j 2 \pi /3}
-$$&lt;/p&gt;
-
-&lt;p&gt;The invert transformation is:
-$$
 \begin{bmatrix}
-\vec{V}_a  &lt;br /&gt;
-\vec{V}_b  &lt;br /&gt;
-\vec{V}_c  &lt;br /&gt;
-\end{bmatrix}&lt;/p&gt;
+\vec{V}_a  \\
+\vec{V}_b  \\
+\vec{V}_c  \\
+\end{bmatrix}
 
-&lt;p&gt;=&lt;/p&gt;
+\qquad \text{ where } \vec{a} = e^{j 2 \pi /3}\]
 
-&lt;p&gt;\begin{bmatrix}
-1 &amp;amp; 1 &amp;amp; 1  &lt;br /&gt;
-\vec{a}^2 &amp;amp; \vec{a} &amp;amp; 1 &lt;br /&gt;
-\vec{a} &amp;amp; \vec{a}^2 &amp;amp; 1 &lt;br /&gt;
-\end{bmatrix}&lt;/p&gt;
+&lt;p&gt;The invert transformation is:&lt;/p&gt;
 
-&lt;p&gt;\begin{bmatrix}
-\vec{V}&lt;em&gt;+  &lt;br /&gt;
-\vec{V}&lt;/em&gt;-  &lt;br /&gt;
-\vec{V}_0  &lt;br /&gt;
-\end{bmatrix}&lt;/p&gt;
+\[\begin{bmatrix}
+\vec{V}_a  \\
+\vec{V}_b  \\
+\vec{V}_c  \\
+\end{bmatrix}
 
-&lt;p&gt;$$&lt;/p&gt;
+= 
+
+\begin{bmatrix}
+1 &amp;amp; 1 &amp;amp; 1  \\
+\vec{a}^2 &amp;amp; \vec{a} &amp;amp; 1 \\
+\vec{a} &amp;amp; \vec{a}^2 &amp;amp; 1 \\
+\end{bmatrix}
+
+\begin{bmatrix}
+\vec{V}_+  \\
+\vec{V}_-  \\
+\vec{V}_0  \\
+\end{bmatrix}\]
 
 &lt;p&gt;Let take an example. Obtain the symmetrical components of a set of unbalanced voltage.&lt;/p&gt;
 
-\[\vec{V_a} = 5 \angle 53 \degree \qquad \vec{V_b} = 7 \angle -164 \degree \qquad \vec{V_c} = 7 \angle 105 \degree\]
+\[\vec{V_a} = 5 \angle 53 ^{\circ} \qquad \vec{V_b} = 7 \angle -164 ^{\circ} \qquad \vec{V_c} = 7 \angle 105 ^{\circ}\]
 
 &lt;p&gt;Run this Matlab script to get the result.&lt;/p&gt;
 
@@ -284,7 +281,15 @@ ic = 0;
 &amp;amp; v_c = \underbrace{5.02 sin (\omega t - 10 - 240)}_{\text{positive seq.}} + \underbrace{ 1.95 sin (\omega t + 92 - 120)}_{\text{negative seq.}} + \underbrace{3.5 sin (\omega t + 122)}_{\text{Zero seq.}} \\
 \end{align*}\]
 
-&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents 1. Fundamental terminologies 1.1. What is postitive, negative and zero sequence? References</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">MOSFET and IGBT</title><link href="https://circuitlover.com/mosfet-igbt/" rel="alternate" type="text/html" title="MOSFET and IGBT" /><published>2022-02-13T00:00:00+00:00</published><updated>2022-02-13T00:00:00+00:00</updated><id>https://circuitlover.com/MOSFET</id><content type="html" xml:base="https://circuitlover.com/mosfet-igbt/">&lt;p&gt;Table of contents&lt;/p&gt;
+&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:ref1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;James Kirtley Jr.. &lt;em&gt;6.061 Introduction to Electric Power Systems.&lt;/em&gt; Spring 2011. Massachusetts Institute of Technology: MIT OpenCourseWare, &lt;a href=&quot;https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-061-introduction-to-electric-power-systems-spring-2011/readings/MIT6_061S11_ch4.pdf&quot;&gt;https://ocw.mit.edu&lt;/a&gt; License: &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;Creative Commons BY-NC-SA&lt;/a&gt;. &lt;a href=&quot;#fnref:ref1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents 1. Fundamental terminologies 1.1. What is postitive, negative and zero sequence? References</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">MOSFET and IGBT</title><link href="https://circuitlover.com/mosfet-igbt/" rel="alternate" type="text/html" title="MOSFET and IGBT" /><published>2022-02-13T00:00:00+00:00</published><updated>2022-02-13T00:00:00+00:00</updated><id>https://circuitlover.com/MOSFET</id><content type="html" xml:base="https://circuitlover.com/mosfet-igbt/">&lt;p&gt;Table of contents&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#n-channel-mosfet&quot;&gt;N-channel MOSFET&lt;/a&gt;
     &lt;ul&gt;
