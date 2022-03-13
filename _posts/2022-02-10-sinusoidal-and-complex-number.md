@@ -24,9 +24,7 @@ Table of contents
 
 Magnitude and phase angle of the complex number $\vec{z}$ is [^ref1]
 
-$$
-{\color{red}{\text{Note: }}} \text{The author was used } \underline{z} \text{ to denote a vector. However, I am using } \vec{z} \text{ to do this because of my personal preference.}
-$$
+⚠️ Note:⚠️ The author was used $\underline{z}$ to denote a vector. However, I am using $\vec{z}$ to do this because of my personal preference.
 
 $$
 |\vec{z}|=\sqrt{x^{2}+y^{2}} \qquad 
