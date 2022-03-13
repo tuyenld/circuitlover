@@ -22,10 +22,14 @@ Table of contents
 
 ![represenation of the complex number](/images/posts/representation-of-the-complex-number.png)
 
-Magnitude and phase angle of the complex number $\underline{z}$ is [^ref1]
+Magnitude and phase angle of the complex number $\vec{z}$ is [^ref1]
 
 $$
-|\underline{z}|=\sqrt{x^{2}+y^{2}} \qquad 
+{\color{red}{\text{Note: }}} \text{The author was used } \underline{z} \text{ to denote a vector. However, I am using } \vec{z} \text{ to do this because of my personal preference.}
+$$
+
+$$
+|\vec{z}|=\sqrt{x^{2}+y^{2}} \qquad 
 \phi=\arctan \left(\frac{y}{x}\right)
 $$
 
@@ -33,30 +37,30 @@ $$
 
 $$
 e^{j \phi}=\cos (\phi)+j \sin (\phi) \qquad 
-\underline{z}=x+j y=|\underline{z}| e^{j \phi}
+\vec{z}=x+j y=|\vec{z}| e^{j \phi}
 $$
 
 The product and the ratio of two complex numbers are
 
 $$
-\underline{z}_{1}=\left|\underline{z}_{1}\right| e^{j \phi_{1}} \qquad
-\underline{z}_{2}=\left|\underline{z}_{2}\right| e^{j \phi_{2}}
+\vec{z}_{1}=\left|\vec{z}_{1}\right| e^{j \phi_{1}} \qquad
+\vec{z}_{2}=\left|\vec{z}_{2}\right| e^{j \phi_{2}}
 \qquad
-\underline{z}_{1} \underline{z}_{2}=\left|\underline{z}_{1}\right|\left|\underline{z}_{2}\right| e^{j\left(\phi_{1}+\phi_{2}\right)}
+\vec{z}_{1} \vec{z}_{2}=\left|\vec{z}_{1}\right|\left|\vec{z}_{2}\right| e^{j\left(\phi_{1}+\phi_{2}\right)}
 \qquad
-\frac{\underline{z}_{1}}{\underline{z}_{2}}=\frac{\left|\underline{z}_{1}\right|}{\left|\underline{z}_{2}\right|} e^{j\left(\phi_{1}-\phi_{2}\right)}
+\frac{\vec{z}_{1}}{\vec{z}_{2}}=\frac{\left|\vec{z}_{1}\right|}{\left|\vec{z}_{2}\right|} e^{j\left(\phi_{1}-\phi_{2}\right)}
 $$
 
 The complex conjugate of a complex number is given by
 
 $$
-\underline{z}=x+j y
+\vec{z}=x+j y
 \quad
-z^{*}=x-j y
+\vec{z}^{*}=x-j y
 \qquad
-\underline{z}+\underline{z}^{*}=2 \operatorname{Re}(\underline{z})=2 x
+\vec{z}+\vec{z}^{*}=2 \operatorname{Re}(\vec{z})=2 x
 \qquad
-\underline{z}-\underline{z}^{*}=2 j \operatorname{Im}(\underline{z})=2 j y
+\vec{z}-\vec{z}^{*}=2 j \operatorname{Im}(\vec{z})=2 j y
 $$
 
 
@@ -73,7 +77,7 @@ f(t)=B \cos (\omega t)+C \sin (\omega t) \qquad (2)
 $$
 
 $$
-f(t)=\underline{X} e^{j \omega t}+\underline{X}^{*} e^{-j \omega t} \qquad (3)
+f(t)=\vec{X} e^{j \omega t}+\vec{X}^{*} e^{-j \omega t} \qquad (3)
 $$
 
 Equation `(3)` makes sure that that the resulting function is real. Now, let find out the relationship between equation `(1) and (3)`.
@@ -81,22 +85,22 @@ Equation `(3)` makes sure that that the resulting function is real. Now, let fin
 Let say
 
 $$
-\underline{X}=|\underline{X}| e^{j \psi}
+\vec{X}=|\vec{X}| e^{j \psi}
 $$
 
 then
 $$
-f(t) =|\underline{X}| e^{j \psi} e^{j \omega t}+|\underline{X}|^{*} e^{-j \psi} e^{-j \omega t} =|\underline{X}| e^{j(\psi+\omega t)}+|\underline{X}|^{*} e^{-j(\psi+\omega t)}
+f(t) =|\vec{X}| e^{j \psi} e^{j \omega t}+|\vec{X}|^{*} e^{-j \psi} e^{-j \omega t} =|\vec{X}| e^{j(\psi+\omega t)}+|\vec{X}|^{*} e^{-j(\psi+\omega t)}
 $$
 
 $$
-f(t)=2|\underline{X}| \cos (\omega t+\psi)
+f(t)=2|\vec{X}| \cos (\omega t+\psi)
 $$
 
 so we have
 
 $$
-|\underline{X}| =\frac{A}{2} \qquad \psi =\phi
+|\vec{X}| =\frac{A}{2} \qquad \psi =\phi
 $$
 
 Next, finding the relationship between equation `(2) and (3)`.
@@ -104,17 +108,17 @@ Next, finding the relationship between equation `(2) and (3)`.
 Alternatively, we could write
 
 $$
-\underline{X}=x+j y 
+\vec{X}=x+j y 
 \qquad \text{where} \quad
-x=|\underline{X}| \cos (\psi)
+x=|\vec{X}| \cos (\psi)
 \qquad
-y=|\underline{X}| \sin (\psi)
+y=|\vec{X}| \sin (\psi)
 $$
 
 thus
 
 $$
-f(t)=\underline{X} e^{j \omega t}+\underline{X}^{*} e^{-j \omega t} = x\left(e^{j \omega t}+e^{-j \omega t}\right)+j y\left(e^{j \omega t}-e^{-j \omega t}\right)
+f(t)=\vec{X} e^{j \omega t}+\vec{X}^{*} e^{-j \omega t} = x\left(e^{j \omega t}+e^{-j \omega t}\right)+j y\left(e^{j \omega t}-e^{-j \omega t}\right)
 $$
 
 $$
@@ -124,23 +128,23 @@ $$
 Finally, we get
 
 $$
-B = 2x \qquad C = -2y \qquad \underline{X} = \frac{B}{2} - j \frac{C}{2}
+B = 2x \qquad C = -2y \qquad \vec{X} = \frac{B}{2} - j \frac{C}{2}
 $$
 
 ### 1.3. Summary 
 
 Since 
 $$
-(\underline{X} e^{j \omega t})^{*} = \underline{X}^{*} e^{-j \omega t}
+(\vec{X} e^{j \omega t})^{*} = \vec{X}^{*} e^{-j \omega t}
 $$
 
 expression `(3) and (4)` are equivalent. It is advantageous to use one or the other of them, according to circumstances.  
-It's easy to notice that $\underline{X}$ is time-independent. This conclusion is used when forming the relationship between voltage and current of inductor and capacitor elements.
+It's easy to notice that $\vec{X}$ is time-independent. This conclusion is used when forming the relationship between voltage and current of inductor and capacitor elements.
 
-| Sinusoidal form                            | Complex number form                                                                 | $\underline{X}$                       |
+| Sinusoidal form                            | Complex number form                                                                 | $\vec{X}$                       |
 | ------------------------------------------ | ----------------------------------------------------------------------------------- | ------------------------------------- |
-| $f(t)=A \cos (\omega t+\phi)$              | $f(t)=\underline{X} e^{j \omega t}+\underline{X}^{*} e^{-j \omega t} \quad (3)$     | $\underline{X}={A}/{2} \angle \phi$   |
-| $f(t)=B \cos (\omega t)+C \sin (\omega t)$ | $f(t)=Re(2\underline{X} e^{j \omega t}) = Re(A e^{j \phi} e^{j \omega t})\quad (4)$ | $\underline{X} = {B}/{2} - j {C}/{2}$ |
+| $f(t)=A \cos (\omega t+\phi)$              | $f(t)=\vec{X} e^{j \omega t}+\vec{X}^{*} e^{-j \omega t} \quad (3)$     | $\vec{X}={A}/{2} \angle \phi$   |
+| $f(t)=B \cos (\omega t)+C \sin (\omega t)$ | $f(t)=Re(2\vec{X} e^{j \omega t}) = Re(A e^{j \phi} e^{j \omega t})\quad (4)$ | $\vec{X} = {B}/{2} - j {C}/{2}$ |
 
 **Strategy**
 1. Transform the input `In` into complex polar form $In \angle \phi$
@@ -156,13 +160,13 @@ Consider two elements, inductances and capacitances.
 | ![inductor](/images/posts/Leading_lagging.jpg)                                                                                      | ![capacitor](/images/posts/Leading_lagging.jpg)                                                                                          |
 | Current is `lagging` voltage. (`L` means _Lower_ :arrow_lower_right:)                                                        | Current is `leading` voltage                                                                                                      |
 | $v_L = L {di}/{dt}$                                                                                                          | $i = C \; {dV_C}/{dt}$                                                                                                            |
-| $v = \underline{V}e^{j \omega t} + \underline{V}^{*} e^{-j \omega t}$                                                        | $i = \underline{I}e^{j \omega t} + \underline{I}^{*} e^{-j \omega t}$                                                             |
-| $\underline{V}=j \omega L \underline{I} = \underline{Z}_L \; \underline{I} \quad \text{where } \underline{Z}_L = j \omega L$ | $\underline{I}=j \omega C \underline{V} = \underline{V} / \underline{Z}_C \quad \text{where } \underline{Z}_C = 1 / (j \omega C)$ |
+| $v = \vec{V}e^{j \omega t} + \vec{V}^{*} e^{-j \omega t}$                                                        | $i = \vec{I}e^{j \omega t} + \vec{I}^{*} e^{-j \omega t}$                                                             |
+| $\vec{V}=j \omega L \vec{I} = \vec{Z}_L \; \vec{I} \quad \text{where } \vec{Z}_L = j \omega L$ | $\vec{I}=j \omega C \vec{V} = \vec{V} / \vec{Z}_C \quad \text{where } \vec{Z}_C = 1 / (j \omega C)$ |
 
 The inverse of impedance is **admittance**
 
 $$
-\underline{Y} = 1/ \underline{Z}
+\vec{Y} = 1/ \vec{Z}
 $$
 
 ### Example
@@ -177,7 +181,7 @@ $$
 
 `Step 2.` Calculate impedance complex number 
 $$
-Z \| = \frac{R j \omega L}{R + j \omega L} = \frac{R \omega L}{\sqrt{R^2 + (\omega L)^2}} \angle (arctan \frac{R}{\omega L})
+Z _\| = \frac{R j \omega L}{R + j \omega L} = \frac{R \omega L}{\sqrt{R^2 + (\omega L)^2}} \angle (arctan \frac{R}{\omega L})
 $$
 
 ![phasor](/images/posts/complex-circuit-ex-phasor.jpg)
@@ -185,7 +189,7 @@ $$
 `Step 3. ` We found the output voltage in the polar-exponential form
 
 $$
-V = Z \| I = \frac{IR \omega L}{\sqrt{R^2 + (\omega L)^2}} \angle (arctan \frac{R}{\omega L})
+V = Z_\| I = \frac{IR \omega L}{\sqrt{R^2 + (\omega L)^2}} \angle (arctan \frac{R}{\omega L})
 $$
 
 `Step 4.` Using expression `(4)` to find out $v(t)$
