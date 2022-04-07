@@ -36,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1647201753">
+    <link rel="stylesheet" href="/css/site.css?v=1649350717">
 
     
 
@@ -147,6 +147,14 @@
     
   ],
   "posts": [
+    {
+      "title": "AC to DC converter",
+      "category": "pe",
+      "date": "2022-03-31T00:00:00Z",
+      "url": "/ac-dc-converter/",
+      "description": "Basic AC to DC converter topologies",
+      "image": "//images/author.png"
+    },
     {
       "title": "Lifetime calculation for Electrolytic Capacitors",
       "category": "pe",
