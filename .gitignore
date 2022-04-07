@@ -9,3 +9,5 @@ yarn.lock
 _includes/tailwind.js
 yarn-error.log
 bin/deploy
+*.log
+*.raw
