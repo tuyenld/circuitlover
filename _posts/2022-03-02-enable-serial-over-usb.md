@@ -1,6 +1,6 @@
 ---
-title: "Enabling serial protocol through USB connection on Raspberry Pi"
-description: ""
+title: "Serial protocol through USB on Raspberry Pi"
+description: "Quick way to enable serial protocol through USB connection"
 category: pi
 layout: post
 maths: false
