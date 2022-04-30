@@ -8,7 +8,7 @@ comments: true
 published: true
 ---
 
-1. Download Raspberry Pi OS
+## 1. Download Raspberry Pi OS
 I am using the lite version at [2022-01-28-raspios-bullseye-armhf-lite image](https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2022-01-28/2022-01-28-raspios-bullseye-armhf-lite.zip)
 
 ```bash
@@ -19,7 +19,7 @@ enable_uart=1
 dtoverlay=dwc2
 ```
 
-2. Settings
+## 2. Raspberry Pi settings
 
 You need to change `/boot/cmdline.txt` file as follows.
 
