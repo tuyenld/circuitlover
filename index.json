@@ -36,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1651293968">
+    <link rel="stylesheet" href="/css/site.css?v=1651331615">
 
     
 
@@ -111,7 +111,7 @@
 
 
   <p class="inline-block text-sm rounded-full bg-green-200 bg-opacity-25 text-green-800 px-4 py-2">
-    1 minute read
+    2 minute read
   </p>
 
 
@@ -164,11 +164,11 @@
       "image": "//images/author.png"
     },
     {
-      "title": "Enabling serial protocol through USB connection on Raspberry Pi",
+      "title": "Serial protocol through USB on Raspberry Pi",
       "category": "pi",
       "date": "2022-03-02T00:00:00Z",
       "url": "/enable-serial-over-usb/",
-      "description": "",
+      "description": "Quick way to enable serial protocol through USB connection",
       "image": "//images/author.png"
     },
     {
