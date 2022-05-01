@@ -36,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1651382312">
+    <link rel="stylesheet" href="/css/site.css?v=1651421321">
 
     
 
@@ -147,6 +147,14 @@
     
   ],
   "posts": [
+    {
+      "title": "Classical Control Theory",
+      "category": "control",
+      "date": "2022-04-30T00:00:00Z",
+      "url": "/classical-control-theory/",
+      "description": "Quick note of Classical Control Theory series by Brian Douglas",
+      "image": "//images/author.png"
+    },
     {
       "title": "AC to DC converter",
       "category": "pe",

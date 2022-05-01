@@ -1,4 +1,79 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-05-01T05:18:32+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">AC to DC converter</title><link href="https://circuitlover.com/ac-dc-converter/" rel="alternate" type="text/html" title="AC to DC converter" /><published>2022-03-31T00:00:00+00:00</published><updated>2022-03-31T00:00:00+00:00</updated><id>https://circuitlover.com/ac-dc-converter</id><content type="html" xml:base="https://circuitlover.com/ac-dc-converter/">&lt;p&gt;Table of contents&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-05-01T16:08:41+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Classical Control Theory</title><link href="https://circuitlover.com/classical-control-theory/" rel="alternate" type="text/html" title="Classical Control Theory" /><published>2022-04-30T00:00:00+00:00</published><updated>2022-04-30T00:00:00+00:00</updated><id>https://circuitlover.com/classical-control-theory</id><content type="html" xml:base="https://circuitlover.com/classical-control-theory/">&lt;h1 id=&quot;1-some-useful-functions&quot;&gt;1. Some useful functions&lt;/h1&gt;
+&lt;p&gt;Step function&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/control/step-function.jpg&quot; alt=&quot;step-function&quot; /&gt;&lt;/p&gt;
+
+\[\begin{align*}
+    u(t)={\begin{cases}1&amp;amp;{\text{if }}t \ge 0 \\0&amp;amp;{\text{if }}t \lt 0\\\end{cases}}
+    \qquad
+    u[n]={\begin{cases}1&amp;amp;{\text{if }}n \ge 0 \\0&amp;amp;{\text{if }}n \lt 0\\\end{cases}}
+\end{align*}\]
+
+&lt;p&gt;Impulse unit function (in descrete domain)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/control/impulse-function.jpg&quot; alt=&quot;Impulse function&quot; /&gt;&lt;/p&gt;
+
+\[\begin{align*}
+    &amp;amp; \delta[n]={\begin{cases}1&amp;amp;{\text{if }}n = 0 \\0&amp;amp;{\text{if }}n \ne 0\\\end{cases}} \\
+    &amp;amp; u[n] = \sum_{k = 0}^{\infty} \delta[n-k] \qquad \text{for step function} \\
+    &amp;amp; x[n] = \sum_{k = - \infty}^{\infty} x[k] \delta[n-k] \qquad \text{for arbitrary function}
+\end{align*}\]
+
+&lt;p&gt;We will use this relation later on.&lt;/p&gt;
+
+&lt;h1 id=&quot;2-what-are-linear-and-time-invariance-lti-systems&quot;&gt;2. What are “Linear and Time Invariance” (LTI) systems?&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/control/LTI-system.jpg&quot; alt=&quot;LTI system&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;An example of LTI system.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/control/LTI-example.jpg&quot; alt=&quot;LTI example&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;What is &lt;strong&gt;Laplace transformation&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/control/Laplace-transform.png&quot; alt=&quot;Laplace transformation&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Q. What is impulse response $h[n]$ of a system?&lt;br /&gt;
+A. When the input is a impulse unit function $\delta [n]$ (see “Impulse unit function” section above)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/control/impulse-response.jpg&quot; alt=&quot;impulse responses&quot; /&gt;&lt;/p&gt;
+
+\[\begin{align*}
+    &amp;amp; \delta [n]\overset L \longrightarrow h[n] \qquad \text{ OR } \qquad y[n] = T\{x[n]\} \\
+    &amp;amp; x[n] = \sum_{k = - \infty}^{\infty} x[k] \delta[n-k] \\
+    &amp;amp; \Rightarrow y[n]=T \{ \sum_{k = - \infty}^{\infty} x[k] \delta[n-k] \} \overset {LTI} \longrightarrow  \sum_{k = - \infty}^{\infty} x[k] L \{\delta[n-k] \} \\
+    &amp;amp; \Rightarrow y[n] = \sum_{k = - \infty}^{\infty} x[k]  h[n-k] := x[n] * h[n] \quad \text{(This is convolution)}
+\end{align*}\]
+
+&lt;p&gt;Now, if we take a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Laplace&lt;/code&gt; transformation of $y[n]$, we have.&lt;/p&gt;
+
+\[\begin{align*}
+    &amp;amp; x [n]\overset L \longrightarrow X[s] \\
+    &amp;amp; h [n]\overset L \longrightarrow H[s] \qquad \text{(where h[n] is the impulse response of the system)}\\
+    &amp;amp; y [n] = x[n] * h[n] \overset L \longrightarrow Y[s] = X[s] . H[s]
+\end{align*}\]
+
+&lt;p&gt;We call $H[s]$ is the &lt;strong&gt;transfer function&lt;/strong&gt; of the system.&lt;/p&gt;
+
+&lt;p&gt;An example of using impulse response in the system.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/control/impulse-response-example.jpg&quot; alt=&quot;impulse responses example&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From convolution to transfer function.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/control/convolution-to-transfer-function.jpg&quot; alt=&quot;convolution-to-transfer-function&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/control/impulse-response-example-2.jpg&quot; alt=&quot;impulse responses example&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Let take a step back to understand this picture. In this case, $u(t)$ is input, and $x(t)$ is output. If we take $u(t)=\delta (t)$, we should have $x(t)=X(t)$ at the output. Taking &lt;strong&gt;Laplace&lt;/strong&gt; transformation both side of the equation, $X(s)$ becomes &lt;strong&gt;Transfer function&lt;/strong&gt; of the system.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/control/impulse-response-example-explain.jpg&quot; alt=&quot;impulse responses example&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;References&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Brian Douglas Youtube &lt;a href=&quot;https://www.youtube.com/user/ControlLectures&quot;&gt;channel&lt;/a&gt;, “Classical Control Theory” &lt;a href=&quot;https://www.youtube.com/playlist?list=PLUMWjy5jgHK1NC52DXXrriwihVrYZKqjk&quot;&gt;series&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Dang Quang Hieu, Digital Signal Processing lecture note&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="control" /><summary type="html">1. Some useful functions Step function</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">AC to DC converter</title><link href="https://circuitlover.com/ac-dc-converter/" rel="alternate" type="text/html" title="AC to DC converter" /><published>2022-03-31T00:00:00+00:00</published><updated>2022-03-31T00:00:00+00:00</updated><id>https://circuitlover.com/ac-dc-converter</id><content type="html" xml:base="https://circuitlover.com/ac-dc-converter/">&lt;p&gt;Table of contents&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#1-one-switch-sigle-ended-forward-converter-isolated-buck-converter&quot;&gt;1. One-switch sigle-ended forward converter (isolated buck converter)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#2-two-switch-sigle-ended-forward-converter-isolated-buck-converter&quot;&gt;2. Two-switch sigle-ended forward converter (isolated buck converter)&lt;/a&gt;&lt;/li&gt;
