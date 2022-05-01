@@ -275,6 +275,15 @@ pi@raspberrypi:~ $ cat /etc/resolv.conf
 nameserver 8.8.8.8 
 ```
 
+<div role="alert">
+  <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2">
+    Important note
+  </div>
+  <div class="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
+    <p>If it doesn't work, disable antivirus program in your computer and try again. You may also need to disable and enable <strong>network sharing </strong> in your Window computer.</p>
+  </div>
+</div>
+
 Done! Now you could use the Internet on your Pi Zero.
 
 
