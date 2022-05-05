@@ -38,7 +38,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1651470110">
+    <link rel="stylesheet" href="/css/site.css?v=1651768477">
 
     
 
@@ -168,12 +168,14 @@ $I_{Lout}$ never reach zero.</p>
 <p>ESR is from $C_{OUT}$, and $\Delta I$ is effected by the design of $L_{out}$. 
 Rule of thumb is $\Delta I$ = 10% to 40% of full load.</p>
 
+<p>Refer <sup id="fnref:fn1" role="doc-noteref"><a href="#fn:fn1" class="footnote" rel="footnote">2</a></sup> for more details.</p>
+
 <h1 id="2-two-switch-sigle-ended-forward-converter-isolated-buck-converter">2. Two-switch sigle-ended forward converter (isolated buck converter)</h1>
 <p>also called asymmetrical half bridge forward</p>
 
 <h1 id="3-practical-consideration">3. Practical consideration</h1>
 <h2 id="31-how-to-use-impedance-analyzer">3.1. How to use Impedance Analyzer</h2>
-<p>The table is adapted from [^4191A].</p>
+<p>The table is adapted from <sup id="fnref:4191A" role="doc-noteref"><a href="#fn:4191A" class="footnote" rel="footnote">3</a></sup>.</p>
 
 <p><img src="/images/posts/ac-dc-inverter/equivalent-circuit-impedance.png" alt="Equivalent circuit model selection" /></p>
 
@@ -187,7 +189,7 @@ Rule of thumb is $\Delta I$ = 10% to 40% of full load.</p>
   <tbody>
     <tr>
       <td>A</td>
-      <td>(1) Coils with high core loss; (2) To measure magnetizing inductance $L_M$, you need to open the secondary side. Only $L_M,C_1,R_{core}$ left.</td>
+      <td>(1) Coils with high core loss; (2) To measure magnetizing inductance $L_M$, you need to open the secondary side. Only $L_M,C_1,R_{core}$ were left.</td>
     </tr>
     <tr>
       <td>B</td>
@@ -209,11 +211,16 @@ Rule of thumb is $\Delta I$ = 10% to 40% of full load.</p>
 </table>
 
 <h1 id="4-references">4. References</h1>
-<p>[^4191A] Operation manual Model 4191A network/spectrum Analyzer page 141/356 <a href="https://xdevs.com/doc/HP_Agilent_Keysight/HP%204195A%20Operation.pdf">Online</a></p>
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:lt_transf" role="doc-endnote">
       <p><a href="https://www.analog.com/en/technical-articles/ltspice-basic-steps-for-simulating-transformers.html">LTspice: Simple Steps for Simulating Transformers</a> <a href="#fnref:lt_transf" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:fn1" role="doc-endnote">
+      <p>David Perreault. <em>6.334 Power Electronics Ch. 7.</em> Spring 2007. Massachusetts Institute of Technology: MIT OpenCourseWare, <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-334-power-electronics-spring-2007">https://ocw.mit.edu</a>. License: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA</a>. <a href="#fnref:fn1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4191A" role="doc-endnote">
+      <p>Operation manual Model 4191A network/spectrum Analyzer page 141/356 <a href="https://xdevs.com/doc/HP_Agilent_Keysight/HP%204195A%20Operation.pdf">Online</a> <a href="#fnref:4191A" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>

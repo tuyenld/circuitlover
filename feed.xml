@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-05-02T05:41:50+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Classical Control Theory</title><link href="https://circuitlover.com/classical-control-theory/" rel="alternate" type="text/html" title="Classical Control Theory" /><published>2022-04-30T00:00:00+00:00</published><updated>2022-04-30T00:00:00+00:00</updated><id>https://circuitlover.com/classical-control-theory</id><content type="html" xml:base="https://circuitlover.com/classical-control-theory/">&lt;h1 id=&quot;1-some-useful-functions&quot;&gt;1. Some useful functions&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-05-05T16:34:37+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Classical Control Theory</title><link href="https://circuitlover.com/classical-control-theory/" rel="alternate" type="text/html" title="Classical Control Theory" /><published>2022-04-30T00:00:00+00:00</published><updated>2022-04-30T00:00:00+00:00</updated><id>https://circuitlover.com/classical-control-theory</id><content type="html" xml:base="https://circuitlover.com/classical-control-theory/">&lt;h1 id=&quot;1-some-useful-functions&quot;&gt;1. Some useful functions&lt;/h1&gt;
 &lt;p&gt;Step function&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/control/step-function.jpg&quot; alt=&quot;step-function&quot; /&gt;&lt;/p&gt;
@@ -109,12 +109,14 @@ $I_{Lout}$ never reach zero.&lt;/p&gt;
 &lt;p&gt;ESR is from $C_{OUT}$, and $\Delta I$ is effected by the design of $L_{out}$. 
 Rule of thumb is $\Delta I$ = 10% to 40% of full load.&lt;/p&gt;
 
+&lt;p&gt;Refer &lt;sup id=&quot;fnref:fn1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:fn1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; for more details.&lt;/p&gt;
+
 &lt;h1 id=&quot;2-two-switch-sigle-ended-forward-converter-isolated-buck-converter&quot;&gt;2. Two-switch sigle-ended forward converter (isolated buck converter)&lt;/h1&gt;
 &lt;p&gt;also called asymmetrical half bridge forward&lt;/p&gt;
 
 &lt;h1 id=&quot;3-practical-consideration&quot;&gt;3. Practical consideration&lt;/h1&gt;
 &lt;h2 id=&quot;31-how-to-use-impedance-analyzer&quot;&gt;3.1. How to use Impedance Analyzer&lt;/h2&gt;
-&lt;p&gt;The table is adapted from [^4191A].&lt;/p&gt;
+&lt;p&gt;The table is adapted from &lt;sup id=&quot;fnref:4191A&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4191A&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/ac-dc-inverter/equivalent-circuit-impedance.png&quot; alt=&quot;Equivalent circuit model selection&quot; /&gt;&lt;/p&gt;
 
@@ -128,7 +130,7 @@ Rule of thumb is $\Delta I$ = 10% to 40% of full load.&lt;/p&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;A&lt;/td&gt;
-      &lt;td&gt;(1) Coils with high core loss; (2) To measure magnetizing inductance $L_M$, you need to open the secondary side. Only $L_M,C_1,R_{core}$ left.&lt;/td&gt;
+      &lt;td&gt;(1) Coils with high core loss; (2) To measure magnetizing inductance $L_M$, you need to open the secondary side. Only $L_M,C_1,R_{core}$ were left.&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;B&lt;/td&gt;
@@ -150,11 +152,16 @@ Rule of thumb is $\Delta I$ = 10% to 40% of full load.&lt;/p&gt;
 &lt;/table&gt;
 
 &lt;h1 id=&quot;4-references&quot;&gt;4. References&lt;/h1&gt;
-&lt;p&gt;[^4191A] Operation manual Model 4191A network/spectrum Analyzer page 141/356 &lt;a href=&quot;https://xdevs.com/doc/HP_Agilent_Keysight/HP%204195A%20Operation.pdf&quot;&gt;Online&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:lt_transf&quot; role=&quot;doc-endnote&quot;&gt;
       &lt;p&gt;&lt;a href=&quot;https://www.analog.com/en/technical-articles/ltspice-basic-steps-for-simulating-transformers.html&quot;&gt;LTspice: Simple Steps for Simulating Transformers&lt;/a&gt; &lt;a href=&quot;#fnref:lt_transf&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:fn1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;David Perreault. &lt;em&gt;6.334 Power Electronics Ch. 7.&lt;/em&gt; Spring 2007. Massachusetts Institute of Technology: MIT OpenCourseWare, &lt;a href=&quot;https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-334-power-electronics-spring-2007&quot;&gt;https://ocw.mit.edu&lt;/a&gt;. License: &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;Creative Commons BY-NC-SA&lt;/a&gt;. &lt;a href=&quot;#fnref:fn1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4191A&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Operation manual Model 4191A network/spectrum Analyzer page 141/356 &lt;a href=&quot;https://xdevs.com/doc/HP_Agilent_Keysight/HP%204195A%20Operation.pdf&quot;&gt;Online&lt;/a&gt; &lt;a href=&quot;#fnref:4191A&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents 1. One-switch sigle-ended forward converter (isolated buck converter) 2. Two-switch sigle-ended forward converter (isolated buck converter) 3. Practical consideration 3.1. How to use Impedance Analyzer 4. References</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Lifetime calculation for Electrolytic Capacitors</title><link href="https://circuitlover.com/capacitor-life-time-cal/" rel="alternate" type="text/html" title="Lifetime calculation for Electrolytic Capacitors" /><published>2022-03-03T00:00:00+00:00</published><updated>2022-03-03T00:00:00+00:00</updated><id>https://circuitlover.com/capacitor-life-time-cal</id><content type="html" xml:base="https://circuitlover.com/capacitor-life-time-cal/">&lt;p&gt;On the process of making new inverter/converter products, we are talking about what type of topology will be used, power losses and cost estimation. It is easy to forgot about the &lt;strong&gt;Lifetime of capacitors&lt;/strong&gt;. This article is quick note how to estimate lifetime of electrolytic capacitor (elcap) provided by &lt;strong&gt;JIANGHAI&lt;/strong&gt; &lt;sup id=&quot;fnref:fn1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:fn1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Other manufactures may have different ways to estimate lifetime of these capacitors. Please look up manufacturer application note for more detail.&lt;/p&gt;
