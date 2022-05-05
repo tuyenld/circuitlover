@@ -44,6 +44,8 @@ $$
 ESR is from $C_{OUT}$, and $\Delta I$ is effected by the design of $L_{out}$. 
 Rule of thumb is $\Delta I$ = 10% to 40% of full load.
 
+Refer [^fn1] for more details.
+
 # 2. Two-switch sigle-ended forward converter (isolated buck converter)
 also called asymmetrical half bridge forward
 
@@ -53,15 +55,15 @@ The table is adapted from [^4191A].
 
 ![Equivalent circuit model selection](/images/posts/ac-dc-inverter/equivalent-circuit-impedance.png)
 
-| Equi. circuit | Type of DUTs                                                                                                                                   |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| A             | (1) Coils with high core loss; (2) To measure magnetizing inductance $L_M$, you need to open the secondary side. Only $L_M,C_1,R_{core}$ left. |
-| B             | (1) coils in general; (2) resistors; (3) Measuring leakage inductance $L_{leakage}$, you need to short the secondary side.                     |
-| C             | High value resistors                                                                                                                           |
-| D             | Capacitors                                                                                                                                     |
-| E             | Resonators (crystal, ceramic, ferrite)                                                                                                         |
+| Equi. circuit | Type of DUTs                                                                                                                                        |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| A             | (1) Coils with high core loss; (2) To measure magnetizing inductance $L_M$, you need to open the secondary side. Only $L_M,C_1,R_{core}$ were left. |
+| B             | (1) coils in general; (2) resistors; (3) Measuring leakage inductance $L_{leakage}$, you need to short the secondary side.                          |
+| C             | High value resistors                                                                                                                                |
+| D             | Capacitors                                                                                                                                          |
+| E             | Resonators (crystal, ceramic, ferrite)                                                                                                              |
 
 # 4. References
 [^fn1]: David Perreault. *6.334 Power Electronics Ch. 7.* Spring 2007. Massachusetts Institute of Technology: MIT OpenCourseWare, [https://ocw.mit.edu](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-334-power-electronics-spring-2007). License: [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 [^lt_transf]: [LTspice: Simple Steps for Simulating Transformers](https://www.analog.com/en/technical-articles/ltspice-basic-steps-for-simulating-transformers.html)
-[^4191A] Operation manual Model 4191A network/spectrum Analyzer page 141/356 [Online](https://xdevs.com/doc/HP_Agilent_Keysight/HP%204195A%20Operation.pdf)
+[^4191A]: Operation manual Model 4191A network/spectrum Analyzer page 141/356 [Online](https://xdevs.com/doc/HP_Agilent_Keysight/HP%204195A%20Operation.pdf)
