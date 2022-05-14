@@ -35,5 +35,7 @@ bin/start
 bin/new POST_TITLE
 ```
 
+## Useful links
+- [github markdown emoji markup](https://gist.github.com/rxaviers/7360908) copy and paste emoji directly into your md file.
 ## Post
 [ ] Clarke transform (ref#4, 15.6)

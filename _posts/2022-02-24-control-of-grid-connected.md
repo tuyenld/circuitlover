@@ -10,7 +10,11 @@ comments: true
 Table of contents
 - [1. Fundamental terminologies](#1-fundamental-terminologies)
   - [1.1. What is postitive, negative and zero sequence?](#11-what-is-postitive-negative-and-zero-sequence)
-- [References](#references)
+  - [Differential and Common Mode Signals](#differential-and-common-mode-signals)
+- [Filter design](#filter-design)
+  - [L filter](#l-filter)
+  - [References](#references)
+- [References](#references-1)
 
 
 # 1. Fundamental terminologies
@@ -212,12 +216,37 @@ or, it could be written in the time domain form.
 
 $$
 \begin{align*}
-& v_a = 5.02 sin (\omega t - 10) + 1.95 sin (\omega t + 92) + 3.5 sin (\omega t + 122) \\
-& v_b = 5.02 sin (\omega t - 10 - 120) + 1.95 sin (\omega t + 92 - 240) + 3.5 sin (\omega t + 122) \\
-& v_c = \underbrace{5.02 sin (\omega t - 10 - 240)}_{\text{positive seq.}} + \underbrace{ 1.95 sin (\omega t + 92 - 120)}_{\text{negative seq.}} + \underbrace{3.5 sin (\omega t + 122)}_{\text{Zero seq.}} \\
+& v_a = 5.02 sin (\omega t - 10)      & &+ 1.95 sin (\omega t + 92)        & &+ 3.5 sin (\omega t + 122) \\
+& v_b = 5.02 sin (\omega t - 10 - 120) & &+ 1.95 sin (\omega t + 92 - 240) & &+ 3.5 sin (\omega t + 122) \\
+& v_c = \underbrace{5.02 sin (\omega t - 10 - 240)}_{\text{positive seq.}} & &+ \underbrace{ 1.95 sin (\omega t + 92 - 120)}_{\text{negative seq.}} & &+ \underbrace{3.5 sin (\omega t + 122)}_{\text{Zero seq.}} \\
 \end{align*}
 $$
 
+## Differential and Common Mode Signals
+
+![Differential mode and common mode](/images/posts/control-of-grid/common-mode-vs-differential-mode.jpg)
+
+An other example.
+
+![Differential mode and common mode](/images/posts/control-of-grid/common-mode-vs-differential-mode-2.jpg)
+
+
+# Filter design
+
+## L filter
+
+![L filter](/images/posts/control-of-grid/L-filter.jpg)
+
+![L filter current ripple](/images/posts/control-of-grid/current-ripple-L-filter.jpg)
+
+
+## References
+- [AC filters for grid connected inverters](https://nptel.ac.in/courses/108108034) in Power electronic design.
+- [Three-phase grid converter control: video 1 Grid tied inverters](https://youtu.be/rE-goTuAIvk)
+
+
 # References
 
-[^ref1]: James Kirtley Jr.. *6.061 Introduction to Electric Power Systems.* Spring 2011. Massachusetts Institute of Technology: MIT OpenCourseWare, [https://ocw.mit.edu](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-061-introduction-to-electric-power-systems-spring-2011/readings/MIT6_061S11_ch4.pdf) License: [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+- [^ref1]: James Kirtley Jr.. *6.061 Introduction to Electric Power Systems.* Spring 2011. Massachusetts Institute of Technology: MIT OpenCourseWare, [https://ocw.mit.edu](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-061-introduction-to-electric-power-systems-spring-2011/readings/MIT6_061S11_ch4.pdf) License: [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+- [Calculate Powers in Non-sinusoidal Conditions According to IEEE 1459](http://nazarovsky.ru/2015/02/25/powers-according-to-ieee1459/)
+- [Differential and Common Mode Signals](https://youtu.be/s1_Siu3prRQ)

@@ -1,8 +1,8 @@
-# - name: UI Testing
-#   slug: ui-testing
-#   color: red
-#   lightColor: "fed7d7"
-#   darkColor: "9b2c2c"
+- name: Control Theory
+  slug: control
+  color: red
+  lightColor: "fed7d7"
+  darkColor: "9b2c2c"
 
 # - name: Swift Testing
 #   slug: testing-swift
