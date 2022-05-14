@@ -36,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1651768477">
+    <link rel="stylesheet" href="/css/site.css?v=1652514242">
 
     
 
@@ -126,6 +126,12 @@
     "cta": "Email Tuyen"
   },
   "categories": [
+    {
+      "name": "Control Theory",
+      "slug": "control",
+      "lightColor": "fed7d7",
+      "darkColor": "9b2c2c"
+    },
     {
       "name": "Power electronics",
       "slug": "pe",

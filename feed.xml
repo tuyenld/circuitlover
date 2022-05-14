@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-05-05T16:34:37+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Classical Control Theory</title><link href="https://circuitlover.com/classical-control-theory/" rel="alternate" type="text/html" title="Classical Control Theory" /><published>2022-04-30T00:00:00+00:00</published><updated>2022-04-30T00:00:00+00:00</updated><id>https://circuitlover.com/classical-control-theory</id><content type="html" xml:base="https://circuitlover.com/classical-control-theory/">&lt;h1 id=&quot;1-some-useful-functions&quot;&gt;1. Some useful functions&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-05-14T07:44:02+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Classical Control Theory</title><link href="https://circuitlover.com/classical-control-theory/" rel="alternate" type="text/html" title="Classical Control Theory" /><published>2022-04-30T00:00:00+00:00</published><updated>2022-04-30T00:00:00+00:00</updated><id>https://circuitlover.com/classical-control-theory</id><content type="html" xml:base="https://circuitlover.com/classical-control-theory/">&lt;h1 id=&quot;1-some-useful-functions&quot;&gt;1. Some useful functions&lt;/h1&gt;
 &lt;p&gt;Step function&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/control/step-function.jpg&quot; alt=&quot;step-function&quot; /&gt;&lt;/p&gt;
@@ -292,9 +292,16 @@ systemctl is-active getty@ttyGS0.service
   &lt;li&gt;&lt;a href=&quot;#1-fundamental-terminologies&quot;&gt;1. Fundamental terminologies&lt;/a&gt;
     &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#11-what-is-postitive-negative-and-zero-sequence&quot;&gt;1.1. What is postitive, negative and zero sequence?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#differential-and-common-mode-signals&quot;&gt;Differential and Common Mode Signals&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#references&quot;&gt;References&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#filter-design&quot;&gt;Filter design&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#l-filter&quot;&gt;L filter&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#references&quot;&gt;References&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#references-1&quot;&gt;References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;1-fundamental-terminologies&quot;&gt;1. Fundamental terminologies&lt;/h1&gt;
@@ -482,20 +489,47 @@ ic = 0;
 &lt;p&gt;or, it could be written in the time domain form.&lt;/p&gt;
 
 \[\begin{align*}
-&amp;amp; v_a = 5.02 sin (\omega t - 10) + 1.95 sin (\omega t + 92) + 3.5 sin (\omega t + 122) \\
-&amp;amp; v_b = 5.02 sin (\omega t - 10 - 120) + 1.95 sin (\omega t + 92 - 240) + 3.5 sin (\omega t + 122) \\
-&amp;amp; v_c = \underbrace{5.02 sin (\omega t - 10 - 240)}_{\text{positive seq.}} + \underbrace{ 1.95 sin (\omega t + 92 - 120)}_{\text{negative seq.}} + \underbrace{3.5 sin (\omega t + 122)}_{\text{Zero seq.}} \\
+&amp;amp; v_a = 5.02 sin (\omega t - 10)      &amp;amp; &amp;amp;+ 1.95 sin (\omega t + 92)        &amp;amp; &amp;amp;+ 3.5 sin (\omega t + 122) \\
+&amp;amp; v_b = 5.02 sin (\omega t - 10 - 120) &amp;amp; &amp;amp;+ 1.95 sin (\omega t + 92 - 240) &amp;amp; &amp;amp;+ 3.5 sin (\omega t + 122) \\
+&amp;amp; v_c = \underbrace{5.02 sin (\omega t - 10 - 240)}_{\text{positive seq.}} &amp;amp; &amp;amp;+ \underbrace{ 1.95 sin (\omega t + 92 - 120)}_{\text{negative seq.}} &amp;amp; &amp;amp;+ \underbrace{3.5 sin (\omega t + 122)}_{\text{Zero seq.}} \\
 \end{align*}\]
 
-&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
+&lt;h2 id=&quot;differential-and-common-mode-signals&quot;&gt;Differential and Common Mode Signals&lt;/h2&gt;
 
+&lt;p&gt;&lt;img src=&quot;/images/posts/control-of-grid/common-mode-vs-differential-mode.jpg&quot; alt=&quot;Differential mode and common mode&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;An other example.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/control-of-grid/common-mode-vs-differential-mode-2.jpg&quot; alt=&quot;Differential mode and common mode&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;filter-design&quot;&gt;Filter design&lt;/h1&gt;
+
+&lt;h2 id=&quot;l-filter&quot;&gt;L filter&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/control-of-grid/L-filter.jpg&quot; alt=&quot;L filter&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/control-of-grid/current-ripple-L-filter.jpg&quot; alt=&quot;L filter current ripple&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://nptel.ac.in/courses/108108034&quot;&gt;AC filters for grid connected inverters&lt;/a&gt; in Power electronic design.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://youtu.be/rE-goTuAIvk&quot;&gt;Three-phase grid converter control: video 1 Grid tied inverters&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;references-1&quot;&gt;References&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://nazarovsky.ru/2015/02/25/powers-according-to-ieee1459/&quot;&gt;Calculate Powers in Non-sinusoidal Conditions According to IEEE 1459&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://youtu.be/s1_Siu3prRQ&quot;&gt;Differential and Common Mode Signals&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:ref1&quot; role=&quot;doc-endnote&quot;&gt;
       &lt;p&gt;James Kirtley Jr.. &lt;em&gt;6.061 Introduction to Electric Power Systems.&lt;/em&gt; Spring 2011. Massachusetts Institute of Technology: MIT OpenCourseWare, &lt;a href=&quot;https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-061-introduction-to-electric-power-systems-spring-2011/readings/MIT6_061S11_ch4.pdf&quot;&gt;https://ocw.mit.edu&lt;/a&gt; License: &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;Creative Commons BY-NC-SA&lt;/a&gt;. &lt;a href=&quot;#fnref:ref1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents 1. Fundamental terminologies 1.1. What is postitive, negative and zero sequence? References</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">MOSFET and IGBT</title><link href="https://circuitlover.com/mosfet-igbt/" rel="alternate" type="text/html" title="MOSFET and IGBT" /><published>2022-02-13T00:00:00+00:00</published><updated>2022-02-13T00:00:00+00:00</updated><id>https://circuitlover.com/MOSFET</id><content type="html" xml:base="https://circuitlover.com/mosfet-igbt/">&lt;p&gt;Table of contents&lt;/p&gt;
+&lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents 1. Fundamental terminologies 1.1. What is postitive, negative and zero sequence? Differential and Common Mode Signals Filter design L filter References References</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">MOSFET and IGBT</title><link href="https://circuitlover.com/mosfet-igbt/" rel="alternate" type="text/html" title="MOSFET and IGBT" /><published>2022-02-13T00:00:00+00:00</published><updated>2022-02-13T00:00:00+00:00</updated><id>https://circuitlover.com/MOSFET</id><content type="html" xml:base="https://circuitlover.com/mosfet-igbt/">&lt;p&gt;Table of contents&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#n-channel-mosfet&quot;&gt;N-channel MOSFET&lt;/a&gt;
     &lt;ul&gt;

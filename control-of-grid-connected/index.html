@@ -38,7 +38,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1651768477">
+    <link rel="stylesheet" href="/css/site.css?v=1652514242">
 
     
 
@@ -125,7 +125,7 @@
 
 
   <p class="inline-block text-sm rounded-full bg-green-200 bg-opacity-25 text-green-800 px-4 py-2">
-    6 minute read
+    7 minute read
   </p>
 
 
@@ -137,9 +137,16 @@
   <li><a href="#1-fundamental-terminologies">1. Fundamental terminologies</a>
     <ul>
       <li><a href="#11-what-is-postitive-negative-and-zero-sequence">1.1. What is postitive, negative and zero sequence?</a></li>
+      <li><a href="#differential-and-common-mode-signals">Differential and Common Mode Signals</a></li>
     </ul>
   </li>
-  <li><a href="#references">References</a></li>
+  <li><a href="#filter-design">Filter design</a>
+    <ul>
+      <li><a href="#l-filter">L filter</a></li>
+      <li><a href="#references">References</a></li>
+    </ul>
+  </li>
+  <li><a href="#references-1">References</a></li>
 </ul>
 
 <h1 id="1-fundamental-terminologies">1. Fundamental terminologies</h1>
@@ -327,13 +334,40 @@ ic = 0;
 <p>or, it could be written in the time domain form.</p>
 
 \[\begin{align*}
-&amp; v_a = 5.02 sin (\omega t - 10) + 1.95 sin (\omega t + 92) + 3.5 sin (\omega t + 122) \\
-&amp; v_b = 5.02 sin (\omega t - 10 - 120) + 1.95 sin (\omega t + 92 - 240) + 3.5 sin (\omega t + 122) \\
-&amp; v_c = \underbrace{5.02 sin (\omega t - 10 - 240)}_{\text{positive seq.}} + \underbrace{ 1.95 sin (\omega t + 92 - 120)}_{\text{negative seq.}} + \underbrace{3.5 sin (\omega t + 122)}_{\text{Zero seq.}} \\
+&amp; v_a = 5.02 sin (\omega t - 10)      &amp; &amp;+ 1.95 sin (\omega t + 92)        &amp; &amp;+ 3.5 sin (\omega t + 122) \\
+&amp; v_b = 5.02 sin (\omega t - 10 - 120) &amp; &amp;+ 1.95 sin (\omega t + 92 - 240) &amp; &amp;+ 3.5 sin (\omega t + 122) \\
+&amp; v_c = \underbrace{5.02 sin (\omega t - 10 - 240)}_{\text{positive seq.}} &amp; &amp;+ \underbrace{ 1.95 sin (\omega t + 92 - 120)}_{\text{negative seq.}} &amp; &amp;+ \underbrace{3.5 sin (\omega t + 122)}_{\text{Zero seq.}} \\
 \end{align*}\]
 
-<h1 id="references">References</h1>
+<h2 id="differential-and-common-mode-signals">Differential and Common Mode Signals</h2>
 
+<p><img src="/images/posts/control-of-grid/common-mode-vs-differential-mode.jpg" alt="Differential mode and common mode" /></p>
+
+<p>An other example.</p>
+
+<p><img src="/images/posts/control-of-grid/common-mode-vs-differential-mode-2.jpg" alt="Differential mode and common mode" /></p>
+
+<h1 id="filter-design">Filter design</h1>
+
+<h2 id="l-filter">L filter</h2>
+
+<p><img src="/images/posts/control-of-grid/L-filter.jpg" alt="L filter" /></p>
+
+<p><img src="/images/posts/control-of-grid/current-ripple-L-filter.jpg" alt="L filter current ripple" /></p>
+
+<h2 id="references">References</h2>
+<ul>
+  <li><a href="https://nptel.ac.in/courses/108108034">AC filters for grid connected inverters</a> in Power electronic design.</li>
+  <li><a href="https://youtu.be/rE-goTuAIvk">Three-phase grid converter control: video 1 Grid tied inverters</a></li>
+</ul>
+
+<h1 id="references-1">References</h1>
+
+<ul>
+  <li></li>
+  <li><a href="http://nazarovsky.ru/2015/02/25/powers-according-to-ieee1459/">Calculate Powers in Non-sinusoidal Conditions According to IEEE 1459</a></li>
+  <li><a href="https://youtu.be/s1_Siu3prRQ">Differential and Common Mode Signals</a></li>
+</ul>
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:ref1" role="doc-endnote">
