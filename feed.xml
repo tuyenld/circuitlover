@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-05-14T07:44:02+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Classical Control Theory</title><link href="https://circuitlover.com/classical-control-theory/" rel="alternate" type="text/html" title="Classical Control Theory" /><published>2022-04-30T00:00:00+00:00</published><updated>2022-04-30T00:00:00+00:00</updated><id>https://circuitlover.com/classical-control-theory</id><content type="html" xml:base="https://circuitlover.com/classical-control-theory/">&lt;h1 id=&quot;1-some-useful-functions&quot;&gt;1. Some useful functions&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-05-19T20:00:37+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Miscellaneous</title><link href="https://circuitlover.com/miscellaneous/" rel="alternate" type="text/html" title="Miscellaneous" /><published>2022-05-19T00:00:00+00:00</published><updated>2022-05-19T00:00:00+00:00</updated><id>https://circuitlover.com/miscellaneous</id><content type="html" xml:base="https://circuitlover.com/miscellaneous/">&lt;h1 id=&quot;connector&quot;&gt;Connector&lt;/h1&gt;
+
+&lt;p&gt;Blade connectors (lower half of photo). Ring and spade terminals (upper half). Bullet terminals, male and female (right-center, with blue wires)&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/posts/miscellaneous/blade-connectors.jpg&quot; alt=&quot;blade-connector&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Blade connector&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/posts/miscellaneous/split_ring_contacts.jpg&quot; alt=&quot;Split-ring terminals&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Split-ring or lugs terminals for 2.5 mm² wire.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/posts/miscellaneous/Banana_Jack_Connector.jpg&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Banana jack connector&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Using crimping tool to join wire to the connector.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;&lt;img src=&quot;/images/posts/miscellaneous/Crimping_tool.jpg&quot; alt=&quot;Crimping tool&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Crimping tool&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="uncategorized" /><summary type="html">Connector</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Classical Control Theory</title><link href="https://circuitlover.com/classical-control-theory/" rel="alternate" type="text/html" title="Classical Control Theory" /><published>2022-04-30T00:00:00+00:00</published><updated>2022-04-30T00:00:00+00:00</updated><id>https://circuitlover.com/classical-control-theory</id><content type="html" xml:base="https://circuitlover.com/classical-control-theory/">&lt;h1 id=&quot;1-some-useful-functions&quot;&gt;1. Some useful functions&lt;/h1&gt;
 &lt;p&gt;Step function&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/control/step-function.jpg&quot; alt=&quot;step-function&quot; /&gt;&lt;/p&gt;
@@ -1208,101 +1250,4 @@ nameserver 8.8.8.8
   &lt;li&gt;&lt;a href=&quot;https://github.com/showmewebcam/showmewebcam/pull/76/files&quot;&gt;showmewebcam #76&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://learn.sparkfun.com/tutorials/how-to-run-a-raspberry-pi-program-on-startup/all&quot;&gt;How to Run a Raspberry Pi Program on Startup&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://gist.github.com/gbaman&quot;&gt;gbaman&lt;/a&gt;/&lt;a href=&quot;https://gist.github.com/gbaman/50b6cca61dd1c3f88f41&quot;&gt;HowToOTG.md&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pi" /><summary type="html">Raspi Zero (not W) have neither Wi-Fi nor Ethernet, so how could we want to update your raspbian without remove the microSD card? Well, you can create a virtual Ethernet interface. This method is tested on Window 10, you could get the same idea when using Linux/Mac computer.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/posts/pi/Pi-Zero-internet.png" /><media:content medium="image" url="https://circuitlover.com/images/posts/pi/Pi-Zero-internet.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How to upgrade flash chip on TPLink TL-WR840N v5.</title><link href="https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb/" rel="alternate" type="text/html" title="How to upgrade flash chip on TPLink TL-WR840N v5." /><published>2019-02-11T00:00:00+00:00</published><updated>2019-02-11T00:00:00+00:00</updated><id>https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb</id><content type="html" xml:base="https://circuitlover.com/upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb/">&lt;p&gt;Upgrade TP-Link flash chip on TP-Link from 4mb to 8mb&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Table of content&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#1-pre-requirement&quot;&gt;1. Pre-requirement&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#2-lets-do-it&quot;&gt;2. Let’s do it&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#21-desolder-old-flash-chip&quot;&gt;2.1 Desolder old flash chip&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#22-program-new-flash-chip&quot;&gt;2.2 Program new flash chip&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#23-re-solder-new-flash-chip&quot;&gt;2.3 Re-solder new flash chip&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#3-enjoy&quot;&gt;3. Enjoy&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;1-pre-requirement&quot;&gt;1. Pre-requirement&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;New flash chip: I used Winbond 8MiB GD25Q64CSIG&lt;/li&gt;
-  &lt;li&gt;Soldering iron: desolder old flash chip and re-solder new flash chip&lt;/li&gt;
-  &lt;li&gt;ROM programer and IC socket: I am using CH-341A (~ 5$)&lt;/li&gt;
-  &lt;li&gt;One PC/Laptop&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;2-lets-do-it&quot;&gt;2. Let’s do it&lt;/h2&gt;
-&lt;h3 id=&quot;21-desolder-old-flash-chip&quot;&gt;2.1 Desolder old flash chip&lt;/h3&gt;
-&lt;p&gt;Hot air soldering station is ideally suited for desoldering flash. If you not, you can follow this video to do this.&lt;/p&gt;
-
-&lt;div class=&quot;embed-responsive aspect-w-16 aspect-h-9&quot;&gt;
-  &lt;iframe class=&quot;embed-responsive-item&quot; src=&quot;https://www.youtube.com/embed/nZGEtpECPQY&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;22-program-new-flash-chip&quot;&gt;2.2 Program new flash chip&lt;/h3&gt;
-&lt;p&gt;Firstly, you need to choose new flash chip you want to replace. Why I chose &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Winbond GD25Q64CSIG&lt;/code&gt; for replacement, see table bellow:&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=Original_vs_Mod_Chip.md&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;I see the name of flash chip is the same, so I didn’t checked datasheet for compatible.&lt;/p&gt;
-
-&lt;p&gt;Secondly, you need to choose OpenWRT firmware.
-Why I used openwrt-18.06.1-ramips-mt76x8-tl-&lt;strong&gt;wr841n-v13&lt;/strong&gt;-squashfs-sysupgrade instead of openwrt-18.06.1-ramips-mt76x8-tl-&lt;strong&gt;wr840n-v5&lt;/strong&gt;-squashfs-sysupgrade?&lt;/p&gt;
-
-&lt;p&gt;Because it used the same CPU and different in flash and RAM chip.
-&lt;script src=&quot;https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=WR841Nv13_vs_WR840Nv5.md&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;div class=&quot;tldr flex rounded-md bg-blue-300 bg-opacity-25 px-4 my-12&quot;&gt;
-  &lt;div class=&quot;flex items-center&quot;&gt;
-    &lt;div class=&quot;-ml-2 mr-2 my-6 transform rotate-90 tracking-tighter font-semibold text-blue-400&quot;&gt;NOTE&lt;/div&gt;
-    &lt;p class=&quot;lg:text-lg leading-5 text-blue-800&quot;&gt;You are able to use openwrt-18.06.1-ramips-mt76x8-tl-**wr840n-v5**-squashfs-sysupgrade with 8MB flash chip, your router still booting but you can not any configuration after reboot. You may got error `Your image is probably too big, leaving not enough space for jffs2`.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;In the first time, I faced this problem. I can not save any configuration after reboot. If you look at boot log, it read:
-&lt;script src=&quot;https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=firmware_bad.log&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;No &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/overlay&lt;/code&gt; will be mounted:
-&lt;script src=&quot;https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=firmware_bad_no_overlay.log&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;If everything is good, it should be like this:
-&lt;script src=&quot;https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=firmware_good.log&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;Now, you have new flash chip and suitable firware, but you can not use this firware to program new flash chip. Because &lt;strong&gt;RAW&lt;/strong&gt; flash need more partion than firmware such as: bootloader and art. See more in &lt;a href=&quot;https://openwrt.org/docs/techref/flash.layout&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;You can use bellow shell script to generate firmware for any flash with different capacity.
-&lt;script src=&quot;https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=create_new_firmware.sh&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/tuyenld/acb0f0e62cadca73b7dffc44d7cc1b4b.js?file=flash_partition.md&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;If you don’t want to use this script, you can create image by yourself. You may to need hex editor like &lt;a href=&quot;https://mh-nexus.de/en/hxd/&quot;&gt;HxDen&lt;/a&gt; to do this.&lt;/p&gt;
-&lt;figure class=&quot;align-center&quot;&gt;
-  &lt;img src=&quot;https://res.cloudinary.com/crushcoding/image/upload/q_auto,f_auto/2019-02-11-upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb/create_image_manual.jpg&quot; alt=&quot;&quot; /&gt;
-  &lt;figcaption&gt;New firmware layout&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;All file which I used in &lt;a href=&quot;https://drive.google.com/file/d/1kqXvFQYrolipvrrD3Rkv7J7JTZwgVHDn/view?usp=sharing&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;23-re-solder-new-flash-chip&quot;&gt;2.3 Re-solder new flash chip&lt;/h3&gt;
-&lt;p&gt;After use CH341A to program new flash chip, you can re-solder new flash chip on target board.&lt;/p&gt;
-
-&lt;div class=&quot;tldr flex rounded-md bg-blue-300 bg-opacity-25 px-4 my-12&quot;&gt;
-  &lt;div class=&quot;flex items-center&quot;&gt;
-    &lt;div class=&quot;-ml-2 mr-2 my-6 transform rotate-90 tracking-tighter font-semibold text-blue-400&quot;&gt;NOTE&lt;/div&gt;
-    &lt;p class=&quot;lg:text-lg leading-5 text-blue-800&quot;&gt;If your board can not booting, don't worry. You can use [Clip Socket Adapter](https://www.ebay.com/itm/SOIC8-SOP8-Flash-Chip-IC-Test-Clip-Socket-Adapter-BIOS-CH341A-USB-Programmer-/372555847443) to try program flash again with out desolder chip.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;3-enjoy&quot;&gt;3. Enjoy&lt;/h2&gt;
-&lt;figure class=&quot;align-center&quot;&gt;
-  &lt;img src=&quot;https://res.cloudinary.com/crushcoding/image/upload/q_auto,f_auto/2019-02-11-upgrade-flash-chip-tplink-tl-wr840n-4mb-to-8mb/software_status.jpg&quot; alt=&quot;&quot; /&gt;
-  &lt;figcaption&gt;Software with new flash chip (8MB).&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;div class=&quot;tldr flex rounded-md bg-blue-300 bg-opacity-25 px-4 my-12&quot;&gt;
-  &lt;div class=&quot;flex items-center&quot;&gt;
-    &lt;div class=&quot;-ml-2 mr-2 my-6 transform rotate-90 tracking-tighter font-semibold text-blue-400&quot;&gt;NOTE&lt;/div&gt;
-    &lt;p class=&quot;lg:text-lg leading-5 text-blue-800&quot;&gt;I used image come from **TL-WR841N v13.x**, except for LED will not working, everything work well (Wi-Fi, Ethernet, Router feature).&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="uncategorized" /><category term="TL-WR840N" /><summary type="html">Upgrade TP-Link flash chip on TP-Link from 4mb to 8mb</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;/ul&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pi" /><summary type="html">Raspi Zero (not W) have neither Wi-Fi nor Ethernet, so how could we want to update your raspbian without remove the microSD card? Well, you can create a virtual Ethernet interface. This method is tested on Window 10, you could get the same idea when using Linux/Mac computer.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/posts/pi/Pi-Zero-internet.png" /><media:content medium="image" url="https://circuitlover.com/images/posts/pi/Pi-Zero-internet.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

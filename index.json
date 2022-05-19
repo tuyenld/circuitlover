@@ -36,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1652514242">
+    <link rel="stylesheet" href="/css/site.css?v=1652990438">
 
     
 
@@ -153,6 +153,14 @@
     
   ],
   "posts": [
+    {
+      "title": "Miscellaneous",
+      "category": "uncategorized",
+      "date": "2022-05-19T00:00:00Z",
+      "url": "/miscellaneous/",
+      "description": "",
+      "image": "//images/author.png"
+    },
     {
       "title": "Classical Control Theory",
       "category": "control",
