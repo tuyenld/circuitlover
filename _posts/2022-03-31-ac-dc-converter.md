@@ -12,9 +12,10 @@ Table of contents
 - [1. One-switch sigle-ended forward converter (isolated buck converter)](#1-one-switch-sigle-ended-forward-converter-isolated-buck-converter)
 - [2. Two-switch sigle-ended forward converter (isolated buck converter)](#2-two-switch-sigle-ended-forward-converter-isolated-buck-converter)
 - [3. Peak current control mode (Current-Programmed Control)](#3-peak-current-control-mode-current-programmed-control)
-- [4. Practical consideration](#4-practical-consideration)
-  - [4.1. How to use Impedance Analyzer](#41-how-to-use-impedance-analyzer)
-- [5. References](#5-references)
+- [4. Slope compensation](#4-slope-compensation)
+- [5. Practical consideration](#5-practical-consideration)
+  - [5.1. How to use Impedance Analyzer](#51-how-to-use-impedance-analyzer)
+- [6. References](#6-references)
 
 
 If you don't know what is `K1 L1 L2 1` transformer directive means, you should check [^lt_transf] for more details.
@@ -60,8 +61,29 @@ Refer to chapter 18 of [^erickson2007], and [^dragan].
 
 ![](/images/posts/ac-dc-inverter/peak-current-mode-in-voltage-regulator.jpg)
 
-# 4. Practical consideration
-## 4.1. How to use Impedance Analyzer
+# 4. Slope compensation
+
+Refer to [^slope] for more information.
+
+| ![](/images/posts/ac-dc-inverter/slope-comp-d-lt-50.jpg) |
+| :------------------------------------------------------: |
+|              D<50% turburlance is faded out              |
+
+
+If Duty cycle $D>50\%$, $I_L$ with turburlance is not stable.
+
+![](/images/posts/ac-dc-inverter/slope-comp-d-gt-50.jpg)
+
+Using new $I_{Lref}$ to solve the problem.
+
+![](/images/posts/ac-dc-inverter/slope-comp-using-new-I_l.jpg)
+
+How to generate the new $I_{Lref}$?
+
+![](/images/posts/ac-dc-inverter/slope-comp-gen-new-I_l.jpg)
+
+# 5. Practical consideration
+## 5.1. How to use Impedance Analyzer
 The table is adapted from [^4191A].
 
 ![Equivalent circuit model selection](/images/posts/ac-dc-inverter/equivalent-circuit-impedance.png)
@@ -74,12 +96,6 @@ The table is adapted from [^4191A].
 | D             | Capacitors                                                                                                                                          |
 | E             | Resonators (crystal, ceramic, ferrite)                                                                                                              |
 
-# 5. References
-[^fn1]: David Perreault. *6.334 Power Electronics Ch. 7.* Spring 2007. Massachusetts Institute of Technology: MIT OpenCourseWare, [https://ocw.mit.edu](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-334-power-electronics-spring-2007). License: [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-[^lt_transf]: [LTspice: Simple Steps for Simulating Transformers](https://www.analog.com/en/technical-articles/ltspice-basic-steps-for-simulating-transformers.html)
-[^4191A]: Operation manual Model 4191A network/spectrum Analyzer page 141/356 [Online](https://xdevs.com/doc/HP_Agilent_Keysight/HP%204195A%20Operation.pdf)
-[^erickson2007]: Erickson, R. W. & Maksimovic, D. 2007. Fundamentals of power electronics, Springer Science & Business Media.
-[^dragan]: Current-Mode Control, Dr. Dragan Maksimovic - University of Colorado Boulder [Online](https://www.coursera.org/lecture/current-modecontrol/introduction-to-peak-current-mode-control-nbIZQ)
 
 ---
 
@@ -99,3 +115,12 @@ Pending
 - [NOC:Control and Tuning Methods in Switched Mode Power Converters](https://archive.nptel.ac.in/courses/108/105/108105180/)
   - Week 02
     - Lecture 12 : Interactive MATLAB Simulation and Case Studies
+
+
+# 6. References
+[^fn1]: David Perreault. *6.334 Power Electronics Ch. 7.* Spring 2007. Massachusetts Institute of Technology: MIT OpenCourseWare, [https://ocw.mit.edu](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-334-power-electronics-spring-2007). License: [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+[^lt_transf]: [LTspice: Simple Steps for Simulating Transformers](https://www.analog.com/en/technical-articles/ltspice-basic-steps-for-simulating-transformers.html)
+[^4191A]: Operation manual Model 4191A network/spectrum Analyzer page 141/356 [Online](https://xdevs.com/doc/HP_Agilent_Keysight/HP%204195A%20Operation.pdf)
+[^erickson2007]: Erickson, R. W. & Maksimovic, D. 2007. Fundamentals of power electronics, Springer Science & Business Media.
+[^dragan]: Current-Mode Control, Dr. Dragan Maksimovic - University of Colorado Boulder [Online](https://www.coursera.org/lecture/current-modecontrol/introduction-to-peak-current-mode-control-nbIZQ)
+[^slope]: Slope compensation for current control - NPTEL [Online](https://youtu.be/b3e0RTWt4W0)
