@@ -10,29 +10,85 @@ maths: true
 ---
 
 Table of contents
+- [Getting started](#getting-started)
 - [1. Full-brige inverters](#1-full-brige-inverters)
   - [1.1. Biploar PWM](#11-biploar-pwm)
   - [1.2. Unipolar PWM](#12-unipolar-pwm)
   - [1.3. Hybrid PWM](#13-hybrid-pwm)
-- [Vector space and three-phase inverter](#vector-space-and-three-phase-inverter)
-- [Power losses and heating design of an DC-AC inverter](#power-losses-and-heating-design-of-an-dc-ac-inverter)
-- [References](#references)
+  - [References](#references)
+- [2. Vector space and three-phase inverter](#2-vector-space-and-three-phase-inverter)
+- [3. Power losses and heating design of an DC-AC inverter](#3-power-losses-and-heating-design-of-an-dc-ac-inverter)
+- [4. References](#4-references)
 
+
+Refer [^fn1] for more details.
+
+# Getting started
+
+Switch utilization 
+
+$$
+\frac{P_o}{P_T} = \frac{V_{o1,max} \times I_{o1,max}}{q \times V_T \times I_T}
+$$
+
+Where
+- $V_{o1,max}, I_{o1,max}$ are the maximum rated output voltage and current.
+- $V_T, I_T$ are the peak voltage rating and peak current rating of a switching device.
+- $q$ is the number of switches.
 
 # 1. Full-brige inverters
 TL;DR
 - Unipolar by definition: having or oriented in respect to a single pole.
 - Bipolar by definiton: having or involving the use of two poles or polarities.
 
+$$
+\begin{align*}
+& \text{Control signal: } V_{control}(t) = 𝑀 \times sin(\omega t) \\
+& \text{Carrier signal: } V_{tri}(t) = 
+\left\{\begin{matrix}
+\cfrac{4}{T_{sw} t} \qquad t \in [0,\cfrac{T_{sw}}{4}] \cup [\cfrac{3T_{sw}}{4},T_{sw}] \\
+-\cfrac{4}{T_{sw} t} +2 \qquad  t \in [\cfrac{T_{sw}}{4},\cfrac{3T_{sw}}{2}]
+\end{matrix}\right. \\
+& \text{Output peak voltage } V_{out} = M \times V_{DC}
+
+\end{align*}
+$$
+
+Where:
+- $M$ is mudulation index.
+- $\omega$ is fundamental frequency.
+- $f_{sw} = 1 / T_{sw}$ is switching frequency.
+
+Refer to [^simu] for LTspice simulation instruction.
+
 ## 1.1. Biploar PWM
+
+`S1` and `S4` turn on and turn off at the same time.
+
+![bipolar-PWM](/images/posts/dc-ac-inverter/bipolar-PWM.png)
+
+Simulation result:
+![bipolar-PWM-waveform](/images/posts/dc-ac-inverter/bipolar-PWM-waveform.png)
+
 
 ## 1.2. Unipolar PWM
 
+The inverter output voltage switches between either between $0 \rightarrow +Vd$ during half cycle and $0 \rightarrow -Vd$ half cycle of the fundamental frequency thus this scheme is called unipolar modulation.
+
+![Unipolar PWM schematic](/images/posts/dc-ac-inverter/unipolar-PWM.png)
+
+![Unipolar PWM waveform](/images/posts/dc-ac-inverter/unipolar-PWM-waveform.png)
+
 ## 1.3. Hybrid PWM
 
-# Vector space and three-phase inverter
+Refer to [^hpwm]
 
-# Power losses and heating design of an DC-AC inverter
+## References
+- [^hpwm]: Lai, R.S. and Ngo, K.D., 1995. A PWM method for reduction of switching loss in a full-bridge inverter. *IEEE Transactions on Power Electronics*, *10*(3), pp.326-332.
+
+# 2. Vector space and three-phase inverter
+
+# 3. Power losses and heating design of an DC-AC inverter
 Power losses of an inverter is defined as
 
 $$
@@ -140,5 +196,7 @@ $$
 Since $R_{DS} \gg R_{CE}$, we could say that $P_C^{MOS}$ is not smaller than $P_C^{IBGT}$.
 
 
-# References
-[^fn1]: David Perreault. *6.334 Power Electronics.* Spring 2007. Massachusetts Institute of Technology: MIT OpenCourseWare, [https://ocw.mit.edu](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-334-power-electronics-spring-2007). License: [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+# 4. References
+- [^fn1]: David Perreault. *6.334 Power Electronics.* Spring 2007. Massachusetts Institute of Technology: MIT OpenCourseWare, [https://ocw.mit.edu](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-334-power-electronics-spring-2007). License: [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+- [^simu]: [Simulation of Bridge Inverter in LTspice](https://youtu.be/al6RyyJsOJo)

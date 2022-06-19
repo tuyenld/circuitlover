@@ -1,5 +1,5 @@
 ---
-title: "AC to DC converter"
+title: "AC/DC to DC converter"
 description: "Basic AC to DC converter topologies"
 category: pe
 layout: post
@@ -11,9 +11,10 @@ published: true
 Table of contents
 - [1. One-switch sigle-ended forward converter (isolated buck converter)](#1-one-switch-sigle-ended-forward-converter-isolated-buck-converter)
 - [2. Two-switch sigle-ended forward converter (isolated buck converter)](#2-two-switch-sigle-ended-forward-converter-isolated-buck-converter)
-- [3. Practical consideration](#3-practical-consideration)
-  - [3.1. How to use Impedance Analyzer](#31-how-to-use-impedance-analyzer)
-- [4. References](#4-references)
+- [3. Peak current control mode (Current-Programmed Control)](#3-peak-current-control-mode-current-programmed-control)
+- [4. Practical consideration](#4-practical-consideration)
+  - [4.1. How to use Impedance Analyzer](#41-how-to-use-impedance-analyzer)
+- [5. References](#5-references)
 
 
 If you don't know what is `K1 L1 L2 1` transformer directive means, you should check [^lt_transf] for more details.
@@ -49,8 +50,18 @@ Refer [^fn1] for more details.
 # 2. Two-switch sigle-ended forward converter (isolated buck converter)
 also called asymmetrical half bridge forward
 
-# 3. Practical consideration
-## 3.1. How to use Impedance Analyzer
+# 3. Peak current control mode (Current-Programmed Control)
+
+Refer to chapter 18 of [^erickson2007], and [^dragan].
+
+![](/images/posts/ac-dc-inverter/peak-current-mode-intro.jpg)
+
+![](/images/posts/ac-dc-inverter/peak-current-mode-operation.jpg)
+
+![](/images/posts/ac-dc-inverter/peak-current-mode-in-voltage-regulator.jpg)
+
+# 4. Practical consideration
+## 4.1. How to use Impedance Analyzer
 The table is adapted from [^4191A].
 
 ![Equivalent circuit model selection](/images/posts/ac-dc-inverter/equivalent-circuit-impedance.png)
@@ -63,7 +74,28 @@ The table is adapted from [^4191A].
 | D             | Capacitors                                                                                                                                          |
 | E             | Resonators (crystal, ceramic, ferrite)                                                                                                              |
 
-# 4. References
+# 5. References
 [^fn1]: David Perreault. *6.334 Power Electronics Ch. 7.* Spring 2007. Massachusetts Institute of Technology: MIT OpenCourseWare, [https://ocw.mit.edu](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-334-power-electronics-spring-2007). License: [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 [^lt_transf]: [LTspice: Simple Steps for Simulating Transformers](https://www.analog.com/en/technical-articles/ltspice-basic-steps-for-simulating-transformers.html)
 [^4191A]: Operation manual Model 4191A network/spectrum Analyzer page 141/356 [Online](https://xdevs.com/doc/HP_Agilent_Keysight/HP%204195A%20Operation.pdf)
+[^erickson2007]: Erickson, R. W. & Maksimovic, D. 2007. Fundamentals of power electronics, Springer Science & Business Media.
+[^dragan]: Current-Mode Control, Dr. Dragan Maksimovic - University of Colorado Boulder [Online](https://www.coursera.org/lecture/current-modecontrol/introduction-to-peak-current-mode-control-nbIZQ)
+
+---
+
+Pending
+- https://archive.nptel.ac.in/course.html
+- [NOC:Fundamental of Power Electronics (Video) ](https://archive.nptel.ac.in/courses/108/101/108101126/)
+  - Week 12
+    - Intro for close loop control
+    - Close looping dc-dc converters
+    - Simulation of close loop control
+    - Current control for battery charger application
+    - Instability in current control and slope compensation
+    - Slope compensated current control
+    - Simulation of current control
+    - Single phase inverter with sinusoidal pwm
+    - Simulation of sinusoidal PWM
+- [NOC:Control and Tuning Methods in Switched Mode Power Converters](https://archive.nptel.ac.in/courses/108/105/108105180/)
+  - Week 02
+    - Lecture 12 : Interactive MATLAB Simulation and Case Studies
