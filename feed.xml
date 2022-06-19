@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-05-19T20:00:37+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Miscellaneous</title><link href="https://circuitlover.com/miscellaneous/" rel="alternate" type="text/html" title="Miscellaneous" /><published>2022-05-19T00:00:00+00:00</published><updated>2022-05-19T00:00:00+00:00</updated><id>https://circuitlover.com/miscellaneous</id><content type="html" xml:base="https://circuitlover.com/miscellaneous/">&lt;h1 id=&quot;connector&quot;&gt;Connector&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://circuitlover.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://circuitlover.com/" rel="alternate" type="text/html" /><updated>2022-06-19T15:40:18+00:00</updated><id>https://circuitlover.com/feed.xml</id><title type="html">circuitlover.com</title><subtitle>A blog from Dinh-Tuyen Le.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><entry><title type="html">Miscellaneous</title><link href="https://circuitlover.com/miscellaneous/" rel="alternate" type="text/html" title="Miscellaneous" /><published>2022-05-19T00:00:00+00:00</published><updated>2022-05-19T00:00:00+00:00</updated><id>https://circuitlover.com/miscellaneous</id><content type="html" xml:base="https://circuitlover.com/miscellaneous/">&lt;h1 id=&quot;connector&quot;&gt;Connector&lt;/h1&gt;
 
 &lt;p&gt;Blade connectors (lower half of photo). Ring and spade terminals (upper half). Bullet terminals, male and female (right-center, with blue wires)&lt;/p&gt;
 
@@ -115,16 +115,17 @@ A. When the input is a impulse unit function $\delta [n]$ (see “Impulse unit f
 &lt;ul&gt;
   &lt;li&gt;Brian Douglas Youtube &lt;a href=&quot;https://www.youtube.com/user/ControlLectures&quot;&gt;channel&lt;/a&gt;, “Classical Control Theory” &lt;a href=&quot;https://www.youtube.com/playlist?list=PLUMWjy5jgHK1NC52DXXrriwihVrYZKqjk&quot;&gt;series&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Dang Quang Hieu, Digital Signal Processing lecture note&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="control" /><summary type="html">1. Some useful functions Step function</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">AC to DC converter</title><link href="https://circuitlover.com/ac-dc-converter/" rel="alternate" type="text/html" title="AC to DC converter" /><published>2022-03-31T00:00:00+00:00</published><updated>2022-03-31T00:00:00+00:00</updated><id>https://circuitlover.com/ac-dc-converter</id><content type="html" xml:base="https://circuitlover.com/ac-dc-converter/">&lt;p&gt;Table of contents&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="control" /><summary type="html">1. Some useful functions Step function</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">AC/DC to DC converter</title><link href="https://circuitlover.com/ac-dc-converter/" rel="alternate" type="text/html" title="AC/DC to DC converter" /><published>2022-03-31T00:00:00+00:00</published><updated>2022-03-31T00:00:00+00:00</updated><id>https://circuitlover.com/ac-dc-converter</id><content type="html" xml:base="https://circuitlover.com/ac-dc-converter/">&lt;p&gt;Table of contents&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#1-one-switch-sigle-ended-forward-converter-isolated-buck-converter&quot;&gt;1. One-switch sigle-ended forward converter (isolated buck converter)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#2-two-switch-sigle-ended-forward-converter-isolated-buck-converter&quot;&gt;2. Two-switch sigle-ended forward converter (isolated buck converter)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#3-practical-consideration&quot;&gt;3. Practical consideration&lt;/a&gt;
+  &lt;li&gt;&lt;a href=&quot;#3-peak-current-control-mode-current-programmed-control&quot;&gt;3. Peak current control mode (Current-Programmed Control)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#4-practical-consideration&quot;&gt;4. Practical consideration&lt;/a&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#31-how-to-use-impedance-analyzer&quot;&gt;3.1. How to use Impedance Analyzer&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#41-how-to-use-impedance-analyzer&quot;&gt;4.1. How to use Impedance Analyzer&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#4-references&quot;&gt;4. References&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#5-references&quot;&gt;5. References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;If you don’t know what is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;K1 L1 L2 1&lt;/code&gt; transformer directive means, you should check &lt;sup id=&quot;fnref:lt_transf&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:lt_transf&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; for more details.&lt;/p&gt;
@@ -156,9 +157,19 @@ Rule of thumb is $\Delta I$ = 10% to 40% of full load.&lt;/p&gt;
 &lt;h1 id=&quot;2-two-switch-sigle-ended-forward-converter-isolated-buck-converter&quot;&gt;2. Two-switch sigle-ended forward converter (isolated buck converter)&lt;/h1&gt;
 &lt;p&gt;also called asymmetrical half bridge forward&lt;/p&gt;
 
-&lt;h1 id=&quot;3-practical-consideration&quot;&gt;3. Practical consideration&lt;/h1&gt;
-&lt;h2 id=&quot;31-how-to-use-impedance-analyzer&quot;&gt;3.1. How to use Impedance Analyzer&lt;/h2&gt;
-&lt;p&gt;The table is adapted from &lt;sup id=&quot;fnref:4191A&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4191A&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;h1 id=&quot;3-peak-current-control-mode-current-programmed-control&quot;&gt;3. Peak current control mode (Current-Programmed Control)&lt;/h1&gt;
+
+&lt;p&gt;Refer to chapter 18 of &lt;sup id=&quot;fnref:erickson2007&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:erickson2007&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, and &lt;sup id=&quot;fnref:dragan&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:dragan&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/ac-dc-inverter/peak-current-mode-intro.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/ac-dc-inverter/peak-current-mode-operation.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/ac-dc-inverter/peak-current-mode-in-voltage-regulator.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;4-practical-consideration&quot;&gt;4. Practical consideration&lt;/h1&gt;
+&lt;h2 id=&quot;41-how-to-use-impedance-analyzer&quot;&gt;4.1. How to use Impedance Analyzer&lt;/h2&gt;
+&lt;p&gt;The table is adapted from &lt;sup id=&quot;fnref:4191A&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4191A&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/ac-dc-inverter/equivalent-circuit-impedance.png&quot; alt=&quot;Equivalent circuit model selection&quot; /&gt;&lt;/p&gt;
 
@@ -193,7 +204,40 @@ Rule of thumb is $\Delta I$ = 10% to 40% of full load.&lt;/p&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h1 id=&quot;4-references&quot;&gt;4. References&lt;/h1&gt;
+&lt;h1 id=&quot;5-references&quot;&gt;5. References&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Pending&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;https://archive.nptel.ac.in/course.html&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://archive.nptel.ac.in/courses/108/101/108101126/&quot;&gt;NOC:Fundamental of Power Electronics (Video) &lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Week 12
+        &lt;ul&gt;
+          &lt;li&gt;Intro for close loop control&lt;/li&gt;
+          &lt;li&gt;Close looping dc-dc converters&lt;/li&gt;
+          &lt;li&gt;Simulation of close loop control&lt;/li&gt;
+          &lt;li&gt;Current control for battery charger application&lt;/li&gt;
+          &lt;li&gt;Instability in current control and slope compensation&lt;/li&gt;
+          &lt;li&gt;Slope compensated current control&lt;/li&gt;
+          &lt;li&gt;Simulation of current control&lt;/li&gt;
+          &lt;li&gt;Single phase inverter with sinusoidal pwm&lt;/li&gt;
+          &lt;li&gt;Simulation of sinusoidal PWM&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://archive.nptel.ac.in/courses/108/105/108105180/&quot;&gt;NOC:Control and Tuning Methods in Switched Mode Power Converters&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Week 02
+        &lt;ul&gt;
+          &lt;li&gt;Lecture 12 : Interactive MATLAB Simulation and Case Studies&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:lt_transf&quot; role=&quot;doc-endnote&quot;&gt;
@@ -202,11 +246,17 @@ Rule of thumb is $\Delta I$ = 10% to 40% of full load.&lt;/p&gt;
     &lt;li id=&quot;fn:fn1&quot; role=&quot;doc-endnote&quot;&gt;
       &lt;p&gt;David Perreault. &lt;em&gt;6.334 Power Electronics Ch. 7.&lt;/em&gt; Spring 2007. Massachusetts Institute of Technology: MIT OpenCourseWare, &lt;a href=&quot;https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-334-power-electronics-spring-2007&quot;&gt;https://ocw.mit.edu&lt;/a&gt;. License: &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;Creative Commons BY-NC-SA&lt;/a&gt;. &lt;a href=&quot;#fnref:fn1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
+    &lt;li id=&quot;fn:erickson2007&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Erickson, R. W. &amp;amp; Maksimovic, D. 2007. Fundamentals of power electronics, Springer Science &amp;amp; Business Media. &lt;a href=&quot;#fnref:erickson2007&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:dragan&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Current-Mode Control, Dr. Dragan Maksimovic - University of Colorado Boulder &lt;a href=&quot;https://www.coursera.org/lecture/current-modecontrol/introduction-to-peak-current-mode-control-nbIZQ&quot;&gt;Online&lt;/a&gt; &lt;a href=&quot;#fnref:dragan&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
     &lt;li id=&quot;fn:4191A&quot; role=&quot;doc-endnote&quot;&gt;
       &lt;p&gt;Operation manual Model 4191A network/spectrum Analyzer page 141/356 &lt;a href=&quot;https://xdevs.com/doc/HP_Agilent_Keysight/HP%204195A%20Operation.pdf&quot;&gt;Online&lt;/a&gt; &lt;a href=&quot;#fnref:4191A&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents 1. One-switch sigle-ended forward converter (isolated buck converter) 2. Two-switch sigle-ended forward converter (isolated buck converter) 3. Practical consideration 3.1. How to use Impedance Analyzer 4. References</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Lifetime calculation for Electrolytic Capacitors</title><link href="https://circuitlover.com/capacitor-life-time-cal/" rel="alternate" type="text/html" title="Lifetime calculation for Electrolytic Capacitors" /><published>2022-03-03T00:00:00+00:00</published><updated>2022-03-03T00:00:00+00:00</updated><id>https://circuitlover.com/capacitor-life-time-cal</id><content type="html" xml:base="https://circuitlover.com/capacitor-life-time-cal/">&lt;p&gt;On the process of making new inverter/converter products, we are talking about what type of topology will be used, power losses and cost estimation. It is easy to forgot about the &lt;strong&gt;Lifetime of capacitors&lt;/strong&gt;. This article is quick note how to estimate lifetime of electrolytic capacitor (elcap) provided by &lt;strong&gt;JIANGHAI&lt;/strong&gt; &lt;sup id=&quot;fnref:fn1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:fn1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Other manufactures may have different ways to estimate lifetime of these capacitors. Please look up manufacturer application note for more detail.&lt;/p&gt;
+&lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents 1. One-switch sigle-ended forward converter (isolated buck converter) 2. Two-switch sigle-ended forward converter (isolated buck converter) 3. Peak current control mode (Current-Programmed Control) 4. Practical consideration 4.1. How to use Impedance Analyzer 5. References</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Lifetime calculation for Electrolytic Capacitors</title><link href="https://circuitlover.com/capacitor-life-time-cal/" rel="alternate" type="text/html" title="Lifetime calculation for Electrolytic Capacitors" /><published>2022-03-03T00:00:00+00:00</published><updated>2022-03-03T00:00:00+00:00</updated><id>https://circuitlover.com/capacitor-life-time-cal</id><content type="html" xml:base="https://circuitlover.com/capacitor-life-time-cal/">&lt;p&gt;On the process of making new inverter/converter products, we are talking about what type of topology will be used, power losses and cost estimation. It is easy to forgot about the &lt;strong&gt;Lifetime of capacitors&lt;/strong&gt;. This article is quick note how to estimate lifetime of electrolytic capacitor (elcap) provided by &lt;strong&gt;JIANGHAI&lt;/strong&gt; &lt;sup id=&quot;fnref:fn1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:fn1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Other manufactures may have different ways to estimate lifetime of these capacitors. Please look up manufacturer application note for more detail.&lt;/p&gt;
 
 &lt;p&gt;Table of contents&lt;/p&gt;
 &lt;ul&gt;
@@ -856,16 +906,33 @@ It’s easy to notice that $\vec{X}$ is time-independent. This conclusion is use
   &lt;/ol&gt;
 &lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents 1. Sinusoidal time functions and complex number 1.1. Complex number recap 1.2. Sinusoidal Time Functions 1.3. Summary 2. Impedance Example</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The fundamental of DC-AC inverter</title><link href="https://circuitlover.com/dc-ac-inverter/" rel="alternate" type="text/html" title="The fundamental of DC-AC inverter" /><published>2022-01-06T00:00:00+00:00</published><updated>2022-01-06T00:00:00+00:00</updated><id>https://circuitlover.com/dc-ac-inverter</id><content type="html" xml:base="https://circuitlover.com/dc-ac-inverter/">&lt;p&gt;Table of contents&lt;/p&gt;
 &lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#getting-started&quot;&gt;Getting started&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#1-full-brige-inverters&quot;&gt;1. Full-brige inverters&lt;/a&gt;
     &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#11-biploar-pwm&quot;&gt;1.1. Biploar PWM&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#12-unipolar-pwm&quot;&gt;1.2. Unipolar PWM&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#13-hybrid-pwm&quot;&gt;1.3. Hybrid PWM&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#references&quot;&gt;References&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#vector-space-and-three-phase-inverter&quot;&gt;Vector space and three-phase inverter&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#power-losses-and-heating-design-of-an-dc-ac-inverter&quot;&gt;Power losses and heating design of an DC-AC inverter&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#references&quot;&gt;References&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2-vector-space-and-three-phase-inverter&quot;&gt;2. Vector space and three-phase inverter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#3-power-losses-and-heating-design-of-an-dc-ac-inverter&quot;&gt;3. Power losses and heating design of an DC-AC inverter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#4-references&quot;&gt;4. References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Refer &lt;sup id=&quot;fnref:fn1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:fn1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; for more details.&lt;/p&gt;
+
+&lt;h1 id=&quot;getting-started&quot;&gt;Getting started&lt;/h1&gt;
+
+&lt;p&gt;Switch utilization&lt;/p&gt;
+
+\[\frac{P_o}{P_T} = \frac{V_{o1,max} \times I_{o1,max}}{q \times V_T \times I_T}\]
+
+&lt;p&gt;Where&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;$V_{o1,max}, I_{o1,max}$ are the maximum rated output voltage and current.&lt;/li&gt;
+  &lt;li&gt;$V_T, I_T$ are the peak voltage rating and peak current rating of a switching device.&lt;/li&gt;
+  &lt;li&gt;$q$ is the number of switches.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;1-full-brige-inverters&quot;&gt;1. Full-brige inverters&lt;/h1&gt;
@@ -875,15 +942,55 @@ It’s easy to notice that $\vec{X}$ is time-independent. This conclusion is use
   &lt;li&gt;Bipolar by definiton: having or involving the use of two poles or polarities.&lt;/li&gt;
 &lt;/ul&gt;
 
+\[\begin{align*}
+&amp;amp; \text{Control signal: } V_{control}(t) = 𝑀 \times sin(\omega t) \\
+&amp;amp; \text{Carrier signal: } V_{tri}(t) = 
+\left\{\begin{matrix}
+\cfrac{4}{T_{sw} t} \qquad t \in [0,\cfrac{T_{sw}}{4}] \cup [\cfrac{3T_{sw}}{4},T_{sw}] \\
+-\cfrac{4}{T_{sw} t} +2 \qquad  t \in [\cfrac{T_{sw}}{4},\cfrac{3T_{sw}}{2}]
+\end{matrix}\right. \\
+&amp;amp; \text{Output peak voltage } V_{out} = M \times V_{DC}
+
+\end{align*}\]
+
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;$M$ is mudulation index.&lt;/li&gt;
+  &lt;li&gt;$\omega$ is fundamental frequency.&lt;/li&gt;
+  &lt;li&gt;$f_{sw} = 1 / T_{sw}$ is switching frequency.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Refer to &lt;sup id=&quot;fnref:simu&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:simu&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; for LTspice simulation instruction.&lt;/p&gt;
+
 &lt;h2 id=&quot;11-biploar-pwm&quot;&gt;1.1. Biploar PWM&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;S1&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;S4&lt;/code&gt; turn on and turn off at the same time.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/dc-ac-inverter/bipolar-PWM.png&quot; alt=&quot;bipolar-PWM&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Simulation result:
+&lt;img src=&quot;/images/posts/dc-ac-inverter/bipolar-PWM-waveform.png&quot; alt=&quot;bipolar-PWM-waveform&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;12-unipolar-pwm&quot;&gt;1.2. Unipolar PWM&lt;/h2&gt;
 
+&lt;p&gt;The inverter output voltage switches between either between $0 \rightarrow +Vd$ during half cycle and $0 \rightarrow -Vd$ half cycle of the fundamental frequency thus this scheme is called unipolar modulation.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/dc-ac-inverter/unipolar-PWM.png&quot; alt=&quot;Unipolar PWM schematic&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/dc-ac-inverter/unipolar-PWM-waveform.png&quot; alt=&quot;Unipolar PWM waveform&quot; /&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;13-hybrid-pwm&quot;&gt;1.3. Hybrid PWM&lt;/h2&gt;
 
-&lt;h1 id=&quot;vector-space-and-three-phase-inverter&quot;&gt;Vector space and three-phase inverter&lt;/h1&gt;
+&lt;p&gt;Refer to &lt;sup id=&quot;fnref:hpwm&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:hpwm&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;power-losses-and-heating-design-of-an-dc-ac-inverter&quot;&gt;Power losses and heating design of an DC-AC inverter&lt;/h1&gt;
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;2-vector-space-and-three-phase-inverter&quot;&gt;2. Vector space and three-phase inverter&lt;/h1&gt;
+
+&lt;h1 id=&quot;3-power-losses-and-heating-design-of-an-dc-ac-inverter&quot;&gt;3. Power losses and heating design of an DC-AC inverter&lt;/h1&gt;
 &lt;p&gt;Power losses of an inverter is defined as&lt;/p&gt;
 
 \[P_{Loss} = P_{in} - P_{out}\]
@@ -973,7 +1080,24 @@ i_{Diode} (\omega t) = \frac{1}{2}  \left[ 1 - M \cdot sin(\omega t) \right]  \h
 
 &lt;p&gt;Since $R_{DS} \gg R_{CE}$, we could say that $P_C^{MOS}$ is not smaller than $P_C^{IBGT}$.&lt;/p&gt;
 
-&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents 1. Full-brige inverters 1.1. Biploar PWM 1.2. Unipolar PWM 1.3. Hybrid PWM Vector space and three-phase inverter Power losses and heating design of an DC-AC inverter References</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Connect Raspberry Pi Zero (not W) to the Internet</title><link href="https://circuitlover.com/connect-Pi-Zero-to-internet/" rel="alternate" type="text/html" title="Connect Raspberry Pi Zero (not W) to the Internet" /><published>2020-12-11T00:00:00+00:00</published><updated>2020-12-11T00:00:00+00:00</updated><id>https://circuitlover.com/connect-Pi-Zero-to-internet</id><content type="html" xml:base="https://circuitlover.com/connect-Pi-Zero-to-internet/">&lt;p&gt;Raspi Zero (not W) have neither Wi-Fi nor Ethernet, so how could we want to update your raspbian without remove the microSD card? 
+&lt;h1 id=&quot;4-references&quot;&gt;4. References&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:fn1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;David Perreault. &lt;em&gt;6.334 Power Electronics.&lt;/em&gt; Spring 2007. Massachusetts Institute of Technology: MIT OpenCourseWare, &lt;a href=&quot;https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-334-power-electronics-spring-2007&quot;&gt;https://ocw.mit.edu&lt;/a&gt;. License: &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;Creative Commons BY-NC-SA&lt;/a&gt;. &lt;a href=&quot;#fnref:fn1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:simu&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://youtu.be/al6RyyJsOJo&quot;&gt;Simulation of Bridge Inverter in LTspice&lt;/a&gt; &lt;a href=&quot;#fnref:simu&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:hpwm&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Lai, R.S. and Ngo, K.D., 1995. A PWM method for reduction of switching loss in a full-bridge inverter. &lt;em&gt;IEEE Transactions on Power Electronics&lt;/em&gt;, &lt;em&gt;10&lt;/em&gt;(3), pp.326-332. &lt;a href=&quot;#fnref:hpwm&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld@circuitlover.com</email></author><category term="pe" /><summary type="html">Table of contents Getting started 1. Full-brige inverters 1.1. Biploar PWM 1.2. Unipolar PWM 1.3. Hybrid PWM References 2. Vector space and three-phase inverter 3. Power losses and heating design of an DC-AC inverter 4. References</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://circuitlover.com/images/author.png" /><media:content medium="image" url="https://circuitlover.com/images/author.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Connect Raspberry Pi Zero (not W) to the Internet</title><link href="https://circuitlover.com/connect-Pi-Zero-to-internet/" rel="alternate" type="text/html" title="Connect Raspberry Pi Zero (not W) to the Internet" /><published>2020-12-11T00:00:00+00:00</published><updated>2020-12-11T00:00:00+00:00</updated><id>https://circuitlover.com/connect-Pi-Zero-to-internet</id><content type="html" xml:base="https://circuitlover.com/connect-Pi-Zero-to-internet/">&lt;p&gt;Raspi Zero (not W) have neither Wi-Fi nor Ethernet, so how could we want to update your raspbian without remove the microSD card? 
 Well, you can create a virtual Ethernet interface. This method is tested on &lt;strong&gt;Window 10&lt;/strong&gt;, you could get the same idea when using Linux/Mac computer.&lt;/p&gt;
 
 &lt;p&gt;I am testing &lt;a href=&quot;https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2022-01-28/2022-01-28-raspios-bullseye-armhf-lite.zip&quot;&gt;2022-01-28-raspios-bullseye-armhf-lite image&lt;/a&gt; version.&lt;/p&gt;

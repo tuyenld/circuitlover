@@ -36,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1652990438">
+    <link rel="stylesheet" href="/css/site.css?v=1655653218">
 
     
 
@@ -170,7 +170,7 @@
       "image": "//images/author.png"
     },
     {
-      "title": "AC to DC converter",
+      "title": "AC/DC to DC converter",
       "category": "pe",
       "date": "2022-03-31T00:00:00Z",
       "url": "/ac-dc-converter/",

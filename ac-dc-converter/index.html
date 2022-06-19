@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <link type="application/atom+xml" rel="alternate" href="https://circuitlover.com/feed.xml" title="circuitlover.com" />
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>AC to DC converter | circuitlover.com</title>
+<title>AC/DC to DC converter | circuitlover.com</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="AC to DC converter" />
+<meta property="og:title" content="AC/DC to DC converter" />
 <meta name="author" content="Dinh-Tuyen Le" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Basic AC to DC converter topologies" />
@@ -20,11 +20,11 @@
 <meta property="article:published_time" content="2022-03-31T00:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://circuitlover.com/images/author.png" />
-<meta property="twitter:title" content="AC to DC converter" />
+<meta property="twitter:title" content="AC/DC to DC converter" />
 <meta name="twitter:site" content="@tuyen_ld" />
 <meta name="twitter:creator" content="@tuyen_ld" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://circuitlover.com/ac-dc-converter/","headline":"AC to DC converter","dateModified":"2022-03-31T00:00:00+00:00","datePublished":"2022-03-31T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://circuitlover.com/ac-dc-converter/"},"image":"https://circuitlover.com/images/author.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://circuitlover.com/images/avatar-circle.png"},"name":"Dinh-Tuyen Le"},"author":{"@type":"Person","name":"Dinh-Tuyen Le"},"description":"Basic AC to DC converter topologies","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://circuitlover.com/ac-dc-converter/","headline":"AC/DC to DC converter","dateModified":"2022-03-31T00:00:00+00:00","datePublished":"2022-03-31T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://circuitlover.com/ac-dc-converter/"},"image":"https://circuitlover.com/images/author.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://circuitlover.com/images/avatar-circle.png"},"name":"Dinh-Tuyen Le"},"author":{"@type":"Person","name":"Dinh-Tuyen Le"},"description":"Basic AC to DC converter topologies","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta property="author" content="Dinh-Tuyen Le">
@@ -38,7 +38,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1652990438">
+    <link rel="stylesheet" href="/css/site.css?v=1655653218">
 
     
 
@@ -103,7 +103,7 @@
   </div>
 
   <h1 class="text-center p-name mx-auto mb-4 lg:mb-8">
-    <a href="/ac-dc-converter/" class="u-url no-underline">AC to DC converter</a>
+    <a href="/ac-dc-converter/" class="u-url no-underline">AC/DC to DC converter</a>
   </h1>
 
   <div class="flex justify-center space-x-8 sm:space-x-12">
@@ -125,7 +125,7 @@
 
 
   <p class="inline-block text-sm rounded-full bg-green-200 bg-opacity-25 text-green-800 px-4 py-2">
-    2 minute read
+    3 minute read
   </p>
 
 
@@ -136,12 +136,13 @@
 <ul>
   <li><a href="#1-one-switch-sigle-ended-forward-converter-isolated-buck-converter">1. One-switch sigle-ended forward converter (isolated buck converter)</a></li>
   <li><a href="#2-two-switch-sigle-ended-forward-converter-isolated-buck-converter">2. Two-switch sigle-ended forward converter (isolated buck converter)</a></li>
-  <li><a href="#3-practical-consideration">3. Practical consideration</a>
+  <li><a href="#3-peak-current-control-mode-current-programmed-control">3. Peak current control mode (Current-Programmed Control)</a></li>
+  <li><a href="#4-practical-consideration">4. Practical consideration</a>
     <ul>
-      <li><a href="#31-how-to-use-impedance-analyzer">3.1. How to use Impedance Analyzer</a></li>
+      <li><a href="#41-how-to-use-impedance-analyzer">4.1. How to use Impedance Analyzer</a></li>
     </ul>
   </li>
-  <li><a href="#4-references">4. References</a></li>
+  <li><a href="#5-references">5. References</a></li>
 </ul>
 
 <p>If you don’t know what is <code class="language-plaintext highlighter-rouge">K1 L1 L2 1</code> transformer directive means, you should check <sup id="fnref:lt_transf" role="doc-noteref"><a href="#fn:lt_transf" class="footnote" rel="footnote">1</a></sup> for more details.</p>
@@ -173,9 +174,19 @@ Rule of thumb is $\Delta I$ = 10% to 40% of full load.</p>
 <h1 id="2-two-switch-sigle-ended-forward-converter-isolated-buck-converter">2. Two-switch sigle-ended forward converter (isolated buck converter)</h1>
 <p>also called asymmetrical half bridge forward</p>
 
-<h1 id="3-practical-consideration">3. Practical consideration</h1>
-<h2 id="31-how-to-use-impedance-analyzer">3.1. How to use Impedance Analyzer</h2>
-<p>The table is adapted from <sup id="fnref:4191A" role="doc-noteref"><a href="#fn:4191A" class="footnote" rel="footnote">3</a></sup>.</p>
+<h1 id="3-peak-current-control-mode-current-programmed-control">3. Peak current control mode (Current-Programmed Control)</h1>
+
+<p>Refer to chapter 18 of <sup id="fnref:erickson2007" role="doc-noteref"><a href="#fn:erickson2007" class="footnote" rel="footnote">3</a></sup>, and <sup id="fnref:dragan" role="doc-noteref"><a href="#fn:dragan" class="footnote" rel="footnote">4</a></sup>.</p>
+
+<p><img src="/images/posts/ac-dc-inverter/peak-current-mode-intro.jpg" alt="" /></p>
+
+<p><img src="/images/posts/ac-dc-inverter/peak-current-mode-operation.jpg" alt="" /></p>
+
+<p><img src="/images/posts/ac-dc-inverter/peak-current-mode-in-voltage-regulator.jpg" alt="" /></p>
+
+<h1 id="4-practical-consideration">4. Practical consideration</h1>
+<h2 id="41-how-to-use-impedance-analyzer">4.1. How to use Impedance Analyzer</h2>
+<p>The table is adapted from <sup id="fnref:4191A" role="doc-noteref"><a href="#fn:4191A" class="footnote" rel="footnote">5</a></sup>.</p>
 
 <p><img src="/images/posts/ac-dc-inverter/equivalent-circuit-impedance.png" alt="Equivalent circuit model selection" /></p>
 
@@ -210,7 +221,40 @@ Rule of thumb is $\Delta I$ = 10% to 40% of full load.</p>
   </tbody>
 </table>
 
-<h1 id="4-references">4. References</h1>
+<h1 id="5-references">5. References</h1>
+
+<hr />
+
+<p>Pending</p>
+<ul>
+  <li>https://archive.nptel.ac.in/course.html</li>
+  <li><a href="https://archive.nptel.ac.in/courses/108/101/108101126/">NOC:Fundamental of Power Electronics (Video) </a>
+    <ul>
+      <li>Week 12
+        <ul>
+          <li>Intro for close loop control</li>
+          <li>Close looping dc-dc converters</li>
+          <li>Simulation of close loop control</li>
+          <li>Current control for battery charger application</li>
+          <li>Instability in current control and slope compensation</li>
+          <li>Slope compensated current control</li>
+          <li>Simulation of current control</li>
+          <li>Single phase inverter with sinusoidal pwm</li>
+          <li>Simulation of sinusoidal PWM</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://archive.nptel.ac.in/courses/108/105/108105180/">NOC:Control and Tuning Methods in Switched Mode Power Converters</a>
+    <ul>
+      <li>Week 02
+        <ul>
+          <li>Lecture 12 : Interactive MATLAB Simulation and Case Studies</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:lt_transf" role="doc-endnote">
@@ -218,6 +262,12 @@ Rule of thumb is $\Delta I$ = 10% to 40% of full load.</p>
     </li>
     <li id="fn:fn1" role="doc-endnote">
       <p>David Perreault. <em>6.334 Power Electronics Ch. 7.</em> Spring 2007. Massachusetts Institute of Technology: MIT OpenCourseWare, <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-334-power-electronics-spring-2007">https://ocw.mit.edu</a>. License: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA</a>. <a href="#fnref:fn1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:erickson2007" role="doc-endnote">
+      <p>Erickson, R. W. &amp; Maksimovic, D. 2007. Fundamentals of power electronics, Springer Science &amp; Business Media. <a href="#fnref:erickson2007" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:dragan" role="doc-endnote">
+      <p>Current-Mode Control, Dr. Dragan Maksimovic - University of Colorado Boulder <a href="https://www.coursera.org/lecture/current-modecontrol/introduction-to-peak-current-mode-control-nbIZQ">Online</a> <a href="#fnref:dragan" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:4191A" role="doc-endnote">
       <p>Operation manual Model 4191A network/spectrum Analyzer page 141/356 <a href="https://xdevs.com/doc/HP_Agilent_Keysight/HP%204195A%20Operation.pdf">Online</a> <a href="#fnref:4191A" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
