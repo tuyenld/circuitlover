@@ -38,7 +38,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1655653218">
+    <link rel="stylesheet" href="/css/site.css?v=1655654167">
 
     
 
@@ -125,7 +125,7 @@
 
 
   <p class="inline-block text-sm rounded-full bg-green-200 bg-opacity-25 text-green-800 px-4 py-2">
-    3 minute read
+    4 minute read
   </p>
 
 
@@ -137,6 +137,7 @@
   <li><a href="#1-one-switch-sigle-ended-forward-converter-isolated-buck-converter">1. One-switch sigle-ended forward converter (isolated buck converter)</a></li>
   <li><a href="#2-two-switch-sigle-ended-forward-converter-isolated-buck-converter">2. Two-switch sigle-ended forward converter (isolated buck converter)</a></li>
   <li><a href="#3-peak-current-control-mode-current-programmed-control">3. Peak current control mode (Current-Programmed Control)</a></li>
+  <li><a href="#slope-compensation">Slope compensation</a></li>
   <li><a href="#4-practical-consideration">4. Practical consideration</a>
     <ul>
       <li><a href="#41-how-to-use-impedance-analyzer">4.1. How to use Impedance Analyzer</a></li>
@@ -184,9 +185,38 @@ Rule of thumb is $\Delta I$ = 10% to 40% of full load.</p>
 
 <p><img src="/images/posts/ac-dc-inverter/peak-current-mode-in-voltage-regulator.jpg" alt="" /></p>
 
+<h1 id="slope-compensation">Slope compensation</h1>
+
+<p>Refer to <sup id="fnref:slope" role="doc-noteref"><a href="#fn:slope" class="footnote" rel="footnote">5</a></sup> for more information.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="/images/posts/ac-dc-inverter/slope-comp-d-lt-50.jpg" alt="" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">D&lt;50% turburlance is faded out</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>If Duty cycle $D&gt;50\%$, $I_L$ with turburlance is not stable.</p>
+
+<p><img src="/images/posts/ac-dc-inverter/slope-comp-d-gt-50.jpg" alt="" /></p>
+
+<p>Using new $I_{Lref}$ to solve the problem.</p>
+
+<p><img src="/images/posts/ac-dc-inverter/slope-comp-using-new-I_l.jpg" alt="" /></p>
+
+<p>How to generate the new $I_{Lref}$?</p>
+
+<p><img src="/images/posts/ac-dc-inverter/slope-comp-gen-new-I_l.jpg" alt="" /></p>
+
 <h1 id="4-practical-consideration">4. Practical consideration</h1>
 <h2 id="41-how-to-use-impedance-analyzer">4.1. How to use Impedance Analyzer</h2>
-<p>The table is adapted from <sup id="fnref:4191A" role="doc-noteref"><a href="#fn:4191A" class="footnote" rel="footnote">5</a></sup>.</p>
+<p>The table is adapted from <sup id="fnref:4191A" role="doc-noteref"><a href="#fn:4191A" class="footnote" rel="footnote">6</a></sup>.</p>
 
 <p><img src="/images/posts/ac-dc-inverter/equivalent-circuit-impedance.png" alt="Equivalent circuit model selection" /></p>
 
@@ -221,8 +251,6 @@ Rule of thumb is $\Delta I$ = 10% to 40% of full load.</p>
   </tbody>
 </table>
 
-<h1 id="5-references">5. References</h1>
-
 <hr />
 
 <p>Pending</p>
@@ -255,6 +283,8 @@ Rule of thumb is $\Delta I$ = 10% to 40% of full load.</p>
     </ul>
   </li>
 </ul>
+
+<h1 id="5-references">5. References</h1>
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:lt_transf" role="doc-endnote">
@@ -268,6 +298,9 @@ Rule of thumb is $\Delta I$ = 10% to 40% of full load.</p>
     </li>
     <li id="fn:dragan" role="doc-endnote">
       <p>Current-Mode Control, Dr. Dragan Maksimovic - University of Colorado Boulder <a href="https://www.coursera.org/lecture/current-modecontrol/introduction-to-peak-current-mode-control-nbIZQ">Online</a> <a href="#fnref:dragan" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:slope" role="doc-endnote">
+      <p>Slope compensation for current control - NPTEL <a href="https://youtu.be/b3e0RTWt4W0">Online</a> <a href="#fnref:slope" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:4191A" role="doc-endnote">
       <p>Operation manual Model 4191A network/spectrum Analyzer page 141/356 <a href="https://xdevs.com/doc/HP_Agilent_Keysight/HP%204195A%20Operation.pdf">Online</a> <a href="#fnref:4191A" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
