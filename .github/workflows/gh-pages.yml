@@ -1,4 +1,4 @@
-name: Hyas CI
+name: Github pages
 
 on:
   push:
@@ -12,8 +12,8 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        node: [16.x, 18.x]
+        os: [ubuntu-20.04]
+        node: [18.x]
 
     steps:
     - name: Check out Hyas project
@@ -32,3 +32,9 @@ jobs:
 
     - name: Build production website
       run: npm run build
+    
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+         github_token: ${{ secrets.GITHUB_TOKEN }}
+         publish_dir: ./public
