@@ -1,4 +1,4 @@
-baseurl = "https://doks.netlify.app/"
+baseurl = "https://tuyenld.github.io/dok/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
