@@ -58,8 +58,12 @@
       <div class="col-md-12 col-lg-10 col-xl-8">
         <!-- <div class="card-bar"></div> -->
         <h2 class="h3 mt-1 text-center">⚡️ Latest from my blog ⚡️</h2>
-        <div class="card-list">
-        {{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "blog")  -}}
+      </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-lg-2 g-lg-5">
+      {{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "blog")  -}}
+      <div class="col">
         <div class="card">
           <div class="card-body">
             <h2 class="h3"><a class="stretched-link text-body" href="{{ .Permalink }}">{{ .Params.title }}</a></h2>
@@ -67,9 +71,8 @@
             {{ partial "main/blog-meta.html" . -}}
           </div>
         </div>
-        {{ end -}}
-        </div>
       </div>
+      {{ end -}}
     </div>
   </div>
 </section>
