@@ -7,9 +7,9 @@ lastmod: 2020-11-04T09:19:42+01:00
 draft: false
 weight: 20
 images: [el-cap.png]
-categories: ["News"]
-tags: ["security", "performance", "SEO"]
-contributors: ["Henk Verlinde"]
+categories: ["Power-Electronics"]
+tags: ["capacitor"]
+contributors: ["Tuyen D. Le"]
 pinned: false
 homepage: false
 ---
@@ -19,9 +19,9 @@ On the process of making new inverter/converter products, we are talking about w
 Table of contents
 
 - [Lifetime model](#lifetime-model)
-  - [Temperature factor $K_T$](#temperature-factor-k_t)
-  - [Ripple current factor $K_R$](#ripple-current-factor-k_r)
-  - [Voltage factor $K_V$](#voltage-factor-k_v)
+  - [Temperature factor](#temperature-factor)
+  - [Ripple current factor](#ripple-current-factor)
+  - [Voltage factor](#voltage-factor)
 - [References](#references)
 
 ## Lifetime model
@@ -39,9 +39,9 @@ where
 - $K_R$ ripple current factor (self-heating)
 - $K_V$ voltage factor (operating voltage)
 
-### Temperature factor $K_T$
+### Temperature factor
 
-"10-Kelvin-rule" is wide used in the industry: a drop of the ambient temperature by $10K$ double the lifetime of capacitor.
+Temperature factor $K_T$ can be calculated based on "10-Kelvin-rule" that is: a drop of the ambient temperature by $10K$ double the lifetime of capacitor.
 
 $$
 K_T = 2^{\cfrac {T_O - T_A}{10K}}
@@ -52,7 +52,9 @@ Where
 - $T_0$ rated temperature
 - $T_A$ ambient temperature
 
-### Ripple current factor $K_R$
+### Ripple current factor
+
+Ripple current factor $K_R$ is calculated as following.
 
 $$
 K_R = K_i^{A \cdot \cfrac{\Delta T_0}{10K}}
@@ -70,7 +72,9 @@ where
   - $T_0=105 ^{\circ}C$ if ($I>I_R$) then $K_i = 4$ else $K_i = 2$
   - $T_0 = 85 ^\circ C \rightarrow K_i = 2$
 
-### Voltage factor $K_V$
+### Voltage factor
+
+There are two cases need to take into account when calculate voltage factor $K_V$.
 
 If $0.6 \le \cfrac{U_A}{U_R} \le 1$ then
 $$
