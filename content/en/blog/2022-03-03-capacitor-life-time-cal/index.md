@@ -5,8 +5,6 @@ excerpt: "How to calculate lifetime of a capacitor."
 date: 2020-11-04T09:19:42+01:00
 lastmod: 2020-11-04T09:19:42+01:00
 draft: false
-weight: 20
-images: [el-cap.png]
 categories: ["Power-Electronics"]
 tags: ["capacitor"]
 contributors: ["Tuyen D. Le"]
