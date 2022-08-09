@@ -84,7 +84,7 @@ docsRepo = "https://github.com/h-enk/doks"
 docsRepoBranch = "master"
 docsRepoSubPath = ""
 editPage = false
-lastMod = false
+lastMod = true
 
 [sections]
   sectionNav = ["docs", "guides"]
