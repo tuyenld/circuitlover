@@ -7,7 +7,7 @@
 {{ $highlight := resources.Get "js/highlight.js" -}}
 {{ $highlight := $highlight | js.Build -}}
 
-{{ $katex := resources.Get "js/vendor/katex/dist/katex.js" -}}
+{{ $katex := resources.Get "js/vendor/katex/dist/katex.min.js" -}}
 {{ $katexAutoRender := resources.Get "js/vendor/katex/dist/contrib/auto-render.js" -}}
 
 {{ $mermaid := resources.Get "js/mermaid.js" | js.Build -}}
@@ -80,7 +80,7 @@
   {{ if .Site.Params.options.highLight -}}
     <script src="{{ $highlight.RelPermalink }}" defer></script>
   {{ end -}}
-  {{ if .Site.Params.options.kaTex -}}
+  {{ if .Params.katex -}}
     <script src="{{ $katex.RelPermalink }}" defer></script>
     <script src="{{ $katexAutoRender.RelPermalink }}" onload="renderMathInElement(document.body);" defer></script>
   {{ end -}}
@@ -96,7 +96,7 @@
   {{ $index := $index | minify | fingerprint "sha512" -}}
   {{ $bs := $bs | minify | fingerprint "sha512" -}}
   {{ $highlight := $highlight | minify | fingerprint "sha512" -}}
-  {{ $katex := $katex | minify | fingerprint "sha512" -}}
+  {{ $katex := $katex | fingerprint "sha512" -}}
   {{ $katexAutoRender := $katexAutoRender | minify | fingerprint "sha512" -}}
   {{ $mermaid := $mermaid | minify | fingerprint "sha512" -}}
   {{ if .Site.Params.options.bootStrapJs -}}
@@ -105,7 +105,7 @@
   {{ if .Site.Params.options.highLight -}}
     <script src="{{ $highlight.RelPermalink }}" integrity="{{ $highlight.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}
-  {{ if .Site.Params.options.kaTex -}}
+  {{ if .Params.katex -}}
     <script src="{{ $katex.RelPermalink }}" integrity="{{ $katex.Data.Integrity }}" crossorigin="anonymous" defer></script>
     <script src="{{ $katexAutoRender.RelPermalink }}" integrity="{{ $katexAutoRender.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}

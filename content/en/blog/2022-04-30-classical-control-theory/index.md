@@ -7,6 +7,7 @@ lastmod: 2022-04-30T09:19:42+01:00
 categories: ["Control"]
 tags: ["Brian-Douglas"]
 contributors: ["Tuyen D. Le"]
+katex: true
 ---
 
 ## Table of contents
@@ -27,29 +28,41 @@ contributors: ["Tuyen D. Le"]
 
 ![step-function](images/step-function.jpg)
 
-<div>
+{{< math >}}
 $$
 \begin{align*}
-    u(t)={\begin{cases}1&{\text{if }}t \ge 0 \\0&{\text{if }}t \lt 0\\\end{cases}}
+    u(t)={
+        \begin{cases}
+        1&{\text{if }}t \ge 0 \newline  
+        0&{\text{if }}t \lt 0 \newline
+        \end{cases}}
     \qquad
-    u[n]={\begin{cases}1&{\text{if }}n \ge 0 \\0&{\text{if }}n \lt 0\\\end{cases}}
+    u[n]={
+        \begin{cases}
+        1&{\text{if }}n \ge 0 \newline
+        0&{\text{if }}n \lt 0 \newline
+        \end{cases}}
 \end{align*}
 $$
-</div>
+{{< /math >}}
 
 ### 1.2. Impulse unit function (in descrete domain)
 
 ![Impulse function](images/impulse-function.jpg)
 
-<div>
+{{< math >}}
 $$
 \begin{align*}
-    & \delta[n]={\begin{cases}1&{\text{if }}n = 0 \\0&{\text{if }}n \ne 0\\\end{cases}} \\
-    & u[n] = \sum_{k = 0}^{\infty} \delta[n-k] \qquad \text{for step function} \\
+    & \delta[n]={
+        \begin{cases}
+        1&{\text{if }}n = 0 \newline
+        0&{\text{if }}n \ne 0 \newline
+        \end{cases}} \newline
+    & u[n] = \sum_{k = 0}^{\infty} \delta[n-k] \qquad \text{for step function} \newline
     & x[n] = \sum_{k = - \infty}^{\infty} x[k] \delta[n-k] \qquad \text{for arbitrary function}
 \end{align*}
 $$
-</div>
+{{< /math >}}
 
 We will use this relation later on.
 
@@ -72,28 +85,28 @@ A. When the input is a impulse unit function $\delta [n]$ (see "Impulse unit fun
 
 ![impulse responses](images/impulse-response.jpg)
 
-<div>
+{{< math >}}
 $$
 \begin{align*}
-    & \delta [n]\overset L \longrightarrow h[n] \qquad \text{ OR } \qquad y[n] = T\{x[n]\} \\
-    & x[n] = \sum_{k = - \infty}^{\infty} x[k] \delta[n-k] \\
-    & \Rightarrow y[n]=T \{ \sum_{k = - \infty}^{\infty} x[k] \delta[n-k] \} \overset {LTI} \longrightarrow  \sum_{k = - \infty}^{\infty} x[k] L \{\delta[n-k] \} \\
+    & \delta [n]\overset L \longrightarrow h[n] \qquad \text{ OR } \qquad y[n] = T\{x[n]\} \newline
+    & x[n] = \sum_{k = - \infty}^{\infty} x[k] \delta[n-k] \newline
+    & \Rightarrow y[n]=T \{ \sum_{k = - \infty}^{\infty} x[k] \delta[n-k] \} \overset {LTI} \longrightarrow  \sum_{k = - \infty}^{\infty} x[k] L \{\delta[n-k] \} \newline
     & \Rightarrow y[n] = \sum_{k = - \infty}^{\infty} x[k]  h[n-k] := x[n]*h[n] \quad \text{(This is convolution)}
 \end{align*}
 $$
-</div>
+{{< /math >}}
 
 Now, if we take a `Laplace` transformation of $y[n]$, we have.
 
-<div>
+{{< math >}}
 $$
 \begin{align*}
-    & x [n]\overset L \longrightarrow X[s] \\
-    & h [n]\overset L \longrightarrow H[s] \qquad \text{(where h[n] is the impulse response of the system)}\\
+    & x [n]\overset L \longrightarrow X[s] \newline
+    & h [n]\overset L \longrightarrow H[s] \qquad \text{(where h[n] is the impulse response of the system)} \newline
     & y [n] = x[n]*h[n] \overset L \longrightarrow Y[s] = X[s] . H[s]
 \end{align*}
 $$
-</div>
+{{< /math >}}
 
 We call $H[s]$ is the **transfer function** of the system.
 
@@ -128,14 +141,14 @@ Using complex number to include phase information into account.
 
 ![Fourier complex number](images/Fourier-complex.png)
 
-<div>
+{{< math >}}
 $$
 \begin{align*}
-    & F(v) = \cfrac{\sqrt{2}}{2} + \cfrac{\sqrt{2}}{2} j = e^{j \pi/4} \\
+    & F(v) = \cfrac{\sqrt{2}}{2} + \cfrac{\sqrt{2}}{2} j = e^{j \pi/4} \newline
     & F(v)e^{2 \pi j v t} = e^{j \pi/4} e^{2 \pi j v t}
 \end{align*}
 $$
-</div>
+{{< /math >}}
 
 ## 4. References
 

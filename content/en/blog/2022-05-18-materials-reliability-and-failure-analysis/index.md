@@ -7,6 +7,7 @@ lastmod: 2022-05-11T09:19:42+01:00
 contributors: ["Tuyen D. Le"]
 categories: ["Power-Electronics"]
 tags: ["material"]
+katex: true
 ---
 
 Kinetic thermal energy
@@ -19,23 +20,10 @@ When an electric field $E$ is applied, each carrier (i.e. electrons and holes) e
 The current density $J$, or the current flow of electrons per unit volume, is given by the following:
 
 $$
-\begin{aligned }
-J_n = nqv_d \newline
-J_n = nq\dfrac{1}{2} \dfrac{q\tau}{m^{2}}E
-\end{aligned }
-$$
-
-$$
-\begin{aligned}
-  a   &=b+c \cr
-  d+e &=f
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-  a & b \\\\ c & d
-\end{aligned}
+\begin{align*}
+J_n &= nqv_d \newline
+J_n &= nq\dfrac{1}{2} \dfrac{q\tau}{m^{2}}E
+\end{align*}
 $$
 
 Electron mobility $\mu_n$ is the ratio of drift velocity to the electric field strength.
