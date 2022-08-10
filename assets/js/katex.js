@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
       {left: '$', right: '$', display: false},
       {left: '\\(', right: '\\)', display: false},
       {left: '\\[', right: '\\]', display: true},
+      {left: "\\begin{align*}", right: "\\end{align*}", display: true}
     ],
+    displayMode: true,
+    newLineInDisplayMode: true
   });
 });

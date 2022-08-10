@@ -19,10 +19,23 @@ When an electric field $E$ is applied, each carrier (i.e. electrons and holes) e
 The current density $J$, or the current flow of electrons per unit volume, is given by the following:
 
 $$
-\begin{align*}
-J_n &= nqv_d \\
-J_n &= nq\dfrac{1}{2} \dfrac{q\tau}{m^*}E
-\end{align*}
+\begin{aligned }
+J_n = nqv_d \newline
+J_n = nq\dfrac{1}{2} \dfrac{q\tau}{m^{2}}E
+\end{aligned }
+$$
+
+$$
+\begin{aligned}
+  a   &=b+c \cr
+  d+e &=f
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+  a & b \\\\ c & d
+\end{aligned}
 $$
 
 Electron mobility $\mu_n$ is the ratio of drift velocity to the electric field strength.

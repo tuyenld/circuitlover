@@ -20,3 +20,5 @@ To-do list
 - [x] contributors page
 - [ ] [Table of contents for blog](https://github.com/h-enk/doks/discussions/761)
 - [ ] [Gitcus](https://zhauniarovich.com/post/2021/2021-06-giscus/)
+- [ ] Change `h-enk` url
+- [ ] `\\` to `\newline` in Latex; or `<div> and </div>`
