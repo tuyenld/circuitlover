@@ -6,8 +6,7 @@
     </div>
     <div class="col-lg-9 col-xl-8 text-center">
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-lg px-4 mb-2" href="/docs/{{ if .Site.Params.options.docsVersioning }}{{ .Site.Params.docsVersion }}/{{ end }}prologue/introduction/" role="button">{{ i18n "get-started" }}</a>
-      <p class="meta">Open-source MIT Licensed. <a href="https://github.com/h-enk/doks">GitHub v{{ $data := getJSON "/package.json" }}{{ $data.version }}</a></p>
+      <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ .Site.Params.schemaAuthorGitHub }}" role="button">{{ i18n "see-all-project" }}</a>
     </div>
   </div>
 </section>
@@ -31,20 +30,6 @@
           <p>Use sensible defaults for structured data, open graph, and Twitter cards. Or easily change the SEO settings to your liking.</p>
         </div>
       </div>
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-5">
-          <h2 class="h4">Full text search</h2>
-          <p>Search your Doks site with FlexSearch. Easily customize index settings and search options to your liking.</p>
-        </div>
-        <div class="col-lg-5">
-          <h2 class="h4">Page layouts</h2>
-          <p>Build pages with a landing page, blog, or documentation layout. Add custom sections and components to suit your needs.</p>
-        </div>
-        <div class="col-lg-5">
-          <h2 class="h4">Want to know more</h2>
-          <p>Click to <a href="https://observatory.mozilla.org/analyze/doks.netlify.app">my Github profile</a> to get the full list of my project.</p>
-        </div>
-      </div>
     </div>
   </section>
   {{ end }}
@@ -62,7 +47,7 @@
     </div>
 
     <div class="row row-cols-1 row-cols-lg-2">
-      {{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "blog")  -}}
+      {{ range first 4 (where .Site.RegularPages.ByDate.Reverse "Section" "blog")  -}}
       <div class="col">
         <div class="card">
           <div class="card-body">

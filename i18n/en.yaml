@@ -15,3 +15,6 @@
 
 - id: browse
   translation: "Browse"
+
+- id: see-all-project
+  translation: "See all of my projects on Github"

@@ -56,11 +56,14 @@
   {{ $slice = $slice | append $alert -}}
 {{ end -}}
 
-{{ if .Site.Params.options.kaTex -}}
+{{ printf "%#v" $.Site }}
+{{ printf "%v" .Params.katex }}
+
+{{ with (.Params.katex) }}
   {{ $katexConfig := resources.Get "js/katex.js" -}}
   {{ $katexConfig := $katexConfig | js.Build -}}
   {{ $slice = $slice | append $katexConfig -}}
-{{ end -}}
+{{ end }}
 
 {{ $scrollLock := resources.Get "js/scroll-lock.js" | js.Build -}}
 {{ $slice = $slice | append $scrollLock -}}
