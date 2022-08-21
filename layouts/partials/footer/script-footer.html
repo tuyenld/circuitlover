@@ -56,14 +56,11 @@
   {{ $slice = $slice | append $alert -}}
 {{ end -}}
 
-{{ printf "%#v" $.Site }}
-{{ printf "%v" .Params.katex }}
-
-{{ with (.Params.katex) }}
+{{ if .Site.Params.options.kaTex -}}
   {{ $katexConfig := resources.Get "js/katex.js" -}}
   {{ $katexConfig := $katexConfig | js.Build -}}
   {{ $slice = $slice | append $katexConfig -}}
-{{ end }}
+{{ end -}}
 
 {{ $scrollLock := resources.Get "js/scroll-lock.js" | js.Build -}}
 {{ $slice = $slice | append $scrollLock -}}
@@ -83,7 +80,7 @@
   {{ if .Site.Params.options.highLight -}}
     <script src="{{ $highlight.RelPermalink }}" defer></script>
   {{ end -}}
-  {{ if .Params.katex -}}
+  {{ if .Site.Params.options.kaTex -}}
     <script src="{{ $katex.RelPermalink }}" defer></script>
     <script src="{{ $katexAutoRender.RelPermalink }}" onload="renderMathInElement(document.body);" defer></script>
   {{ end -}}
@@ -108,7 +105,7 @@
   {{ if .Site.Params.options.highLight -}}
     <script src="{{ $highlight.RelPermalink }}" integrity="{{ $highlight.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}
-  {{ if .Params.katex -}}
+  {{ if .Site.Params.options.kaTex -}}
     <script src="{{ $katex.RelPermalink }}" integrity="{{ $katex.Data.Integrity }}" crossorigin="anonymous" defer></script>
     <script src="{{ $katexAutoRender.RelPermalink }}" integrity="{{ $katexAutoRender.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}
