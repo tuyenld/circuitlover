@@ -1,7 +1,7 @@
 ---
 title: "Materials, Reliability and Failure Analysis"
 description: "Meterial science and testing"
-excerpt: From MAT1 and MAT2 courses
+excerpt: "Meterial science and testing"
 date: 2022-05-11T09:19:42+01:00
 lastmod: 2022-05-11T09:19:42+01:00
 contributors: ["Tuyen D. Le"]
