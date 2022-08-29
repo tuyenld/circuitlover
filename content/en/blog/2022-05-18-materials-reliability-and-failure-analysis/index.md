@@ -41,7 +41,7 @@ $$
 - Shottky diode: $E_{max}$ at the contact semiconductor and metal or P-N junction.
   - Merged PiN Schottky Diodes (MPS) structure: reduce electrical field stress
 - "Trench Oxide Pin Schottky" (TOPS): reduce contact between metal and semiconductor --> prevent the migration of carriers at the anode (metal). The rest of structure is the same as MPS [^fn-luz].
-- Soft recovery $\cfrac{t_f}{t_s} \gt 1.8$
+- Soft recovery. Soft factor $s = \cfrac{t_f}{t_s} \gt 0.8$
 
 |                                                                                                                        |       |
 | :--------------------------------------------------------------------------------------------------------------------: | :---: |
