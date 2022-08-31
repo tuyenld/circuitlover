@@ -2,8 +2,8 @@
 title: "Miscellaneous"
 description: "Notes about connector type using in Power Electronics."
 excerpt: "Notes about connector type using in Power Electronics."
-date: 2020-11-04T09:19:42+01:00
-lastmod: 2020-11-04T09:19:42+01:00
+date: 2022-05-19T09:19:42+01:00
+lastmod: 2022-05-19T09:19:42+01:00
 categories: ["Power-Electronics"]
 tags: ["misc"]
 contributors: ["Tuyen D. Le"]
