@@ -47,7 +47,7 @@
     </div>
 
     <div class="row row-cols-1 row-cols-lg-2">
-      {{ range first 4 (where .Site.RegularPages.ByDate.Reverse "Section" "blog")  -}}
+      {{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "blog")  -}}
       <div class="col">
         <div class="card">
           <div class="card-body">
@@ -58,6 +58,14 @@
         </div>
       </div>
       {{ end -}}
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="h4">Want to know more?</h2>
+            <p>Click to <a href="/blog">My Blog</a> to explore more.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
