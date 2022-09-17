@@ -14,6 +14,7 @@ Table of contents
 - [Connector](#connector)
 - [Power factor](#power-factor)
 - [Interfacing Matlab Simulink with Plexim PLECS](#interfacing-matlab-simulink-with-plexim-plecs)
+- [Potentiometers](#potentiometers)
 
 ## Connector
 
@@ -52,3 +53,15 @@ See more at [What is the role of reactive power in transmission networks?](https
 ## Interfacing Matlab Simulink with Plexim PLECS
 
 {{< youtube JnEJ63qEOqc >}}
+
+## Potentiometers
+
+[P16NP504KAB15 Vishay / Sfernice | Mouser Denmark](https://www.mouser.dk/ProductDetail/Vishay-Sfernice/P16NP504KAB15?qs=sGAEpiMZZMtC25l1F4XBU4GDvGXyUw%2BkUqAGoVe0N3c%3D)
+
+There's a *LOT* of files on the official LTwiki.
+
+For potentiometers look in ([source](https://www.eevblog.com/forum/eda/is-there-an-updated-massive-open-source-style-library-for-ltspice/)):
+
+- http://ltwiki.org/files/LTspiceIV/lib/sym/Pot&Sw/ for the symbols, and
+- http://ltwiki.org/files/LTspiceIV/lib/sub/Pote.lib is the associated library, (including both potentiometer_standard.lib and potentiometer_tapped.lib with documentation and sample files at
+- http://ltwiki.org/files/LTspiceIV/examples/LtSpicePlus/Discretos/Sw&Pote/
