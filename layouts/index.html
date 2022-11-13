@@ -43,15 +43,15 @@
           <div class="card">
             <div class="card-body">
               <h3><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}{{ with .Params.emoji -}}&nbsp;{{ . | emojify }}{{ end -}}</a></h3>
-              <p>{{ .Params.lead | safeHTML }}</p>
-              {{ partial "main/blog-meta.html" . -}}
+              <p>{{ .Params.excerpt | safeHTML }}</p>
             </div>
           </div>
           {{ end -}}
           <div class="card">
             <div class="card-body">
               <h3><a class="stretched-link text-body">Want to know more?</a></h3>
-              <p>Click to <a href="/blog">My Blog</a> to explore more.</p>
+              <p>Click to <a class="stretched-link position-relative link-muted" href="/blog">My Blog</a> to explore more.
+              </p>
             </div>
           </div>
         </div>
