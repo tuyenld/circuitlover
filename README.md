@@ -2,7 +2,7 @@ The theme is forked from [Doks](https://github.com/h-enk/doks)
 
 ---
 
-Default front mater
+## Default front mater
 
 ```yaml
 title: "Lifetime calculation for Electrolytic Capacitors"
@@ -15,7 +15,17 @@ tags: ["capacitor"]
 contributors: ["Tuyen D. Le"]
 ```
 
-To-do list
+## Math/Latex display
+
+Please using math shortcode to insert latex code.
+
+```
+{{< math >}}
+
+{{< /math >}}
+```
+
+## To-do list
 
 - [x] contributors page
 - [ ] [Table of contents for blog](https://github.com/h-enk/doks/discussions/761)
